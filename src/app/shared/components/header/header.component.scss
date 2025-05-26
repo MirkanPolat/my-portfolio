@@ -20,22 +20,18 @@ header {
   }
 
   nav {
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
 
-      li {
-        a {
-          color: white;
-          text-decoration: none;
-          font-size: 16px;
-          transition: color 0.3s;
-
-          &:hover {
-            color: #5988FF;
-          }
-        }
+      &:hover {
+        color: #5988FF;
       }
     }
   }
@@ -45,8 +41,8 @@ header {
   header {
     padding: 16px 20px;
     
-    nav ul {
-      gap: 20px;
+    nav {
+      gap: 20px; 
     }
   }
 }
