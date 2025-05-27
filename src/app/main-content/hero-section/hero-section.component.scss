@@ -31,7 +31,7 @@ section {
             
             &:hover .hand-icon {
                 opacity: 1;
-                transform: translateX(189px) rotate(360deg);
+                transform: translateX(170px) rotate(360deg);
             }
         }
         
@@ -43,18 +43,45 @@ section {
             padding: 10px 30px;
             font-size: 18px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            min-width: fit-content;
+            width: auto;
             
-            .button-text::before {
-                content: "Hello world";
+            .text-default, .text-hover {
+                display: block;
+                transition: all 0.4s ease;
+                white-space: nowrap;
+            }
+            
+            .text-hover {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 100%);
+                opacity: 0;
+            }
+            
+            .text-default {
+                transform: translateY(0);
+                opacity: 1;
             }
             
             &:hover {
                 background-color: #3355FF;
                 border-color: #3355FF;
+                padding: 10px 40px;
                 
-                .button-text::before {
-                    content: "I'm Mirkan Polat";
+                .text-default {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+                
+                .text-hover {
+                    transform: translate(-50%, -50%);
+                    opacity: 1;
                 }
             }
         }
