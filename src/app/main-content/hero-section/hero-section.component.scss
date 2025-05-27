@@ -1,42 +1,51 @@
 section {
-  background-image: url("./../../../assets/Design-material/01_Background/Design Size Relation@3x/01_Hero.png");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  > .hero-content {
+    background-image: url("./../../../assets/Design-material/01_Background/Design Size Relation@3x/01_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-  }
-  .hero-top {
-    > .hello-button {
-      background-color: transparent;
-      border: 1px solid white;
-      border-radius: 50px;
-      padding: 10px 30px;
-      font-size: 18px;
+
+    > .hero-content {
+        display: flex;
+        flex-direction: column;
     }
-  }
 
-  .hero-middle {
-    > .title-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      > .title-top {
-        
-      }
-      > .title-bottom {
-        margin-left: 143px;
-      }
+    .hero-top {
+        > .hello-button {
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 18px;
+        }
     }
-  }
 
-  h1 {
-    font-size: 128px;
-  }
+    .hero-middle {
+        > .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            > .title-top {
+                
+            }
+
+            > .title-bottom {
+                margin-left: 143px;
+            }
+        }
+
+        .profile-image {
+            > .name-tag {
+                
+            }
+        }
+    }
+
+    h1 {
+        font-size: 128px;
+    }
 }
