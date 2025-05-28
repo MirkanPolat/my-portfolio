@@ -11,110 +11,153 @@ section {
     > .hero-content {
         display: flex;
         flex-direction: column;
-    }
+        margin-top: 118px;
 
-    .hero-top {
-        .button-container {
-            position: relative;
-            display: inline-block;
-            
-            .hand-icon {
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                top: -35px;
-                left: -20px;
-                opacity: 0;
-                transform: translateX(0px) rotate(-180deg);
-                transition: all 0.8s ease;
-            }
-            
-            &:hover .hand-icon {
-                opacity: 1;
-                transform: translateX(170px) rotate(360deg);
-            }
-        }
-        
-        .hello-button {
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-            border-radius: 50px;
-            padding: 10px 30px;
-            font-size: 18px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
-            min-width: fit-content;
-            width: auto;
-            
-            .text-default, .text-hover {
-                display: block;
-                transition: all 0.4s ease;
-                white-space: nowrap;
-            }
-            
-            .text-hover {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, 100%);
-                opacity: 0;
-            }
-            
-            .text-default {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            
-            &:hover {
-                background-color: #3355FF;
-                border-color: #3355FF;
-                padding: 10px 40px;
+        .hero-top {
+            .button-container {
+                position: relative;
+                display: inline-block;
                 
-                .text-default {
-                    transform: translateY(-100%);
+                .hand-icon {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    top: -35px;
+                    left: -20px;
                     opacity: 0;
+                    transform: translateX(0px) rotate(-180deg);
+                    transition: all 0.8s ease;
+                }
+                
+                &:hover .hand-icon {
+                    opacity: 1;
+                    transform: translateX(170px) rotate(360deg);
+                }
+            }
+            
+            .hello-button {
+                background-color: transparent;
+               
+                border: 1px solid white;
+                border-radius: 50px;
+                padding: 10px 30px;
+                font-size: 18px;
+                transition: all 0.4s ease;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                min-width: fit-content;
+                width: auto;
+                
+                .text-default, .text-hover {
+                    display: block;
+                    transition: all 0.4s ease;
+                    white-space: nowrap;
                 }
                 
                 .text-hover {
-                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 100%);
+                    opacity: 0;
+                }
+                
+                .text-default {
+                    transform: translateY(0);
                     opacity: 1;
+                }
+                
+                &:hover {
+                    background-color: #3355FF;
+                    border-color: #3355FF;
+                    padding: 10px 40px;
+                    
+                    .text-default {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+                    
+                    .text-hover {
+                        transform: translate(-50%, -50%);
+                        opacity: 1;
+                    }
                 }
             }
         }
-    }
 
-    .hero-middle {
-        > .title-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        .hero-middle {
+            margin-top: 30px;
+            position: relative;
+            
+            > .title-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
 
-            > .title-top {
                 
-            }
 
-            > .title-bottom {
-                margin-left: 143px;
-            }
-        }
+                > .title-bottom {     
+                    margin-left: 143px;
+                }
 
-        .profile-image {
-            > .name-tag {
+                .polaroid {
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    transform: rotate(5deg);
+                    position: absolute;
+                    top: -149px;
+                    right: 35px;
+                    
+                    .profile-image {
+                        width: 203.57px;
+                        height: 244px;
+                        overflow: hidden;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+
+                    .name-tag {
+                        position: absolute;
+                        bottom: 8px;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Kalam', cursive;
+                        font-size: 24px;
+                        color: black;
+                        margin: 0;
+                    }
+                }
                 
+                .contact-button {
+                    margin-top: 40px;
+                    margin-left: 143px;
+                    background-color: #3355FF;
+                    color: white;
+                    border: none;
+                    border-radius: 50px;
+                    padding: 12px 30px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        background-color: #2244CC;
+                        transform: scale(1.05);
+                    }
+                }
             }
         }
     }
     
-    .hero-bottom{
+    .hero-bottom {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 76px;
-
-        > .social-links{
+        > .social-links {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -146,5 +189,6 @@ section {
 
     h1 {
         font-size: 128px;
+        font-weight: 700;
     }
 }
