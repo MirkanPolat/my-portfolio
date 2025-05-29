@@ -133,24 +133,6 @@ section {
                         margin: 0;
                     }
                 }
-                
-                .contact-button {
-                    margin-top: 40px;
-                    margin-left: 143px;
-                    background-color: #3355FF;
-                    color: white;
-                    border: none;
-                    border-radius: 50px;
-                    padding: 12px 30px;
-                    font-size: 18px;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    
-                    &:hover {
-                        background-color: #2244CC;
-                        transform: scale(1.05);
-                    }
-                }
             }
         }
     }
