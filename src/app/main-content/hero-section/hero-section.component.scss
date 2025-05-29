@@ -1,7 +1,7 @@
 section {
     background-image: url("./../../../assets/Design-material/01_Background/Design Size Relation@3x/01_Hero.png");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -135,6 +135,13 @@ section {
                 }
             }
         }
+    }
+
+    .contact-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
     }
     
     .hero-bottom {
