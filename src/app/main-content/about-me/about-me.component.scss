@@ -31,6 +31,19 @@
         width: 100%;
         max-width: 560px;
         height: auto;
+        transition: transform 0.3s ease; // Soft Animation
+      }
+      
+      &:nth-child(1) .ribbon-bg {
+        transform: rotate(-3deg);
+      }
+      
+      &:nth-child(2) .ribbon-bg {
+        transform: rotate(0deg);
+      }
+      
+      &:nth-child(3) .ribbon-bg {
+        transform: rotate(2deg);
       }
       
       .ribbon-content {
@@ -66,7 +79,7 @@
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 64px;
       margin-bottom: 1rem;
       display: inline-block;
     }
