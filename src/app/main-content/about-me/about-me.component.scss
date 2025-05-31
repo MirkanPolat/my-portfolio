@@ -91,10 +91,21 @@
 
     .my-button {
       margin-top: 1rem;
-      border: 2px solid black;
+      border: 1px solid black;
       box-shadow: 3px 5px 0 rgb(0, 0, 0);
+      color: black;
       
-
+      &:hover {
+        background-color: #F87B57;
+        transform: translateY(4px);
+        box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+        color: white;
+      }
+      
+      &:active {
+        transform: translateY(5px);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+      }
     }
 
     > .contact-me{
