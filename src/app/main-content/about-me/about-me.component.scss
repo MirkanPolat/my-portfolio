@@ -12,32 +12,46 @@
   .about-wrapper {
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-evenly;
     width: 100vw;
+    max-width: 1920px;
   }
 
   .availability-ribbons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
 
     .ribbon {
+      position: relative;
       display: flex;
       align-items: center;
-      background-color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-      img {
-        width: 560px;
-        height: 152px;
+      justify-content: center;
+      
+      .ribbon-bg {
+        width: 100%;
+        max-width: 560px;
+        height: auto;
       }
-
-      p {
-        margin: 0;
-        font-weight: 500;
-        font-size: 1rem;
+      
+      .ribbon-content {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+        .icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 12px;
+        }
+        
+        span {
+          color: white;
+          font-size: 24px;
+          font-weight: 600;
+          white-space: nowrap;
+        }
       }
     }
   }
@@ -65,6 +79,13 @@
 
     .my-button {
       margin-top: 1rem;
+    
+    }
+
+    > .contact-me{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
   }
 }

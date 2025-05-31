@@ -38,3 +38,11 @@ section {
   font-weight: 400;
   src: url('./assets/fonts/kalam-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+
+@media (max-width: 1362px){
+    .about-wrapper {
+
+    gap: 62px;
+  }
+}
