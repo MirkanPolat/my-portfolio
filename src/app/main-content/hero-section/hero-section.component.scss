@@ -150,6 +150,7 @@ section {
     
     .hero-bottom {
         width: 100%;
+        max-width: 1920px;
         > .social-links {
             display: flex;
             flex-direction: column;
