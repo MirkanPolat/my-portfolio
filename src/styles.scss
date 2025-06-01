@@ -9,10 +9,15 @@ body {
     overflow-x: hidden;
 }
 
+.content-wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 section {
     padding: 0 62px;
 }
-
 .bricolage-grotesque {
     font-family: 'Bricolage Grotesque', sans-serif;
 }
