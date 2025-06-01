@@ -12,6 +12,10 @@ section {
         display: flex;
         flex-direction: column;
         margin-top: 118px;
+        width: 100%;
+        max-width: 860px;
+        margin-left: auto;
+        margin-right: auto;
 
         .hero-top {
             .button-container {
