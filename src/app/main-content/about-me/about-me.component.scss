@@ -34,7 +34,7 @@
       }
       
       &:nth-child(1) .ribbon-bg {
-        transform: rotate(-3deg);
+        transform: rotate(-4deg);
       }
       
       &:nth-child(2) .ribbon-bg {
@@ -42,7 +42,7 @@
       }
       
       &:nth-child(3) .ribbon-bg {
-        transform: rotate(2deg);
+        transform: rotate(4deg);
       }
       
       .ribbon-content {
@@ -51,7 +51,6 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        
         .icon {
           width: 40px;
           height: 40px;
