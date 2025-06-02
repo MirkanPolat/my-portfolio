@@ -23,7 +23,6 @@
 
       <div class="column column-right">
         <div class="sticker-container" (click)="peelSticker()">
-      
           <img 
             class="sticker-image" 
             [class.hidden]="stickerState !== 'default'"
@@ -40,7 +39,7 @@
           
           <img 
             class="sticker-image" 
-            [class.hidden]="stickerState !== 'transition'"
+            [class.hidden]="stickerState !== 'peeled'"
             src="assets/Design-material/03_Stickers/01_Skills - Peel off/Final.png" 
             alt="Peeled" 
           />
@@ -48,6 +47,10 @@
           <div class="sticker-text" [class.hidden]="stickerState !== 'default'">
             <img class="arrow-img" src="assets/Design-material/03_Stickers/Arrow.png" alt="Arrow">
             <span class="text kalam">Pull to<br>peel</span>
+          </div>
+          
+          <div class="final-image" [class.hidden]="stickerState !== 'peeled'">
+            <img src="assets/Design-material/03_Stickers/01_Skills - Peel off/Frame.png" alt="Also interested in">
           </div>
         </div>
       </div>

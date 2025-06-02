@@ -139,6 +139,7 @@ section {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          color: white;
           font-weight: bold;
           text-align: center;
           z-index: 10;
@@ -164,6 +165,24 @@ section {
             &.kalam {
               font-family: 'Kalam', sans-serif;
             }
+          }
+        }
+        
+        .final-image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          transition: opacity 0.15s ease-in-out;
+          
+          &.hidden {
+            opacity: 0;
+          }
+          
+          img {
+            width: 180px;
+            height: auto;
           }
         }
       }

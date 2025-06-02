@@ -15,7 +15,7 @@ interface Skill {
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
-  stickerState: 'default' | 'transition' | 'transition' = 'default';
+  stickerState: 'default' | 'transition' | 'peeled' = 'default';
 
   skills: Skill[] = [
     { name: 'HTML', icon: 'assets/Design-material/img/Skill-Icons/HTML.png', row: 1 },
@@ -37,8 +37,8 @@ export class SkillSetComponent {
       this.stickerState = 'transition';
     
       setTimeout(() => {
-        this.stickerState = 'transition';
-      }, 100);
+        this.stickerState = 'peeled';
+      }, 200);
     } else {
       this.stickerState = 'default';
     }
