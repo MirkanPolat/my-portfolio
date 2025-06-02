@@ -74,37 +74,34 @@ section {
       .skills-grid {
         margin-top: 3rem;
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
         
-        .skill-row {
+        .skill-item {
           display: flex;
-          justify-content: space-between;
-          margin-bottom: 2rem;
+          flex-direction: column;
+          align-items: center;
+          gap: 14px;
           
-          .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 14px;
-            padding: 1rem;
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
             
-            img {
-              width: 60px;
-              height: 60px;
-              object-fit: contain;
-              filter: grayscale(100%);
-              transition: filter 0.3s ease, transform 0.3s ease;
-              
-              &:hover {
-                filter: grayscale(0%);
-                transform: scale(1.3);
-              }
+            &:hover {
+              filter: grayscale(0%);
+              transform: scale(1.3);
             }
-            
-            span {
-              color: white;
-              font-size: 18px;
-              text-align: center;
-            }
+          }
+          
+          span {
+            color: white;
+            font-size: 18px;
+            text-align: center;
           }
         }
       }

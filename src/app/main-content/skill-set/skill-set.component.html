@@ -17,11 +17,9 @@
         </div>
         
         <div class="skills-grid">
-          <div class="skill-row" *ngFor="let rowNum of [1, 2]">
-            <div class="skill-item" *ngFor="let skill of getSkillsInRow(rowNum)">
-              <img [src]="skill.icon" [alt]="skill.name">
-              <span>{{ skill.name }}</span>
-            </div>
+          <div class="skill-item" *ngFor="let skill of skills">
+            <img [src]="skill.icon" [alt]="skill.name">
+            <span>{{ skill.name }}</span>
           </div>
         </div>
       </div>
