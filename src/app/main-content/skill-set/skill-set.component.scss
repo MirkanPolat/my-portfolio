@@ -73,7 +73,7 @@ section {
       
       .skills-grid {
         margin-top: 3rem;
-        width: 656px;
+        width: 100%;
         
         .skill-row {
           display: flex;
@@ -103,6 +103,8 @@ section {
     }
 
     .column-right {
+      align-self: flex-end;
+      
       img {
         width: 120px;
         height: auto;

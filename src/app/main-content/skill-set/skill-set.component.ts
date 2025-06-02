@@ -21,11 +21,14 @@ export class SkillSetComponent {
     { name: 'JavaScript', icon: 'assets/Design-material/img/Skill-Icons/Js.png', row: 1 },
     { name: 'TypeScript', icon: 'assets/Design-material/img/Skill-Icons/Ts.png', row: 1 },
     { name: 'Angular', icon: 'assets/Design-material/img/Skill-Icons/Angular.png', row: 1 },
+    { name: 'Bootstrap', icon: 'assets/Design-material/img/Skill-Icons/Bootstrap.png', row: 1 },
     { name: 'Firebase', icon: 'assets/Design-material/img/Skill-Icons/Firebase.png', row: 2 },
     { name: 'Git', icon: 'assets/Design-material/img/Skill-Icons/Git.png', row: 2 },
     { name: 'Rest-Api', icon: 'assets/Design-material/img/Skill-Icons/Rest-Api.png', row: 2 },
     { name: 'Scrum', icon: 'assets/Design-material/img/Skill-Icons/Scrum.png', row: 2 },
+    { name: 'GitHub', icon: 'assets/Design-material/img/Skill-Icons/GitHub.png', row: 2 },
     { name: 'Material Design', icon: 'assets/Design-material/img/Skill-Icons/Material Design.png', row: 2 }
+
   ];
 
   getSkillsInRow(rowNumber: number): Skill[] {
