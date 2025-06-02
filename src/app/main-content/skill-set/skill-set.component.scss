@@ -91,7 +91,9 @@ section {
             height: 60px;
             object-fit: contain;
             filter: grayscale(100%);
-            transition: filter 0.3s ease, transform 0.3s ease;
+            transition: filter 0.15s ease-out, transform 0.15s ease-out;
+            will-change: filter, transform;
+            cursor: pointer;
             
             &:hover {
               filter: grayscale(0%);
