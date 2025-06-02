@@ -1,0 +1,112 @@
+section {
+  background-image: url("./../../../assets/Design-material/01_Background/Design Size Relation@3x/03_Skills.png");
+  background-size: cover;
+  background-position: bottom;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    h2 {
+      font-size: 64px;
+    }
+
+    h3 {
+      font-size: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .skill-set-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column-left {
+      h3 {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        font-size: 64px;
+        color: white;
+        white-space: nowrap;
+      }
+    }
+
+    .column-middle {
+      .skill-set-content {
+        background-image: url("./../../../assets/Design-material/01_Background/Design Size Relation@3x/skill_set_text.png");
+        background-size: 100% 100%;
+        background-position: center;
+        width: 656px;
+        height: 144px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 2rem;
+
+        p {
+          margin: 0;
+          color: black;
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+      }
+      
+      .skills-grid {
+        margin-top: 3rem;
+        width: 656px;
+        
+        .skill-row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+          
+          .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            
+            img {
+              width: 60px;
+              height: 60px;
+              object-fit: contain;
+            }
+            
+            span {
+              color: white;
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .column-right {
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+}
