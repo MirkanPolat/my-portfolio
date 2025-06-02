@@ -28,7 +28,6 @@ export class SkillSetComponent {
     { name: 'Scrum', icon: 'assets/Design-material/img/Skill-Icons/Scrum.png', row: 2 },
     { name: 'GitHub', icon: 'assets/Design-material/img/Skill-Icons/GitHub.png', row: 2 },
     { name: 'Material Design', icon: 'assets/Design-material/img/Skill-Icons/Material Design.png', row: 2 }
-
   ];
 
   getSkillsInRow(rowNumber: number): Skill[] {
