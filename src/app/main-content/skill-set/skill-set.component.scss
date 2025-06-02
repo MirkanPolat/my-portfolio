@@ -114,8 +114,9 @@ section {
       align-self: flex-end;
       
       img {
-        width: 120px;
-        height: auto;
+        width: 200px;
+        height: 200px;
+        transform: rotate(8deg);
       }
     }
   }
