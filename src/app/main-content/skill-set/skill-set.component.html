@@ -9,10 +9,7 @@
       <div class="column column-middle">
         <div class="skill-set-content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-            possimus? Accusamus nemo repudiandae consequatur deserunt vel,
-            cumque ipsa magni facere, eius quam velit quaerat impedit quos vero
-            sint ipsam iure!
+            I’m passionate about creating modern, intuitive, and accessible frontend experiences. My strength lies in translating design into responsive, reliable interfaces. I embrace new tools with curiosity and strive to grow through meaningful, real-world challenges in a professional team environment.
           </p>
         </div>
         
@@ -25,7 +22,34 @@
       </div>
 
       <div class="column column-right">
-        <img src="assets/Design-material/03_Stickers/01_Skills - Peel off/Default.png" alt="Pull to peel" />
+        <div class="sticker-container" (click)="peelSticker()">
+      
+          <img 
+            class="sticker-image" 
+            [class.hidden]="stickerState !== 'default'"
+            src="assets/Design-material/03_Stickers/01_Skills - Peel off/Default.png" 
+            alt="Pull to peel" 
+          />
+          
+          <img 
+            class="sticker-image" 
+            [class.hidden]="stickerState !== 'transition'"
+            src="assets/Design-material/03_Stickers/01_Skills - Peel off/Transition.png" 
+            alt="Peeling" 
+          />
+          
+          <img 
+            class="sticker-image" 
+            [class.hidden]="stickerState !== 'transition'"
+            src="assets/Design-material/03_Stickers/01_Skills - Peel off/Final.png" 
+            alt="Peeled" 
+          />
+          
+          <div class="sticker-text" [class.hidden]="stickerState !== 'default'">
+            <span class="arrow">↙</span>
+            <span class="text">Pull to<br>peel</span>
+          </div>
+        </div>
       </div>
       
     </div>

@@ -15,6 +15,8 @@ interface Skill {
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
+  stickerState: 'default' | 'transition' | 'transition' = 'default';
+
   skills: Skill[] = [
     { name: 'HTML', icon: 'assets/Design-material/img/Skill-Icons/HTML.png', row: 1 },
     { name: 'CSS', icon: 'assets/Design-material/img/Skill-Icons/CSS.png', row: 1 },
@@ -29,6 +31,18 @@ export class SkillSetComponent {
     { name: 'GitHub', icon: 'assets/Design-material/img/Skill-Icons/GitHub.png', row: 2 },
     { name: 'Material Design', icon: 'assets/Design-material/img/Skill-Icons/Material Design.png', row: 2 }
   ];
+
+  peelSticker(): void {
+    if (this.stickerState === 'default') {
+      this.stickerState = 'transition';
+    
+      setTimeout(() => {
+        this.stickerState = 'transition';
+      }, 100);
+    } else {
+      this.stickerState = 'default';
+    }
+  }
 
   getSkillsInRow(rowNumber: number): Skill[] {
     return this.skills.filter(skill => skill.row === rowNumber);
