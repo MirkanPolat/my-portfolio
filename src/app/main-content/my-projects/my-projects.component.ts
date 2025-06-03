@@ -5,7 +5,7 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  image: string; // Neues Property für Projekt-Bild
+  image: string;
   featured?: boolean;
   badgeImage?: string;
 }
@@ -32,19 +32,19 @@ export class MyProjectsComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       featured: true,
       badgeImage: 'assets/Design-material/03_Stickers/project_imgs/featured.svg',
-      image: 'assets/Design-material/03_Stickers/project_imgs/Laptop.png'
+      image: 'assets/Design-material/03_Stickers/project_imgs/Laptop.svg'
     },
     {
       id: 'el-pollo-loco',
       title: 'El Pollo Loco',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      image: 'assets/Design-material/03_Stickers/project_imgs/El-Pollo-Loco.png' 
+      image: 'assets/Design-material/03_Stickers/project_imgs/El-Pollo-Loco.svg' 
     },
     {
       id: 'dabubble',
       title: 'DABubble',
       description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-      image: 'assets/Design-material/03_Stickers/project_imgs/DABubble.png'
+      image: 'assets/Design-material/03_Stickers/project_imgs/DABubble.svg'
     }
   ];
 }
