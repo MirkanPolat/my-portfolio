@@ -13,7 +13,7 @@
       </div>
 
       @for (project of projects; track project.id) {
-        <div class="grid-item project-box">
+        <div class="grid-item project-box" [attr.data-project-id]="project.id">
           <div class="project-image">
             
             <img [src]="project.image" [alt]="project.title" class="main-project-image">
