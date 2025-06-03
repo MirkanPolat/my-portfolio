@@ -16,9 +16,10 @@
         <div class="grid-item project-box">
           <div class="project-image">
             
+            <!-- Smart conditional: Featured = Image Badge, sonst nichts -->
             @if (project.featured) {
-              <div class="featured-badge">
-                <span>Featured Project</span>
+              <div class="featured-badge-image">
+                <img [src]="project.badgeImage" alt="Featured Project">
               </div>
             }
           </div>

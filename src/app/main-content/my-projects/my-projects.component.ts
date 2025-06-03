@@ -6,6 +6,7 @@ interface Project {
   title: string;
   description: string;
   featured?: boolean;
+  badgeImage?: string;
 }
 
 @Component({
@@ -28,7 +29,8 @@ export class MyProjectsComponent {
       id: 'join',
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      featured: true
+      featured: true,
+      badgeImage: 'assets/Design-material/03_Stickers/project_imgs/featured.svg'
     },
     {
       id: 'el-pollo-loco',
