@@ -115,7 +115,6 @@ section {
                         filter: grayscale(100%);
                         transition: filter 0.15s ease-out, transform 0.15s ease-out;
                         will-change: filter, transform;
-                        cursor: pointer;
                         
                         &:hover {
                             filter: grayscale(0%);

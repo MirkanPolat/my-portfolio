@@ -1,0 +1,121 @@
+.projects-section {
+  padding: 80px 0;
+  background-color: white;
+
+  .content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    min-height: 800px;
+  }
+
+  .grid-item {
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-box {
+    .intro-content {
+      h3 {
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+        letter-spacing: 1px;
+      }
+      
+      h2 {
+        font-size: 48px;
+        color: #000;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      
+      .decoration-line {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #ff6b35, #f7931e);
+        margin-bottom: 1.5rem;
+        border-radius: 2px;
+      }
+      
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #000;
+      }
+    }
+  }
+
+  .project-box {
+    .project-image {
+      flex: 1;
+      background-color: #f8f9fa;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 200px;
+      
+      &::before {
+        content: 'Image Placeholder';
+        color: #999;
+        font-size: 14px;
+      }
+
+      .featured-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #007bff;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+    
+    .project-info {
+      h3 {
+        font-size: 24px;
+        color: #000;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      
+      p {
+        font-size: 13px;
+        line-height: 1.4;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1.5rem;
+      min-height: auto;
+    }
+    
+    .grid-item {
+      padding: 1.5rem;
+    }
+  }
+}
