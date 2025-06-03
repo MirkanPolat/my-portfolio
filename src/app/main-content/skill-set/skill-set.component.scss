@@ -60,7 +60,7 @@ section {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 opacity: 1;
-                animation: clockwiseReveal 10s infinite;
+                animation: clockwiseReveal 5s infinite;
                 pointer-events: none;
                 z-index: 10;
                 
@@ -69,7 +69,7 @@ section {
                     height: auto;
                     max-width: 300px;
                     clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 50%);
-                    animation: clockwiseClip 10s infinite;
+                    animation: clockwiseClip 5s infinite;
                 }
             }
         }
