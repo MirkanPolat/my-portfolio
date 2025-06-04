@@ -1,27 +1,29 @@
 <section>
     <div class="content-wrapper">
-        <div class="testimonials-header">
-            <p class="subtitle">IN THEIR WORDS:</p>
-            <h2 class="title">Colleagues' Thoughts</h2>
-        </div>
-        
         <div class="testimonials-cards">
-            @for (testimonial of testimonials; track testimonial.id) {
-                <div class="testimonial-card" [attr.data-position]="testimonial.id">
-                    <div class="card-content">
-                        <p class="testimonial-text">
-                            {{ testimonial.text }}
-                        </p>
-                        <div class="author-info">
-                            <h4 class="author-name">{{ testimonial.authorName }}</h4>
-                            <p class="author-title">{{ testimonial.authorTitle }}</p>
-                            <div class="profile-link">
-                                <span>Profile</span>
+            <div class="testimonials-header">
+                <p class="subtitle">IN THEIR WORDS:</p>
+                <h2 class="title">Colleagues' Thoughts</h2>
+            </div>
+            
+            <div class="cards-container">
+                @for (testimonial of testimonials; track testimonial.id) {
+                    <div class="testimonial-card" [attr.data-position]="testimonial.id">
+                        <div class="card-content">
+                            <p class="testimonial-text">
+                                {{ testimonial.text }}
+                            </p>
+                            <div class="author-info">
+                                <h4 class="author-name">{{ testimonial.authorName }}</h4>
+                                <p class="author-title">{{ testimonial.authorTitle }}</p>
+                                <div class="profile-link">
+                                    <span>Profile</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
         </div>
     </div>
 </section>
