@@ -5,8 +5,6 @@ interface Testimonial {
   text: string;
   authorName: string;
   authorTitle: string;
-  rotation: string;
-  marginBottom: string;
 }
 
 @Component({
@@ -22,25 +20,19 @@ export class TestimonialsComponent {
       id: 'left',
       text: 'Karl really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
       authorName: 'Tobias Lange',
-      authorTitle: 'Frontend Developer',
-      rotation: 'rotate(-8deg)',
-      marginBottom: '2rem'
+      authorTitle: 'Frontend Developer'
     },
     {
       id: 'center',
       text: 'It\'s always a pleasure to work with Karl. He knows how to motivate and encourage team members to achieve the best work possible, always adding a personal brainstorm. Regarding the well-being of his team members, he was always present and ready to listen and help others, with a great sense of humor as well.',
       authorName: 'Anna Developer', 
-      authorTitle: 'Backend Developer',
-      rotation: 'rotate(2deg)',
-      marginBottom: '1rem'
+      authorTitle: 'Backend Developer'
     },
     {
       id: 'right',
       text: 'Karl is a great team colleague at DA. His positive attitude and willingness to take on challenges made a significant contribution to us achieving our goals.',
       authorName: 'Max Schmidt',
-      authorTitle: 'Project Manager', 
-      rotation: 'rotate(-5deg)',
-      marginBottom: '3rem'
+      authorTitle: 'Project Manager'
     }
   ];
 }

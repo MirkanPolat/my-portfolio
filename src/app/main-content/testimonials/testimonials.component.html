@@ -7,9 +7,7 @@
         
         <div class="testimonials-cards">
             @for (testimonial of testimonials; track testimonial.id) {
-                <div class="testimonial-card" 
-                     [style.transform]="testimonial.rotation"
-                     [style.margin-bottom]="testimonial.marginBottom">
+                <div class="testimonial-card" [attr.data-position]="testimonial.id">
                     <div class="card-content">
                         <p class="testimonial-text">
                             {{ testimonial.text }}
