@@ -71,19 +71,21 @@ section {
 
         &[data-position="left"] {
           transform: rotate(-8deg);
-          margin-bottom: 2rem;
+          margin-bottom: 7rem;
+          left: 110px;
           z-index: 3;
         }
 
         &[data-position="center"] {
           transform: rotate(2deg);
           margin-bottom: 1rem;
+          right: -52px;
           z-index: 2;
         }
 
         &[data-position="right"] {
           transform: rotate(-5deg);
-          margin-bottom: 3rem;
+          margin-bottom: 8rem;
           z-index: 1;
         }
 
