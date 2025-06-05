@@ -1,0 +1,88 @@
+<section>
+    <div class="content-wrapper">
+        <div class="left-section">
+            <div class="contact-header">
+                <span class="contact-label">CONTACT ME</span>
+                <h1>Ready to work together?</h1>
+            </div>
+            
+            <div class="description">
+                <p>Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.</p>
+                <p>Show interest in contributing to a new project, while highlighting the value and skills you can bring to the table.</p>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="contact-logo">
+                <div class="logo-circle">
+                    <span>MP</span>
+                </div>
+            </div>
+
+            <form (ngSubmit)="onSubmit()" class="contact-form">
+                <div class="form-group">
+                    <label for="name">What's your name?</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        [(ngModel)]="contactForm.name"
+                        name="name"
+                        placeholder="Your name goes here"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">What's your email?</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        [(ngModel)]="contactForm.email"
+                        name="email"
+                        placeholder="youremail@email.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">How can I help you?</label>
+                    <textarea 
+                        id="message" 
+                        [(ngModel)]="contactForm.message"
+                        name="message"
+                        placeholder="Hello Lukas, I am interested in..."
+                        rows="5"
+                        required></textarea>
+                </div>
+
+                <div class="privacy-checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="privacy" 
+                        [(ngModel)]="privacyAccepted"
+                        name="privacy"
+                        required>
+                    <label for="privacy">
+                        I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+                    </label>
+                </div>
+
+                <button type="submit" [disabled]="!isFormValid()" class="send-button">
+                    Send
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="contact-footer">
+        <div class="footer-left">
+            <div class="logo">MP</div>
+            <p>© Mirkan Polat 2024</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#" class="footer-link">Legal Notice</a>
+            <a href="#" class="footer-link">GitHub</a>
+            <a href="#" class="footer-link">LinkedIn</a>
+            <a href="#" class="footer-link">Email</a>
+        </div>
+    </footer>
+</section>
