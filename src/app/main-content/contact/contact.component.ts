@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,15 +11,50 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  http = inject(HttpClient);
+
   contactData = {
     name: '',
     email: '',
     message: '',
   };
 
+  mailTest = true; 
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit(contactForm: NgForm) {
-    if (contactForm.valid && contactForm.submitted) {
-      console.log('Form submitted:', this.contactData);
+    if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
+      // PRODUCTION MODE: Email versenden
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            console.log('Email successfully sent!', response);
+            contactForm.resetForm();
+            this.contactData = { name: '', email: '', message: '' };
+          },
+          error: (error) => {
+            console.error('Error sending email:', error);
+          },
+          complete: () => console.info('Send post complete'),
+        });
+    } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
+      // TEST MODE: Nur Console Log
+      console.log('TEST MODE - Form Data:', this.contactData);
+      contactForm.resetForm();
+      this.contactData = { name: '', email: '', message: '' }; 
+    } else if (contactForm.submitted && !contactForm.form.valid) {
+      // VALIDATION ERROR
+      console.log('Form is invalid - please check all fields');
     }
   }
 }
