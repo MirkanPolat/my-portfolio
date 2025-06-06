@@ -1,43 +1,24 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  contactForm = {
+  contactData = {
     name: '',
     email: '',
-    message: ''
+    message: '',
   };
 
-  privacyAccepted = false;
-
-  onSubmit() {
-    if (this.isFormValid()) {
-      console.log('Form submitted:', this.contactForm);
-      this.resetForm();
+  onSubmit(contactForm: NgForm) {
+    if (contactForm.valid && contactForm.submitted) {
+      console.log('Form submitted:', this.contactData);
     }
-  }
-
-  isFormValid(): boolean {
-    return this.contactForm.name.trim() !== '' && 
-           this.contactForm.email.trim() !== '' && 
-           this.contactForm.message.trim() !== '' && 
-           this.privacyAccepted;
-  }
-
-  resetForm() {
-    this.contactForm = {
-      name: '',
-      email: '',
-      message: ''
-    };
-    this.privacyAccepted = false;
   }
 }

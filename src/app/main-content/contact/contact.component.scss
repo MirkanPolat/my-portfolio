@@ -212,6 +212,13 @@ section {
   }
 }
 
+.error-message {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
