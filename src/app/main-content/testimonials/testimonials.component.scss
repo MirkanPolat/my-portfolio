@@ -67,7 +67,6 @@ section {
         box-sizing: border-box;
         overflow: hidden;
         transition: all 0.3s ease;
-        cursor: pointer;
 
         &:hover {
           z-index: 10 !important;
@@ -156,16 +155,34 @@ section {
                 display: flex;
                 align-items: center;
                 gap: 4px;
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+                transition: all 0.2s ease;
 
                 .linkedin-icon {
                   width: 20px;
                   height: 20px;
+                  transition: all 0.2s ease; 
                 }
 
                 span {
                   font-size: 18px;
                   font-weight: 500;
-                  cursor: pointer;
+                  transition: color 0.2s ease;
+                }
+
+                &:hover {
+                  color: white; 
+                
+                  .linkedin-icon {
+                    transform: scale(1.1);
+                    filter: brightness(0) invert(1); 
+                  }
+
+                  span {
+                    color: white;
+                  }
                 }
               }
             }

@@ -5,6 +5,7 @@ interface Testimonial {
   text: string;
   authorName: string;
   authorTitle: string;
+  linkedinUrl: string; // Neue Property hinzufügen
 }
 
 @Component({
@@ -18,21 +19,24 @@ export class TestimonialsComponent {
   testimonials: Testimonial[] = [
     {
       id: 'left',
-      text: 'Karl really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
-      authorName: 'Tobias Lange',
-      authorTitle: 'Frontend Developer'
+      text: 'Es hat mir viel Spaß gemacht mit Mirkan am Projekt Kochwelt zu arbeiten. Er war sehr Engagiert und fokussiert.  Seine Ideen waren eine großes Hilfe für das Team. Ich würde auf jeden Fall wieder mit Ihm an einem Projekt arbeiten. Vielen Danke noch einmal.',
+      authorName: 'Markus Fischer',
+      authorTitle: 'Frontend Developer',
+      linkedinUrl: 'https://www.linkedin.com/in/markus-fischer/'
     },
     {
       id: 'center',
-      text: 'It\'s always a pleasure to work with Karl. He knows how to motivate and encourage team members to achieve the best work possible, always adding a personal brainstorm. Regarding the well-being of his team members, he was always present and ready to listen and help others, with a great sense of humor as well.',
-      authorName: 'Anna Developer', 
-      authorTitle: 'Backend Developer'
+      text: 'Mirkan beeindruckt mich auch nach Monaten noch mit seiner Energie und Ausdauer. In unserem Projekt war er jederzeit bereit, mitanzupacken, sogar spät abends, wenn’s mal stressig wurde. Dabei blieb er immer positiv, offen und hat mit seiner Art das Teamgefühl gestärkt',
+      authorName: 'Simon Fuchs', 
+      authorTitle: 'Frontend Developer',
+      linkedinUrl: 'https://www.linkedin.com/in/simon-fuchs/'
     },
     {
       id: 'right',
       text: 'Karl is a great team colleague at DA. His positive attitude and willingness to take on challenges made a significant contribution to us achieving our goals.',
       authorName: 'Max Schmidt',
-      authorTitle: 'Project Manager'
+      authorTitle: 'Project Manager',
+      linkedinUrl: 'https://www.linkedin.com/in/max-schmidt/'
     }
   ];
 }
