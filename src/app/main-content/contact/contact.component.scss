@@ -1,5 +1,5 @@
 section {
-  background: url("/assets/Design-material/01_Background/Img Original Size/Footer.png")
+  background: url("/assets/Design-material/01_Background/Img Original Size/Footer_cropped.png")
     center top / cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@ section {
       width: 100%;
       background: transparent;
       border: none;
-      border-bottom: 1px solid #F7C518;
+      border-bottom: 1px solid #f7c518;
       color: white;
       font-size: 18px;
       padding-bottom: 14px;
@@ -179,7 +179,7 @@ section {
       border-color: #ffa500;
 
       &::after {
-        content: '✓';
+        content: "✓";
         position: absolute;
         top: 50%;
         left: 50%;
