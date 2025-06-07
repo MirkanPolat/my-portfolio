@@ -34,11 +34,52 @@ header {
     a {
       color: white;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
       transition: color 0.3s;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150%;
+        height: 200%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      &:nth-child(1)::after {
+        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/1.png');
+      }
+
+      &:nth-child(2)::after {
+        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/2.png');
+        width: 220%;
+        height: 270%;
+      }
+
+      &:nth-child(3)::after {
+        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/3.png');
+      }
+
+      &:nth-child(4)::after {
+        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/Toggle.png');
+      }
 
       &:hover {
         color: #5988FF;
+
+        &::after {
+          opacity: 1;
+        }
       }
     }
   }
