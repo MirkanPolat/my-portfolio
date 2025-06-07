@@ -87,6 +87,20 @@ section {
       font-size: 4rem;
       margin-bottom: 1rem;
       display: inline-block;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 114%;
+        height: 22px;
+        background-image: url('/assets/Design-material/00_Hand-drawn lines/01_About me/Color option 3.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideInOut 4s ease-in-out infinite;
+      }
     }
 
     p {
@@ -120,5 +134,17 @@ section {
       display: flex;
       justify-content: flex-end;
     }
+  }
+}
+
+@keyframes slideInOut {
+  0%, 25% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  50%, 75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
 }
