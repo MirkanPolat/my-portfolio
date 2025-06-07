@@ -20,6 +20,7 @@ export class ContactComponent {
   };
 
   mailTest = true; 
+  privacyAccepted = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -32,7 +33,16 @@ export class ContactComponent {
     },
   };
 
+  isFormValid(contactForm: NgForm): boolean {
+    return contactForm.form.valid && this.privacyAccepted;
+  }
+
   onSubmit(contactForm: NgForm) {
+    if (!this.isFormValid(contactForm)) {
+      alert('Please fill out the form correctly and accept the privacy policy');
+      return;
+    }
+
     if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
       // PRODUCTION MODE: Email versenden
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -41,6 +51,7 @@ export class ContactComponent {
             console.log('Email successfully sent!', response);
             contactForm.resetForm();
             this.contactData = { name: '', email: '', message: '' };
+            this.privacyAccepted = false;
           },
           error: (error) => {
             console.error('Error sending email:', error);
@@ -52,9 +63,7 @@ export class ContactComponent {
       console.log('TEST MODE - Form Data:', this.contactData);
       contactForm.resetForm();
       this.contactData = { name: '', email: '', message: '' }; 
-    } else if (contactForm.submitted && !contactForm.form.valid) {
-      // VALIDATION ERROR
-      console.log('Form is invalid - please check all fields');
+      this.privacyAccepted = false;
     }
   }
 }

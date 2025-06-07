@@ -151,6 +151,21 @@ section {
     align-self: flex-end;
     width: 154px;
     height: 40px;
+
+    &.disabled {
+      background-color: #666;
+      border-color: #666;
+      color: #999;
+      cursor: not-allowed;
+      box-shadow: none;
+
+      &:hover {
+        background-color: #666;
+        border-color: #666;
+        transform: none;
+        box-shadow: none;
+      }
+    }
   }
 }
 
