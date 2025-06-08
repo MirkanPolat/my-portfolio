@@ -1,0 +1,216 @@
+section {
+  background-image: url('/assets/Design-material/01_Background/Img Original Size/Note book paper.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+
+  .content-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 120px 62px 40px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .go-back-container {
+    margin-bottom: 40px;
+
+    .go-back-btn {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      color: #F87B57;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        color: #ff6b3d;
+        transform: translateX(-5px);
+      }
+    }
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    flex-grow: 1;
+    align-items: start;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #000;
+
+    .project-title {
+      h1 {
+        font-size: 64px;
+        font-weight: 700;
+        color: #000;
+        margin: 0;
+        position: relative;
+        display: inline-block;
+      }
+    }
+
+    .description-section,
+    .implementation-section {
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000;
+        margin: 0;
+      }
+    }
+
+    .duration-section {
+      p {
+        font-size: 16px;
+        color: #000;
+        margin: 0;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .technologies-section {
+      .tech-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .tech-item {
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 8px 16px;
+          
+          span {
+            font-size: 14px;
+            color: #000;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-end;
+
+    .project-image-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+
+      .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .featured-badge {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+       
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 20px;
+
+      .my-button {
+        border: 2px solid #000;
+        color: #000;
+        box-shadow: 3px 5px 0 #000;
+
+        &:hover {
+          background-color: #F87B57;
+          color: white;
+          border-color: #000;
+          transform: translateY(4px);
+          box-shadow: 0 1px 0 #000;
+        }
+      }
+    }
+
+    .next-project {
+      .next-project-btn {
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          color: #F87B57;
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    .content-wrapper {
+      padding: 100px 20px 20px;
+    }
+
+    .project-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .left-column .project-title h1 {
+      font-size: 48px;
+    }
+
+    .right-column {
+      align-items: center;
+    }
+  }
+}

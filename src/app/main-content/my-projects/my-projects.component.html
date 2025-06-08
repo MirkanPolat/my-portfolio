@@ -17,7 +17,9 @@
             
             <img [src]="project.image" [alt]="project.title" class="main-project-image">
             
-            <button class="my-button">Project Details</button>
+            <button class="my-button" (click)="openProjectDetails(project.id)">
+              Project Details
+            </button>
         
             @if (project.featured) {
               <div class="featured-badge-image">
