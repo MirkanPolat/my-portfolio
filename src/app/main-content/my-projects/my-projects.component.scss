@@ -26,7 +26,7 @@ section {
   .intro-box {
     .intro-content {
       h3 {
-        font-size: 16px;
+        font-size: 18px;
         color: #000;
         margin-bottom: 0.5rem;
         font-weight: normal;
@@ -37,7 +37,22 @@ section {
         font-size: 48px;
         color: #000;
         margin-bottom: 4rem;
-        font-weight: bold;
+        font-weight: 700;
+        display: inline-block;
+        position: relative;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -23px;
+          left: -8px;
+          width: 103%;
+          height: 22px;
+          background-image: url('/assets/Design-material/00_Hand-drawn lines/03_Portfolio/Color option 3.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          animation: slideInOut 6s ease-in-out infinite;
+        }
       }
       
       p {
@@ -107,6 +122,18 @@ section {
   }
   50% {
     transform: translateY(-10.5px);
+  }
+}
+
+@keyframes slideInOut {
+  0%, 20% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  30%, 70% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  80%, 100% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
 }
 
