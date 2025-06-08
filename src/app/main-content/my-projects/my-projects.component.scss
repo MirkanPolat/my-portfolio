@@ -81,7 +81,7 @@ section {
         transition: transform 0.3s ease;
       }
       
-      .project-details-btn {
+      .my-button {
         position: absolute;
         bottom: 15px;
         right: 15px;
@@ -108,7 +108,7 @@ section {
           transform: scale(1.05);
         }
         
-        .project-details-btn {
+        .my-button {
           opacity: 1;
           transform: translateY(0);
         }
