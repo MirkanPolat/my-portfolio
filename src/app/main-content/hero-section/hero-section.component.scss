@@ -7,6 +7,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 62px;
 
     > .hero-content {
         display: flex;
@@ -41,7 +42,6 @@ section {
             
             .hello-button {
                 background-color: transparent;
-               
                 border: 1px solid white;
                 border-radius: 50px;
                 padding: 10px 30px;
@@ -99,8 +99,6 @@ section {
                 flex-direction: column;
                 align-items: flex-start;
 
-                
-
                 > .title-bottom {     
                     margin-left: 143px;
                 }
@@ -149,10 +147,10 @@ section {
     }
 
     .contact-button{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
     }
     
     .hero-bottom {
@@ -271,6 +269,440 @@ section {
                 transform: scale(1) rotate(0deg);
                 filter: drop-shadow(0 0 10px rgba(248, 123, 87, 0.8));
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    section {
+        h1 {
+            font-size: clamp(110px, 12.5vw, 128px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(130px, 14vw, 143px);
+            }
+            
+            .polaroid {
+                top: -111px;
+                right: 35px;
+                transform: rotate(5deg);
+                
+                .profile-image {
+                    width: 203.57px;
+                    height: 244px;
+                }
+                
+                .name-tag {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        h1 {
+            font-size: clamp(105px, 11.7vw, 110px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(125px, 13.9vw, 130px);
+            }
+            
+            .polaroid {
+                top: -135px;
+                right: 32px;
+                transform: rotate(5deg);
+                
+                .profile-image {
+                    width: 200px;
+                    height: 240px;
+                }
+                
+                .name-tag {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    section {
+        h1 {
+            font-size: clamp(105px, 12.4vw, 110px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(120px, 14.1vw, 130px);
+            }
+            
+            .polaroid {
+                top: -135px;
+                right: 15px;
+                transform: rotate(5deg);
+                
+                .profile-image {
+                    width: 203.57px;
+                    height: 244px;
+                }
+                
+                .name-tag {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    section {
+        h1 {
+            font-size: clamp(102px, 12.3vw, 105px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(118px, 14.2vw, 125px);
+            }
+            
+            .polaroid {
+                top: -130px;
+                right: 10px;
+                transform: rotate(5deg);
+                
+                .profile-image {
+                    width: 200px;
+                    height: 240px;
+                }
+                
+                .name-tag {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 0 50px;
+        
+        h1 {
+            font-size: clamp(100px, 12.5vw, 105px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(115px, 14.4vw, 125px);
+            }
+            
+            .polaroid {
+                top: -125px;
+                right: 28px;
+                transform: rotate(4.5deg);
+                
+                .profile-image {
+                    width: 195px;
+                    height: 234px;
+                }
+                
+                .name-tag {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 0 40px;
+        
+        h1 {
+            font-size: clamp(95px, 12.4vw, 100px);
+        }
+        
+        > .hero-content {
+            .hero-middle > .title-container {
+                > .title-bottom {
+                    margin-left: clamp(110px, 14.3vw, 115px);
+                }
+                
+                .polaroid {
+                    top: -128px;
+                    right: 25px;
+                    transform: rotate(4deg);
+                    
+                    .profile-image {
+                        width: 190px;
+                        height: 228px;
+                    }
+                    
+                    .name-tag {
+                        font-size: 21px;
+                    }
+                }
+            }
+            
+            .hello-button {
+                font-size: clamp(16px, 2.3vw, 18px);
+            }
+        }
+        
+        .contact-button .my-button {
+            font-size: clamp(14px, 2.1vw, 16px);
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    section {
+        h1 {
+            font-size: clamp(98px, 12.2vw, 102px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(115px, 14.3vw, 120px);
+            }
+            
+            .polaroid {
+                top: -128px;
+                right: 5px;
+                transform: rotate(4.5deg);
+                
+                .profile-image {
+                    width: 195px;
+                    height: 234px;
+                }
+                
+                .name-tag {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    section {
+        padding: 0 35px;
+        
+        h1 {
+            font-size: clamp(85px, 13.1vw, 95px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(100px, 15.4vw, 110px);
+            }
+            
+            .polaroid {
+                top: -95px;
+                right: 20px;
+                transform: rotate(4deg);
+                
+                .profile-image {
+                    width: 180px;
+                    height: 216px;
+                }
+                
+                .name-tag {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 0 30px;
+        
+        h1 {
+            font-size: clamp(75px, 12.5vw, 85px);
+        }
+        
+        > .hero-content .hero-middle > .title-container {
+            > .title-bottom {
+                margin-left: clamp(90px, 15vw, 100px);
+            }
+            
+            .polaroid {
+                top: -85px;
+                right: 15px;
+                transform: rotate(3deg);
+                
+                .profile-image {
+                    width: 170px;
+                    height: 204px;
+                }
+                
+                .name-tag {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 0 25px;
+        height: 100svh;
+        
+        h1 {
+            font-size: clamp(65px, 13.5vw, 75px);
+        }
+        
+        > .hero-content {
+            margin-top: 80px;
+            
+            .hero-top {
+                .hello-button {
+                    padding: 8px 25px;
+                    font-size: 16px;
+                    
+                    &:hover {
+                        padding: 8px 30px;
+                    }
+                }
+                
+                .button-container:hover .hand-icon {
+                    transform: translateX(130px) rotate(360deg);
+                }
+            }
+            
+            .hero-middle > .title-container {
+                > .title-bottom {
+                    margin-left: clamp(70px, 14.6vw, 90px);
+                }
+                
+                .polaroid {
+                    top: -75px;
+                    right: 10px;
+                    transform: rotate(3deg);
+                    
+                    .profile-image {
+                        width: 150px;
+                        height: 180px;
+                    }
+                    
+                    .name-tag {
+                        font-size: 18px;
+                        bottom: 6px;
+                    }
+                }
+            }
+        }
+        
+        .contact-button {
+            margin-top: 25px;
+        }
+        
+        .hero-bottom > .social-links {
+            gap: 15px;
+            
+            a {
+                width: 35px;
+                height: 35px;
+                
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    section {
+        padding: 0 20px;
+        
+        h1 {
+            font-size: clamp(55px, 14.5vw, 65px);
+        }
+        
+        > .hero-content {
+            margin-top: 60px;
+            
+            .hero-middle > .title-container {
+                > .title-bottom {
+                    margin-left: clamp(50px, 13.2vw, 70px);
+                }
+                
+                .polaroid {
+                    top: -60px;
+                    right: 5px;
+                    transform: rotate(2deg);
+                    
+                    .profile-image {
+                        width: 130px;
+                        height: 156px;
+                    }
+                    
+                    .name-tag {
+                        font-size: 16px;
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    section {
+        padding: 0 15px;
+        
+        h1 {
+            font-size: clamp(48px, 15vw, 55px);
+        }
+        
+        > .hero-content {
+            margin-top: 40px;
+            
+            .hero-top .hello-button {
+                padding: 6px 20px;
+                font-size: 14px;
+                
+                &:hover {
+                    padding: 6px 25px;
+                }
+            }
+            
+            .hero-middle > .title-container {
+                > .title-bottom {
+                    margin-left: clamp(30px, 9.4vw, 50px);
+                }
+                
+                .polaroid {
+                    top: -50px;
+                    right: 0px;
+                    transform: rotate(1deg);
+                    
+                    .profile-image {
+                        width: 110px;
+                        height: 132px;
+                    }
+                    
+                    .name-tag {
+                        font-size: 14px;
+                        bottom: 4px;
+                    }
+                }
+            }
+        }
+        
+        .contact-button {
+            margin-top: 20px;
         }
     }
 }
