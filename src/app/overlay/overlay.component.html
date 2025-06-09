@@ -41,7 +41,7 @@
         <div class="technologies-section">
           <div class="tech-icons">
             <div class="tech-item" *ngFor="let tech of project.technologies">
-              <span>{{ tech }}</span>
+              <img [src]="tech" [alt]="'Technology icon'" class="tech-icon">
             </div>
           </div>
         </div>
