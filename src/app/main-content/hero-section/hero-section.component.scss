@@ -229,25 +229,24 @@ section {
                         filter: drop-shadow(0 0 10px rgba(248, 123, 87, 0.8));
                     }
                 }
+
+                &.hovered {
+                    transform: scale(0.8) translateY(-10px) rotate(-5deg);
+                    color: transparent;
+                    text-shadow: 0 0 20px rgba(248, 123, 87, 0.5);
+
+                    &::before {
+                        opacity: 1;
+                        transform: scale(1) rotate(0deg);
+                        filter: drop-shadow(0 0 10px rgba(248, 123, 87, 0.8));
+                    }
+                }
             }
         }
     }
 
-    .title-top.animated-title .letter {
-        &:nth-child(n+2) {
-            &::before {
-                text-transform: uppercase;
-                transform: scale(0.5) rotate(10deg); 
-            }
-            
-            &:hover {
-                transform: scale(0.8) translateY(-10px) rotate(-5deg); 
-                
-                &::before {
-                    transform: scale(1) rotate(0deg);
-                }
-            }
-        }
+    .title-top.animated-title .letter:nth-child(n+2)::before {
+        text-transform: uppercase;
     }
 
     .title-bottom.animated-title .letter {

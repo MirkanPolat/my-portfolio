@@ -11,4 +11,16 @@ import { CommonModule } from '@angular/common';
 export class HeroSectionComponent {
   frontendLetters: string[] = 'Frontend'.split('');
   developerLetters: string[] = 'DEVELOPER'.split('');
+
+  ngAfterViewInit(): void {
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach((letter) => {
+      letter.addEventListener('mouseenter', () => {
+        letter.classList.add('hovered');
+        setTimeout(() => {
+          letter.classList.remove('hovered');
+        }, 400);
+      });
+    });
+  }
 }
