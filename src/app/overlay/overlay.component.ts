@@ -32,7 +32,17 @@ export class OverlayComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/']).then(() => {
+      setTimeout(() => {
+        const projectsElement = document.getElementById('projects');
+        if (projectsElement) {
+          projectsElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }
+      }, 100);
+    });
   }
 
   navigateToProject(direction: 'prev' | 'next'): void {
