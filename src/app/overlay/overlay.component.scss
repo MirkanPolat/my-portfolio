@@ -33,18 +33,21 @@ section {
       align-items: center;
       gap: 10px;
       cursor: pointer;
-      color: #F87B57;
       font-size: 18px;
       font-weight: 500;
       transition: all 0.3s ease;
 
       img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
+      }
+
+      span {
+        color: #000;
       }
 
       &:hover {
-        color: #ff6b3d;
+        color: #F87B57;  // Hover-Effekt bleibt orange
         transform: translateX(-5px);
       }
     }
@@ -75,6 +78,20 @@ section {
         margin: 0;
         position: relative;
         display: inline-block;
+        margin-bottom: 22px;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -17px;
+          left: 0;
+          width: 100%;
+          height: 22px;
+          background-image: url('/assets/Design-material/00_Hand-drawn lines/01_About me/Color option 3.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          animation: slideInOut 6s ease-in-out infinite;
+        }
       }
     }
 
@@ -96,6 +113,13 @@ section {
     }
 
     .duration-section {
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 15px;
+      }
+
       p {
         font-size: 16px;
         color: #000;
@@ -103,6 +127,7 @@ section {
 
         strong {
           font-weight: 700;
+          color: #000;  // Hinzugefügt für "Duration:" Label
         }
       }
     }
@@ -188,8 +213,8 @@ section {
         transition: all 0.3s ease;
 
         img {
-          width: 20px;
-          height: 20px;
+          width: 24px;
+          height: 24px;
         }
 
         &:hover {
@@ -219,5 +244,17 @@ section {
     .right-column {
       align-items: center;
     }
+  }
+}
+
+@keyframes slideInOut {
+  0%, 20% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  30%, 70% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  80%, 100% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
 }
