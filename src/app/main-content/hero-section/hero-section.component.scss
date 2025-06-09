@@ -191,6 +191,103 @@ section {
     h1 {
         font-size: 128px;
         font-weight: 700;
+        
+        &.animated-title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            
+            .letter {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                color: white;
+                transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                animation: slideIn 1s ease-out forwards;
+                opacity: 0;
+                transform: translateY(30px);
+                
+                &::before {
+                    content: attr(data-letter);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #F87B57;
+                    opacity: 0;
+                    transform: scale(0.5) rotate(10deg);
+                    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+                
+                &:hover {
+                    transform: scale(0.8) translateY(-10px) rotate(-5deg);
+                    color: transparent;
+                    text-shadow: 0 0 20px rgba(248, 123, 87, 0.5);
+                    
+                    &::before {
+                        opacity: 1;
+                        transform: scale(1) rotate(0deg);
+                        filter: drop-shadow(0 0 10px rgba(248, 123, 87, 0.8));
+                    }
+                }
+            }
+        }
+    }
+
+    .title-top.animated-title .letter {
+        &:nth-child(n+2) {
+            &::before {
+                text-transform: uppercase;
+                transform: scale(1.2) rotate(-10deg);
+            }
+            
+            &:hover {
+                transform: scale(1.1) translateY(-15px) rotate(5deg);
+                
+                &::before {
+                    transform: scale(1.5) rotate(0deg);
+                }
+            }
+        }
+    }
+
+    .title-bottom.animated-title .letter {
+        &::before {
+            content: attr(data-letter);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #F87B57;
+            opacity: 0;
+            transform: scale(0.5) rotate(10deg);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        &:hover {
+            transform: scale(0.8) translateY(-10px) rotate(-5deg);
+            color: transparent;
+            text-shadow: 0 0 20px rgba(248, 123, 87, 0.5);
+            
+            &::before {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 10px rgba(248, 123, 87, 0.8));
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-5px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
