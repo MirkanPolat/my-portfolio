@@ -237,14 +237,14 @@ section {
         &:nth-child(n+2) {
             &::before {
                 text-transform: uppercase;
-                transform: scale(1.2) rotate(-10deg);
+                transform: scale(0.5) rotate(10deg); 
             }
             
             &:hover {
-                transform: scale(1.1) translateY(-15px) rotate(5deg);
+                transform: scale(0.8) translateY(-10px) rotate(-5deg); 
                 
                 &::before {
-                    transform: scale(1.5) rotate(0deg);
+                    transform: scale(1) rotate(0deg);
                 }
             }
         }
