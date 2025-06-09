@@ -28,12 +28,11 @@ export class ProjectService {
       implementationDetails: 'This project was implemented using Angular 17 with standalone components. The backend utilizes Firebase for real-time data synchronization and user authentication. The drag-and-drop functionality was built with Angular CDK.',
       duration: '3 weeks',
       technologies: [
+        'assets/Design-material/img/Skill-Icons/CSS.svg',
+        'assets/Design-material/img/Skill-Icons/HTML.svg',
+        'assets/Design-material/img/Skill-Icons/Firebase.svg',
         'assets/Design-material/img/Skill-Icons/Angular.svg',
         'assets/Design-material/img/Skill-Icons/Ts.svg',
-        'assets/Design-material/img/Skill-Icons/Firebase.svg',
-        'assets/Design-material/img/Skill-Icons/HTML.svg',
-        'assets/Design-material/img/Skill-Icons/CSS.svg',
-        'assets/Design-material/img/Skill-Icons/Js.svg'
       ]
     },
     {
@@ -56,12 +55,12 @@ export class ProjectService {
       image: 'assets/Design-material/03_Stickers/project_imgs/DABubble.svg',
       implementationDetails: 'Developed as a comprehensive team communication platform using Angular and Firebase. Features include real-time messaging, channel management, file sharing, and user presence indicators. The app uses RxJS for reactive programming patterns.',
       duration: '4 weeks',
-      technologies: [
+      technologies:  [
+        'assets/Design-material/img/Skill-Icons/CSS.svg',
+        'assets/Design-material/img/Skill-Icons/HTML.svg',
+        'assets/Design-material/img/Skill-Icons/Firebase.svg',
         'assets/Design-material/img/Skill-Icons/Angular.svg',
         'assets/Design-material/img/Skill-Icons/Ts.svg',
-        'assets/Design-material/img/Skill-Icons/Firebase.svg',
-        'assets/Design-material/img/Skill-Icons/HTML.svg',
-        'assets/Design-material/img/Skill-Icons/CSS.svg'
       ]
     }
   ];
