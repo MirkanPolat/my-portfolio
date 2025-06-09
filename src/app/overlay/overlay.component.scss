@@ -8,12 +8,16 @@ section {
   width: 100vw;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 
   .content-wrapper {
     max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     padding: 120px 62px 40px;
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -52,6 +56,9 @@ section {
     gap: 80px;
     flex-grow: 1;
     align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .left-column {

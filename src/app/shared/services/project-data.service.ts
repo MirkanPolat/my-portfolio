@@ -17,7 +17,7 @@ export interface Project {
   providedIn: 'root'
 })
 export class ProjectService {
-  private projects: Project[] = [
+  private projects: Project[] = [ 
     {
       id: 'join',
       title: 'Join',
