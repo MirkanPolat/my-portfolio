@@ -10,6 +10,7 @@ import { ProjectService, Project } from '../shared/services/project-data.service
   templateUrl: './overlay.component.html',
   styleUrl: './overlay.component.scss'
 })
+
 export class OverlayComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
