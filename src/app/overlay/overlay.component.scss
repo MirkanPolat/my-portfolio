@@ -47,7 +47,7 @@ section {
       }
 
       &:hover {
-        color: #F87B57;  // Hover-Effekt bleibt orange
+        color: #F87B57;
         transform: translateX(-5px);
       }
     }
@@ -126,7 +126,7 @@ section {
 
         strong {
           font-weight: 700;
-          color: #000;  // Hinzugefügt für "Duration:" Label
+          color: #000;
         }
       }
     }
@@ -142,11 +142,18 @@ section {
           display: flex;
           align-items: center;
           justify-content: center;
+          gap: 5px;
           
           .tech-icon {
             width: 24px;
             height: 24px;
             object-fit: contain;
+          }
+          
+          .tech-name {
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
           }
         }
       }

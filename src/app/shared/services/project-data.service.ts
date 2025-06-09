@@ -7,10 +7,9 @@ export interface Project {
   image: string;
   featured?: boolean;
   badgeImage?: string;
-  // Zusätzliche Properties nur für die Overlay-Ansicht
   implementationDetails?: string;
   duration?: string;
-  technologies?: string[]; // Array für die Tech-Icons
+  technologies?: { icon: string; name: string }[]; // Geändert zu Objekten
 }
 
 @Injectable({
@@ -28,11 +27,11 @@ export class ProjectService {
       implementationDetails: 'This project was implemented using Angular 17 with standalone components. The backend utilizes Firebase for real-time data synchronization and user authentication. The drag-and-drop functionality was built with Angular CDK.',
       duration: '3 weeks',
       technologies: [
-        'assets/Design-material/img/Skill-Icons/CSS.svg',
-        'assets/Design-material/img/Skill-Icons/HTML.svg',
-        'assets/Design-material/img/Skill-Icons/Firebase.svg',
-        'assets/Design-material/img/Skill-Icons/Angular.svg',
-        'assets/Design-material/img/Skill-Icons/Ts.svg',
+        { icon: 'assets/Design-material/img/Skill-Icons/CSS.svg', name: 'CSS' },
+        { icon: 'assets/Design-material/img/Skill-Icons/HTML.svg', name: 'HTML' },
+        { icon: 'assets/Design-material/img/Skill-Icons/Firebase.svg', name: 'Firebase' },
+        { icon: 'assets/Design-material/img/Skill-Icons/Angular.svg', name: 'Angular' },
+        { icon: 'assets/Design-material/img/Skill-Icons/Ts.svg', name: 'TypeScript' }
       ]
     },
     {
@@ -43,9 +42,9 @@ export class ProjectService {
       implementationDetails: 'Built entirely with vanilla JavaScript using object-oriented programming principles. The game engine uses HTML5 Canvas for rendering and handles collision detection, animations, and game state management.',
       duration: '3 weeks',
       technologies: [
-        'assets/Design-material/img/Skill-Icons/Js.svg',
-        'assets/Design-material/img/Skill-Icons/HTML.svg',
-        'assets/Design-material/img/Skill-Icons/CSS.svg'
+        { icon: 'assets/Design-material/img/Skill-Icons/Js.svg', name: 'JavaScript' },
+        { icon: 'assets/Design-material/img/Skill-Icons/HTML.svg', name: 'HTML' },
+        { icon: 'assets/Design-material/img/Skill-Icons/CSS.svg', name: 'CSS' }
       ]
     },
     {
@@ -55,12 +54,12 @@ export class ProjectService {
       image: 'assets/Design-material/03_Stickers/project_imgs/DABubble.svg',
       implementationDetails: 'Developed as a comprehensive team communication platform using Angular and Firebase. Features include real-time messaging, channel management, file sharing, and user presence indicators. The app uses RxJS for reactive programming patterns.',
       duration: '4 weeks',
-      technologies:  [
-        'assets/Design-material/img/Skill-Icons/CSS.svg',
-        'assets/Design-material/img/Skill-Icons/HTML.svg',
-        'assets/Design-material/img/Skill-Icons/Firebase.svg',
-        'assets/Design-material/img/Skill-Icons/Angular.svg',
-        'assets/Design-material/img/Skill-Icons/Ts.svg',
+      technologies: [
+        { icon: 'assets/Design-material/img/Skill-Icons/CSS.svg', name: 'CSS' },
+        { icon: 'assets/Design-material/img/Skill-Icons/HTML.svg', name: 'HTML' },
+        { icon: 'assets/Design-material/img/Skill-Icons/Firebase.svg', name: 'Firebase' },
+        { icon: 'assets/Design-material/img/Skill-Icons/Angular.svg', name: 'Angular' },
+        { icon: 'assets/Design-material/img/Skill-Icons/Ts.svg', name: 'TypeScript' }
       ]
     }
   ];
