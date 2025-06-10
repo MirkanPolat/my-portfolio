@@ -18,12 +18,6 @@
                           [attr.data-letter]="letter.toLowerCase()"
                           [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
                 </h1>
-                <div class="polaroid">
-                    <div class="profile-image">
-                        <img src="assets/Design-material/img/me/me-polaroid(3).png" alt="Profile image">
-                    </div>
-                    <p class="name-tag">Mr. Polat</p>
-                </div>
                 <h1 class="title-bottom animated-title">
                     <span class="letter" 
                           *ngFor="let letter of developerLetters; let i = index" 
@@ -32,6 +26,12 @@
                 </h1>
                 <div class="contact-button">
                     <button class="my-button">Get in Touch</button>
+                </div>
+                <div class="polaroid">
+                    <div class="profile-image">
+                        <img src="assets/Design-material/img/me/me-polaroid(3).png" alt="Profile image">
+                    </div>
+                    <p class="name-tag">Mr. Polat</p>
                 </div>
             </div>
         </div>

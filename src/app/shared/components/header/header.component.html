@@ -4,14 +4,61 @@
       <img src="assets/Design-material/00_Hand-drawn lines/00_Header/M_4.png" alt="Logo">
     </div>
     
-    <nav>
+    <nav class="desktop-nav">
       <a href="#about">About me</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      
+      <div class="desktop-language-toggle">
+        <span class="lang-option active">EN</span>
+        <div class="toggle-switch">
+          <div class="toggle-slider"></div>
+        </div>
+        <span class="lang-option">DE</span>
+      </div>
     </nav>
     
-    <div class="language-toggle">
+    <div class="burger-menu" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+    </div>
+  </div>
+
+  <div class="mobile-menu-overlay" [class.active]="isMenuOpen" (click)="closeMenu()">
+    <div class="mobile-menu" (click)="$event.stopPropagation()">
+      <div class="close-button" (click)="closeMenu()">
+        <div class="close-line"></div>
+        <div class="close-line"></div>
+      </div>
+      
+      <nav class="mobile-nav">
+        <a href="#about" (click)="closeMenu()">About me</a>
+        <a href="#skills" (click)="closeMenu()">Skills</a>
+        <a href="#projects" (click)="closeMenu()">Projects</a>
+        <a href="#contact" (click)="closeMenu()">Contact</a>
+      </nav>
+      
+      <div class="language-switch">
+        <span class="lang-option active">EN</span>
+        <div class="toggle-switch">
+          <div class="toggle-slider"></div>
+        </div>
+        <span class="lang-option">DE</span>
+      </div>
+      
+      <div class="mobile-social-links">
+        <a href="#" class="social-icon">
+          <img src="assets/Design-material/img/contact-icons/LinkedIn.svg" alt="LinkedIn">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="assets/Design-material/img/contact-icons/Github.svg" alt="GitHub">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="assets/Design-material/img/contact-icons/Mail.svg" alt="Email">
+        </a>
+      </div>
     </div>
   </div>
 </header>
