@@ -6,7 +6,7 @@
         <img class="ribbon-bg" src="assets/Design-material/02_Ripped Paper/Option 3/1.png" alt="Location background">
         <div class="ribbon-content">
           <img class="icon" src="assets/Design-material/img/about-me/location-Icon.svg" alt="Location icon"> 
-          <span>Based in Hamburg</span>
+          <span>{{ 'about.ribbons.location' | translate }}</span>
         </div>
       </div>
       
@@ -14,7 +14,7 @@
         <img class="ribbon-bg" src="assets/Design-material/02_Ripped Paper/Option 3/2.png" alt="Relocate background">
         <div class="ribbon-content">
           <img class="icon" src="assets/Design-material/img/about-me/relocate-Icon.svg" alt="Relocate icon">
-          <span>Open to relocate</span>
+          <span>{{ 'about.ribbons.relocate' | translate }}</span>
         </div>
       </div>
       
@@ -22,30 +22,28 @@
         <img class="ribbon-bg" src="assets/Design-material/02_Ripped Paper/Option 3/3.png" alt="Remote background">
         <div class="ribbon-content">
           <img class="icon" src="assets/Design-material/img/about-me/home-icon.svg" alt="Remote icon">
-          <span>Open to work remote</span>
+          <span>{{ 'about.ribbons.remote' | translate }}</span>
         </div>
       </div>
     </div>
 
-    <!-- Rechte Seite -->
     <div class="about-text">
-      <h4>WHO'S MIRKAN?</h4>
-      <h2>About me</h2>
-    <p>
-        I'm Mirkan Polat a motivated frontend developer with a clear goal: to build digital products that are not only functional but also user-friendly and visually engaging.
+      <h4>{{ 'about.subtitle' | translate }}</h4>
+      <h2>{{ 'about.title' | translate }}</h2>
+      <p>
+        {{ 'about.description.intro' | translate }}
         <br><br>
-        My strength lies not just in technical understanding, but in the ability to solve real-world problems with well-thought-out solutions. For me, programming is not an end in itself, but a tool to turn complex requirements into tangible results.
+        {{ 'about.description.strength' | translate }}
         <br><br>
-        Although my journey into the IT world is relatively recent, it comes with qualities that can't be taught: curiosity, perseverance, and a strong drive to grow every day. I work meticulously, think in solutions, and stay focused – especially when things get challenging.
+        {{ 'about.description.qualities' | translate }}
         <br><br>
-        I'm not looking for a temporary stop, but a long-term opportunity in frontend development where I can not only contribute, but actively shape the outcome.
-    </p>
-      <p>Let's build software that truly makes a difference together!</p>
+        {{ 'about.description.goal' | translate }}
+      </p>
+      <p>{{ 'about.closing' | translate }}</p>
 
       <div class="contact-me">
-         <button class="my-button">Let's talk</button>
+         <button class="my-button">{{ 'about.cta' | translate }}</button>
       </div>
-     
     </div>
 
   </div>

@@ -21,5 +21,30 @@
       "developer": "DEVELOPER"
     },
     "cta": "Get in Touch"
+  },
+  "about": {
+    "subtitle": "WHO'S MIRKAN?",
+    "title": "About me",
+    "ribbons": {
+      "location": "Based in Hamburg",
+      "relocate": "Open to relocate",
+      "remote": "Open to work remote"
+    },
+    "description": {
+      "intro": "I'm Mirkan Polat a motivated frontend developer with a clear goal: to build digital products that are not only functional but also user-friendly and visually engaging.",
+      "strength": "My strength lies not just in technical understanding, but in the ability to solve real-world problems with well-thought-out solutions. For me, programming is not an end in itself, but a tool to turn complex requirements into tangible results.",
+      "qualities": "Although my journey into the IT world is relatively recent, it comes with qualities that can't be taught: curiosity, perseverance, and a strong drive to grow every day. I work meticulously, think in solutions, and stay focused – especially when things get challenging.",
+      "goal": "I'm not looking for a temporary stop, but a long-term opportunity in frontend development where I can not only contribute, but actively shape the outcome."
+    },
+    "closing": "Let's build software that truly makes a difference together!",
+    "cta": "Let's talk"
+  },
+  "skills": {
+    "subtitle": "MY STACK",
+    "title": "Skill set",
+    "description": "I'm passionate about creating modern, intuitive, and accessible frontend experiences. My strength lies in translating design into responsive, reliable interfaces. I embrace new tools with curiosity and strive to grow through meaningful, real-world challenges in a professional team environment.",
+    "sticker": {
+      "pullText": "Pull to<br>peel"
+    }
   }
 }

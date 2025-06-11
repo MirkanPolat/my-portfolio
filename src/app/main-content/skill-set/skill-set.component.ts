@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
 
 interface Skill {
   name: string;
@@ -10,7 +11,7 @@ interface Skill {
 @Component({
   selector: 'app-skill-set',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })

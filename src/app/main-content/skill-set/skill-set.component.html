@@ -2,8 +2,8 @@
   <div class="content-wrapper">
     <div class="skill-set-container">
       <div class="column column-left">
-        <h3>MY STACK</h3>
-        <h2>Skill set</h2>
+        <h3>{{ 'skills.subtitle' | translate }}</h3>
+        <h2>{{ 'skills.title' | translate }}</h2>
         <div class="skill-set-overlay">
           <img src="assets/Design-material/00_Hand-drawn lines/02_Skills/Color option 1.png" alt="Skill Set Decoration">
         </div>
@@ -11,9 +11,7 @@
 
       <div class="column column-middle">
         <div class="skill-set-content">
-          <p>
-            I’m passionate about creating modern, intuitive, and accessible frontend experiences. My strength lies in translating design into responsive, reliable interfaces. I embrace new tools with curiosity and strive to grow through meaningful, real-world challenges in a professional team environment.
-          </p>
+          <p>{{ 'skills.description' | translate }}</p>
         </div>
         
         <div class="skills-grid">
@@ -49,7 +47,7 @@
           
           <div class="sticker-text" [class.hidden]="stickerState !== 'default'">
             <img class="arrow-img" src="assets/Design-material/03_Stickers/Arrow.png" alt="Arrow">
-            <span class="text kalam">Pull to<br>peel</span>
+            <span class="text kalam" [innerHTML]="'skills.sticker.pullText' | translate"></span>
           </div>
           
           <div class="final-image" [class.hidden]="stickerState !== 'peeled'">

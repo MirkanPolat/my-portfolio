@@ -21,5 +21,30 @@
       "developer": "ENTWICKLER"
     },
     "cta": "Kontakt aufnehmen"
+  },
+  "about": {
+    "subtitle": "WER IST MIRKAN?",
+    "title": "Über mich",
+    "ribbons": {
+      "location": "Ansässig in Hamburg",
+      "relocate": "Bereit umzuziehen",
+      "remote": "Remote arbeiten möglich"
+    },
+    "description": {
+      "intro": "Ich bin Mirkan Polat, ein motivierter Frontend-Entwickler mit einem klaren Ziel: digitale Produkte zu entwickeln, die nicht nur funktional, sondern auch benutzerfreundlich und visuell ansprechend sind.",
+      "strength": "Meine Stärke liegt nicht nur im technischen Verständnis, sondern in der Fähigkeit, reale Probleme mit durchdachten Lösungen zu bewältigen. Für mich ist Programmieren kein Selbstzweck, sondern ein Werkzeug, um komplexe Anforderungen in greifbare Ergebnisse umzuwandeln.",
+      "qualities": "Obwohl mein Weg in die IT-Welt relativ neu ist, bringe ich Eigenschaften mit, die nicht lehrbar sind: Neugier, Ausdauer und einen starken Antrieb, jeden Tag zu wachsen. Ich arbeite gewissenhaft, denke in Lösungen und bleibe fokussiert – besonders wenn es herausfordernd wird.",
+      "goal": "Ich suche nicht nach einem vorübergehenden Stopp, sondern nach einer langfristigen Gelegenheit in der Frontend-Entwicklung, wo ich nicht nur beitragen, sondern das Ergebnis aktiv mitgestalten kann."
+    },
+    "closing": "Lass uns gemeinsam Software entwickeln, die wirklich einen Unterschied macht!",
+    "cta": "Lass uns sprechen"
+  },
+  "skills": {
+    "subtitle": "Setup",
+    "title": "Skills",
+    "description": "Ich bin leidenschaftlich dabei, moderne, intuitive und zugängliche Frontend-Erlebnisse zu schaffen. Meine Stärke liegt darin, Design in responsive, zuverlässige Benutzeroberflächen zu übersetzen. Ich nehme neue Tools mit Neugier an und strebe danach, durch bedeutungsvolle, reale Herausforderungen in einem professionellen Teamumfeld zu wachsen.",
+    "sticker": {
+      "pullText": "Ziehen zum<br>Abziehen"
+    }
   }
 }
