@@ -5,17 +5,17 @@
     </div>
     
     <nav class="desktop-nav">
-      <a href="#about">About me</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">{{ 'header.navigation.about' | translate }}</a>
+      <a href="#skills">{{ 'header.navigation.skills' | translate }}</a>
+      <a href="#projects">{{ 'header.navigation.projects' | translate }}</a>
+      <a href="#contact">{{ 'header.navigation.contact' | translate }}</a>
       
       <div class="desktop-language-toggle">
-        <span class="lang-option active">EN</span>
-        <div class="toggle-switch">
+        <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
+        <div class="toggle-switch" [class.de-active]="isGerman()" (click)="switchLanguage()">
           <div class="toggle-slider"></div>
         </div>
-        <span class="lang-option">DE</span>
+        <span class="lang-option" [class.active]="isGerman()">{{ 'header.language.de' | translate }}</span>
       </div>
     </nav>
     
@@ -34,18 +34,18 @@
       </div>
       
       <nav class="mobile-nav">
-        <a href="#about" (click)="closeMenu()">About me</a>
-        <a href="#skills" (click)="closeMenu()">Skills</a>
-        <a href="#projects" (click)="closeMenu()">Projects</a>
-        <a href="#contact" (click)="closeMenu()">Contact</a>
+        <a href="#about" (click)="closeMenu()">{{ 'header.navigation.about' | translate }}</a>
+        <a href="#skills" (click)="closeMenu()">{{ 'header.navigation.skills' | translate }}</a>
+        <a href="#projects" (click)="closeMenu()">{{ 'header.navigation.projects' | translate }}</a>
+        <a href="#contact" (click)="closeMenu()">{{ 'header.navigation.contact' | translate }}</a>
       </nav>
       
       <div class="language-switch">
-        <span class="lang-option active">EN</span>
-        <div class="toggle-switch">
+        <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
+        <div class="toggle-switch" [class.de-active]="isGerman()" (click)="switchLanguage()">
           <div class="toggle-slider"></div>
         </div>
-        <span class="lang-option">DE</span>
+        <span class="lang-option" [class.active]="isGerman()">{{ 'header.language.de' | translate }}</span>
       </div>
       
       <div class="social-links">

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import { Component, inject } from '@angular/core';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
@@ -9,7 +9,14 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  private translateService = inject(TranslateService);
+  
   isMenuOpen = false;
+  currentLang = 'en';
+
+  ngOnInit() {
+    this.currentLang = this.translateService.currentLang || 'en';
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -17,5 +24,14 @@ export class HeaderComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  switchLanguage() {
+    this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+    this.translateService.use(this.currentLang);
+  }
+
+  isGerman(): boolean {
+    return this.currentLang === 'de';
   }
 }

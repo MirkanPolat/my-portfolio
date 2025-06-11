@@ -4,8 +4,8 @@
             <div class="button-container">
                 <img class="hand-icon" src="assets/Design-material/img/waving-hand/waving_hand.svg" alt="Hand">
                 <div class="hello-button">
-                    <span class="text-default">Hello world</span>
-                    <span class="text-hover">I'm Mirkan Polat</span>
+                    <span class="text-default">{{ 'hero.greeting.default' | translate }}</span>
+                    <span class="text-hover">{{ 'hero.greeting.hover' | translate }}</span>
                 </div>
             </div>
         </div>
@@ -14,18 +14,18 @@
             <div class="title-container">
                 <h1 class="title-top animated-title">
                     <span class="letter" 
-                          *ngFor="let letter of frontendLetters; let i = index" 
+                          *ngFor="let letter of ('hero.title.frontend' | translate).split(''); let i = index" 
                           [attr.data-letter]="letter.toLowerCase()"
                           [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
                 </h1>
                 <h1 class="title-bottom animated-title">
                     <span class="letter" 
-                          *ngFor="let letter of developerLetters; let i = index" 
+                          *ngFor="let letter of ('hero.title.developer' | translate).split(''); let i = index" 
                           [attr.data-letter]="letter.toLowerCase()"
                           [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
                 </h1>
                 <div class="contact-button">
-                    <button class="my-button">Get in Touch</button>
+                    <button class="my-button">{{ 'hero.cta' | translate }}</button>
                 </div>
                 <div class="polaroid">
                     <div class="profile-image">

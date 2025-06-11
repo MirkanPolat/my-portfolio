@@ -1,6 +1,25 @@
 {
-  "app": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+  "header": {
+    "navigation": {
+      "about": "About me",
+      "skills": "Skills", 
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "language": {
+      "en": "EN",
+      "de": "DE"
+    }
+  },
+  "hero": {
+    "greeting": {
+      "default": "Hello world",
+      "hover": "I'm Mirkan Polat"
+    },
+    "title": {
+      "frontend": "Frontend",
+      "developer": "DEVELOPER"
+    },
+    "cta": "Get in Touch"
   }
 }
