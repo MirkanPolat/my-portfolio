@@ -46,5 +46,15 @@
     "sticker": {
       "pullText": "Pull to<br>peel"
     }
+  },
+  "projects": {
+    "intro": {
+      "subtitle": "MY CRAFT",
+      "title": "Projects", 
+      "description": "Encourage people to take a look and interact with your projects. Highlight your approach to creating responsive, user-friendly projects with efficient code."
+    },
+    "button": {
+      "details": "Project Details"
+    }
   }
 }

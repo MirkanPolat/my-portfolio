@@ -46,5 +46,15 @@
     "sticker": {
       "pullText": "Ziehen zum<br>Abziehen"
     }
+  },
+  "projects": {
+    "intro": {
+      "subtitle": "MEIN HANDWERK",
+      "title": "Projekte",
+      "description": "Ermutige Menschen, sich deine Projekte anzusehen und mit ihnen zu interagieren. Hebe deinen Ansatz hervor, responsive, benutzerfreundliche Projekte mit effizientem Code zu erstellen."
+    },
+    "button": {
+      "details": "Projektdetails"
+    }
   }
 }

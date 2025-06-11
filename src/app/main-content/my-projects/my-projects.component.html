@@ -5,9 +5,9 @@
       
       <div class="grid-item intro-box">
         <div class="intro-content">
-          <h3>{{ introContent.subtitle }}</h3>
-          <h2>{{ introContent.title }}</h2>
-          <p>{{ introContent.description }}</p>
+          <h3>{{ introContent.subtitle | translate }}</h3>
+          <h2>{{ introContent.title | translate }}</h2>
+          <p>{{ introContent.description | translate }}</p>
         </div>
       </div>
 
@@ -18,7 +18,7 @@
             <img [src]="project.image" [alt]="project.title" class="main-project-image">
             
             <button class="my-button" (click)="openProjectDetails(project.id)">
-              Project Details
+              {{ 'projects.button.details' | translate }}
             </button>
         
             @if (project.featured) {

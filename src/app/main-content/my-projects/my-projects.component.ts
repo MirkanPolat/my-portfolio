@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ProjectService, Project } from '../../shared/services/project-data.service';
+import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './my-projects.component.html',
   styleUrl: './my-projects.component.scss'
 })
@@ -15,9 +16,9 @@ export class MyProjectsComponent {
   private router = inject(Router);
   
   introContent = {
-    subtitle: 'MY CRAFT',
-    title: 'Projects',
-    description: 'Encourage people to take a look and interact with your projects. Highlight your approach to creating responsive, user-friendly projects with efficient code.'
+    subtitle: 'projects.intro.subtitle',
+    title: 'projects.intro.title', 
+    description: 'projects.intro.description'
   };
 
   // Projects aus dem Service laden
