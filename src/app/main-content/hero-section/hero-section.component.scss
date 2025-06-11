@@ -519,6 +519,15 @@ section {
     }
 }
 
+// Social Links auf Hero verstecken ab 700px
+@media (max-width: 700px) {
+  section {
+    .hero-bottom > .social-links {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 675px) {
     section {
         padding: 0 35px;

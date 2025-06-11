@@ -9,7 +9,7 @@ section {
   position: relative;
   overflow: hidden;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 
   .content-wrapper {
@@ -80,7 +80,7 @@ section {
         position: relative;
         display: inline-block;
         margin-bottom: 22px;
-        
+
         &::after {
           content: '';
           position: absolute;
@@ -144,13 +144,13 @@ section {
           align-items: center;
           justify-content: center;
           gap: 5px;
-          
+
           .tech-icon {
             width: 24px;
             height: 24px;
             object-fit: contain;
           }
-          
+
           .tech-name {
             color: #000;
             font-size: 16px;
@@ -183,7 +183,6 @@ section {
         position: absolute;
         bottom: 20px;
         left: 20px;
-       
       }
     }
 

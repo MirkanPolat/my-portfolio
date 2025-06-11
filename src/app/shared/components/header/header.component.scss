@@ -321,29 +321,31 @@ header {
         }
       }
 
-      .mobile-social-links {
+      .social-links {
         display: flex;
         gap: 20px;
         margin-top: 30px;
         
-        .social-icon {
+        a {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
           border: 1px solid white;
           transition: all 0.3s ease;
           
           img {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
           }
           
           &:hover {
-            background-color: rgba(51, 85, 255, 0.2);
+            background-color: #3355FF;
             transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(75, 71, 255, 0.7);
+            border-color: transparent;
           }
         }
       }
@@ -351,7 +353,6 @@ header {
   }
 }
 
-// Media Queries
 @media (max-width: 700px) {
   header {
     .desktop-nav {
@@ -370,7 +371,6 @@ header {
   }
 }
 
-// Glowing Animation für das Logo
 @keyframes logoGlow {
   0% {
     filter: 

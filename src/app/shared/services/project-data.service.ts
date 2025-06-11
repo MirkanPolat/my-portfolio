@@ -9,7 +9,7 @@ export interface Project {
   badgeImage?: string;
   implementationDetails?: string;
   duration?: string;
-  technologies?: { icon: string; name: string }[]; // Geändert zu Objekten
+  technologies?: { icon: string; name: string }[];
 }
 
 @Injectable({
