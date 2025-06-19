@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
 
+
 interface Skill {
   name: string;
   icon: string;
