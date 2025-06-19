@@ -49,12 +49,26 @@
   },
   "projects": {
     "intro": {
-      "subtitle": "MY CRAFT",
-      "title": "Projects", 
-      "description": "Encourage people to take a look and interact with your projects. Highlight your approach to creating responsive, user-friendly projects with efficient code."
+      "subtitle": "Portfolio",
+      "title": "My Projects",
+      "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
     },
     "button": {
-      "details": "Project Details"
+      "details": "Show Details"
+    },
+    "data": {
+      "join": {
+        "title": "Join",
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "dabubble": {
+        "title": "DABubble", 
+        "description": "Chat application inspired by Slack. Real-time messaging with channels and direct messages."
+      },
+      "el-pollo-loco": {
+        "title": "El Pollo Loco",
+        "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      }
     }
   }
 }

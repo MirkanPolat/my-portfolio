@@ -1,8 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ProjectService, Project } from '../../shared/services/project-data.service';
-import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-my-projects',
@@ -11,9 +12,11 @@ import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
   templateUrl: './my-projects.component.html',
   styleUrl: './my-projects.component.scss'
 })
-export class MyProjectsComponent {
+export class MyProjectsComponent implements OnInit, OnDestroy {
   private projectService = inject(ProjectService);
   private router = inject(Router);
+  private translateService = inject(TranslateService);
+  private langChangeSubscription?: Subscription;
   
   introContent = {
     subtitle: 'projects.intro.subtitle',
@@ -21,10 +24,20 @@ export class MyProjectsComponent {
     description: 'projects.intro.description'
   };
 
-  // Projects aus dem Service laden
-  projects: Project[] = this.projectService.getProjects();
+  projects: Project[] = [];
 
-  // Click-Handler für Project Details Button
+  ngOnInit() {
+    this.projects = this.projectService.getProjects();
+    
+    this.langChangeSubscription = this.translateService.onLangChange.subscribe(() => {
+      this.projects = this.projectService.getProjects();
+    });
+  }
+
+  ngOnDestroy() {
+    this.langChangeSubscription?.unsubscribe();
+  }
+
   openProjectDetails(projectId: string): void {
     this.router.navigate(['/project', projectId]);
   }

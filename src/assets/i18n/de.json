@@ -49,12 +49,26 @@
   },
   "projects": {
     "intro": {
-      "subtitle": "MEIN HANDWERK",
-      "title": "Projekte",
-      "description": "Ermutige Menschen, sich deine Projekte anzusehen und mit ihnen zu interagieren. Hebe deinen Ansatz hervor, responsive, benutzerfreundliche Projekte mit effizientem Code zu erstellen."
+      "subtitle": "Portfolio",
+      "title": "Meine Projekte", 
+      "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
     },
     "button": {
-      "details": "Projektdetails"
+      "details": "Details anzeigen"
+    },
+    "data": {
+      "join": {
+        "title": "Join",
+        "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+      },
+      "dabubble": {
+        "title": "DABubble",
+        "description": "Chat-Anwendung inspiriert von Slack. Echtzeit-Messaging mit Kanälen und Direktnachrichten."
+      },
+      "el-pollo-loco": {
+        "title": "El Pollo Loco",
+        "description": "Spring-, Lauf- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+      }
     }
   }
 }

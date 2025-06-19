@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface Project {
   id: string;
@@ -16,6 +17,8 @@ export interface Project {
   providedIn: 'root'
 })
 export class ProjectService {
+  private translateService = inject(TranslateService);
+
   private projects: Project[] = [ 
     {
       id: 'join',
@@ -65,7 +68,11 @@ export class ProjectService {
   ];
 
   getProjects(): Project[] {
-    return this.projects;
+    return this.projects.map(project => ({
+      ...project,
+      title: this.translateService.instant(`projects.data.${project.id}.title`),
+      description: this.translateService.instant(`projects.data.${project.id}.description`)
+    }));
   }
 
   getProjectById(id: string): Project | undefined {
