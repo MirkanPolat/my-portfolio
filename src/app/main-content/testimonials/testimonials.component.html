@@ -2,8 +2,8 @@
     <div class="content-wrapper">
         <div class="testimonials-cards">
             <div class="testimonials-header">
-                <p class="subtitle">IN THEIR WORDS:</p>
-                <h2 class="title">Colleagues' Thoughts</h2>
+                <p class="subtitle">{{ 'testimonials.subtitle' | translate }}</p>
+                <h2 class="title">{{ 'testimonials.title' | translate }}</h2>
             </div>
             
             <div class="cards-container">
@@ -11,15 +11,15 @@
                     <div class="testimonial-card" [attr.data-position]="testimonial.id">
                         <div class="card-content">
                             <p class="testimonial-text">
-                                {{ testimonial.text }}
+                                {{ 'testimonials.data.' + testimonial.id + '.text' | translate }}
                             </p>
                             <div class="author-info">
-                                <h4 class="author-name">{{ testimonial.authorName }}</h4>
+                                <h4 class="author-name">{{ 'testimonials.data.' + testimonial.id + '.authorName' | translate }}</h4>
                                 <div class="author-title-container">
-                                    <p class="author-title">{{ testimonial.authorTitle }}</p>
+                                    <p class="author-title">{{ 'testimonials.data.' + testimonial.id + '.authorTitle' | translate }}</p>
                                     <a [href]="testimonial.linkedinUrl" target="_blank" rel="noopener noreferrer" class="profile-link">
                                         <img src="assets/Design-material/img/contact-icons/LinkedIn-black.svg" alt="LinkedIn" class="linkedin-icon">
-                                        <span>Profile</span>
+                                        <span>{{ 'testimonials.profileLink' | translate }}</span>
                                     </a>
                                 </div>
                             </div>

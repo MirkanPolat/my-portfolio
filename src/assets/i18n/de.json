@@ -59,16 +59,95 @@
     "data": {
       "join": {
         "title": "Join",
-        "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+        "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+        "implementation": "Dieses Projekt wurde mit Angular und TypeScript implementiert. Features umfassen Drag & Drop-Funktionalität, Benutzerverwaltung und Echtzeit-Task-Updates. Das Backend nutzt Firebase für Datenpersistierung und Benutzerauthentifizierung.",
+        "duration": "4 Wochen"
       },
       "dabubble": {
         "title": "DABubble",
-        "description": "Chat-Anwendung inspiriert von Slack. Echtzeit-Messaging mit Kanälen und Direktnachrichten."
+        "description": "Chat-Anwendung inspiriert von Slack. Echtzeit-Messaging mit Kanälen und Direktnachrichten.",
+        "implementation": "Entwickelt mit Angular und Firebase für Echtzeit-Kommunikation. Features umfassen Kanalverwaltung, Direktnachrichten, Benutzerprofile und Dateifreigabe-Funktionen.",
+        "duration": "6 Wochen"
       },
       "el-pollo-loco": {
         "title": "El Pollo Loco",
-        "description": "Spring-, Lauf- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+        "description": "Spring-, Lauf- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+        "implementation": "Entwickelt mit Vanilla JavaScript unter Verwendung objektorientierter Programmierungsprinzipien. Features umfassen Kollisionserkennung, Sprite-Animationen, Soundeffekte und progressive Spielschwierigkeit.",
+        "duration": "3 Wochen"
       }
+    }
+  },
+  "overlay": {
+    "goBack": "Zurück",
+    "description": {
+      "title": "Beschreibung"
+    },
+    "implementation": {
+      "title": "Implementierungsdetails"
+    },
+    "duration": {
+      "label": "Dauer"
+    },
+    "buttons": {
+      "github": "GitHub",
+      "liveTest": "Live Test"
+    },
+    "nextProject": "Nächstes Projekt"
+  },
+  "testimonials": {
+    "subtitle": "IN IHREN WORTEN:",
+    "title": "Gedanken von Kollegen",
+    "profileLink": "Profil",
+    "data": {
+      "left": {
+        "text": "Es hat mir viel Spaß gemacht mit Mirkan am Projekt Kochwelt zu arbeiten. Er war sehr Engagiert und fokussiert. Seine Ideen waren eine großes Hilfe für das Team. Ich würde auf jeden Fall wieder mit Ihm an einem Projekt arbeiten. Vielen Danke noch einmal.",
+        "authorName": "Markus Fischer",
+        "authorTitle": "Frontend Entwickler"
+      },
+      "center": {
+        "text": "Mirkan beeindruckt mich auch nach Monaten noch mit seiner Energie und Ausdauer. In unserem Projekt war er jederzeit bereit, mitanzupacken, sogar spät abends, wenn's mal stressig wurde. Dabei blieb er immer positiv, offen und hat mit seiner Art das Teamgefühl gestärkt",
+        "authorName": "Simon Fuchs",
+        "authorTitle": "Frontend Entwickler"
+      },
+      "right": {
+        "text": "Mirkan ist ein großartiger Teamkollege bei der DA. Seine positive Einstellung und Bereitschaft, Herausforderungen anzunehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreicht haben.",
+        "authorName": "Max Schmidt",
+        "authorTitle": "Projektmanager"
+      }
+    }
+  },
+  "contact": {
+    "label": "KONTAKT",
+    "title": "Bereit zusammenzuarbeiten?",
+    "description": {
+      "first": "Ermutige Leute, dich zu kontaktieren und beschreibe, an welcher Rolle du interessiert bist. Zeige Vertrauen in deine Fähigkeit, durch deine Expertise und Begeisterung für die Verbesserung deiner Fähigkeiten einen bedeutsamen Beitrag zu einem Team zu leisten.",
+      "second": "Zeige Interesse daran, zu einem neuen Projekt beizutragen, während du den Wert und die Fähigkeiten hervorhebst, die du mitbringen kannst."
+    },
+    "circleText": "• Mirkan Polat • Frontend Developer • Engineer •",
+    "form": {
+      "nameLabel": "Wie ist dein Name?",
+      "namePlaceholder": "Dein Name kommt hier hin",
+      "nameError": "Bitte gib deinen Namen ein",
+      "emailLabel": "Wie ist deine E-Mail?",
+      "emailPlaceholder": "deineemail@email.com",
+      "emailError": "Bitte gib eine gültige E-Mail ein",
+      "messageLabel": "Wie kann ich dir helfen?",
+      "messagePlaceholder": "Hallo Mirkan, ich bin interessiert an...",
+      "messageRequired": "Bitte gib eine Nachricht ein",
+      "messageMinLength": "Die Nachricht muss mindestens 4 Zeichen lang sein",
+      "privacyText": "Ich habe die",
+      "privacyLink": "Datenschutzerklärung",
+      "privacyAgreement": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "submitButton": "Senden"
+    }
+  },
+  "footer": {
+    "copyright": "© Mirkan Polat 2024",
+    "links": {
+      "legal": "Impressum",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "E-Mail"
     }
   }
 }

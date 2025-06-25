@@ -4,7 +4,7 @@
     <div class="go-back-container">
       <button class="go-back-btn" (click)="goBack()">
         <img src="assets/Design-material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Breadcrumb arrow 1.png" alt="Back Arrow">
-        <span>Go Back</span>
+        <span>{{ 'overlay.goBack' | translate }}</span>
       </button>
     </div>
 
@@ -13,21 +13,21 @@
       <div class="left-column">
         
         <div class="project-title">
-          <h1>{{ project.title }}</h1>
+          <h1>{{ 'projects.data.' + project.id + '.title' | translate }}</h1>
         </div>
 
         <div class="description-section">
-          <h2>Description</h2>
-          <p>{{ project.description }}</p>
+          <h2>{{ 'overlay.description.title' | translate }}</h2>
+          <p>{{ 'projects.data.' + project.id + '.description' | translate }}</p>
         </div>
 
         <div class="implementation-section">
-          <h2>Implementation Details</h2>
-          <p>{{ project.implementationDetails }}</p>
+          <h2>{{ 'overlay.implementation.title' | translate }}</h2>
+          <p>{{ 'projects.data.' + project.id + '.implementation' | translate }}</p>
         </div>
 
         <div class="duration-section">
-          <p><strong>Duration:</strong> {{ project.duration }}</p>
+          <p><strong>{{ 'overlay.duration.label' | translate }}:</strong> {{ 'projects.data.' + project.id + '.duration' | translate }}</p>
         </div>
 
         <div class="technologies-section">
@@ -51,13 +51,13 @@
         </div>
 
         <div class="action-buttons">
-          <button class="my-button">GitHub</button>
-          <button class="my-button">Live Test</button>
+          <button class="my-button">{{ 'overlay.buttons.github' | translate }}</button>
+          <button class="my-button">{{ 'overlay.buttons.liveTest' | translate }}</button>
         </div>
 
         <div class="next-project">
           <button class="next-project-btn" (click)="navigateToProject('next')">
-            <span>Next Project</span>
+            <span>{{ 'overlay.nextProject' | translate }}</span>
             <img src="assets/Design-material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 1.png" alt="Next Arrow">
           </button>
         </div>

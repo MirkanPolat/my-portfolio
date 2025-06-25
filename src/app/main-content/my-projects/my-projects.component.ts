@@ -2,13 +2,13 @@ import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ProjectService, Project } from '../../shared/services/project-data.service';
-import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './my-projects.component.html',
   styleUrl: './my-projects.component.scss'
 })

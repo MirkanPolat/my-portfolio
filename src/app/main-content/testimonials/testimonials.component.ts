@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Testimonial {
   id: string;
   text: string;
   authorName: string;
   authorTitle: string;
-  linkedinUrl: string; // Neue Property hinzufügen
+  linkedinUrl: string; 
 }
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss'
 })
