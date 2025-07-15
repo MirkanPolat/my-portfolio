@@ -152,3 +152,56 @@ section {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
 }
+
+@media (max-width: 1150px) {
+  section {
+    min-height: auto;
+    padding: 40px 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    .content-wrapper {
+      flex-direction: column;
+      gap: 40px;
+      max-width: 800px;
+    }
+
+    .availability-ribbons {
+      order: 2;
+      max-height: none;
+      
+      .ribbon {
+        .ribbon-bg {
+          max-width: 400px;
+        }
+
+        .ribbon-content {
+          .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+          }
+          
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .about-text {
+      order: 1;
+      max-width: 100%;
+      text-align: center;
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      > .contact-me {
+        justify-content: center;
+      }
+    }
+  }
+}
