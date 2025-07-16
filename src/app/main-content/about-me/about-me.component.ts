@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
+import { CommonModule } from '@angular/common';
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })

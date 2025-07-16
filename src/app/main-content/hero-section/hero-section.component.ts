@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
