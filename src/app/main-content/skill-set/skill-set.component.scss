@@ -479,3 +479,60 @@ section {
     clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 50%);
   }
 }
+
+@media (max-width: 1315px) {
+  section {
+    .content-wrapper {
+      .skill-set-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        max-width: 100%;
+        
+        .column-left {
+          order: 1;
+          text-align: right;
+          width: 100%;
+          
+          .skill-set-overlay {
+            display: none;
+          }
+        }
+        
+        .column-middle {
+          order: 2;
+          width: 100%;
+          max-width: 800px;
+          
+          .skill-set-content {
+            width: 100%;
+            height: auto;
+            min-height: 144px;
+            padding: 2rem;
+            background-size: 100% 100%;
+            
+            p {
+              font-size: 1.2rem;
+              text-align: center;
+            }
+          }
+          
+          .skills-grid {
+            margin-top: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1.5rem;
+          }
+        }
+        
+        .column-right {
+          order: 3;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
