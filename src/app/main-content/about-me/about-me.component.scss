@@ -192,7 +192,7 @@ section {
     .about-text {
       order: 1;
       max-width: 100%;
-      text-align: center;
+      text-align: start;
 
       h2 {
         font-size: 3rem;
@@ -200,7 +200,7 @@ section {
       }
 
       > .contact-me {
-        justify-content: center;
+        justify-content: flex-end;
       }
     }
   }
