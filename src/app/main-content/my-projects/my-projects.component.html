@@ -3,20 +3,33 @@
     
     <div class="projects-grid">
       
-      <div class="grid-item intro-box">
+      <div class="grid-item intro-box" data-aos="fade-up" data-aos-duration="600">
         <div class="intro-content">
-          <h3>{{ introContent.subtitle | translate }}</h3>
-          <h2>{{ introContent.title | translate }}</h2>
-          <p>{{ introContent.description | translate }}</p>
+          <h3 data-aos="fade-right" data-aos-delay="100">{{ introContent.subtitle | translate }}</h3>
+          <div class="projects-title-container" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="projects-title">{{ introContent.title | translate }}</h2>
+            <img
+              class="underline aos-init aos-animate"
+              src="/assets/Design-material/00_Hand-drawn lines/03_Portfolio/Color option 3.png"
+              alt=""
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            />
+          </div>
+          <p data-aos="fade-up" data-aos-delay="400">{{ introContent.description | translate }}</p>
         </div>
       </div>
 
-      @for (project of projects; track project.id) {
-        <div class="grid-item project-box" [attr.data-project-id]="project.id">
+      @for (project of projects; track project.id; let i = $index) {
+        <div class="grid-item project-box" 
+             [attr.data-project-id]="project.id"
+             data-aos="fade-up" 
+             [attr.data-aos-delay]="(i * 150) + 500">
           <div class="project-image">
             
             <img [src]="project.image" [alt]="project.title" class="main-project-image">
             
+            <div class="overlay"></div>
             <button class="my-button" (click)="openProjectDetails(project.id)">
               {{ 'projects.button.details' | translate }}
             </button>
