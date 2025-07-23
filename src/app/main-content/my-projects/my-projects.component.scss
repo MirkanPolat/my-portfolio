@@ -4,7 +4,6 @@ section {
   .content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
   }
 
   .projects-grid {
@@ -26,7 +25,7 @@ section {
   .intro-box {
     .intro-content {
       h3 {
-        font-size: 20px;
+        font-size: clamp(16px, 2.5vw, 20px);
         color: #000;
         margin-bottom: 0.5rem;
         font-weight: normal;
@@ -34,9 +33,9 @@ section {
       }
       
       h2 {
-        font-size: 64px;
+        font-size: clamp(2.5rem, 8vw, 4rem);
         color: #000;
-        margin-bottom: 4rem;
+        margin-bottom: clamp(2rem, 5vw, 4rem);
         font-weight: 700;
         display: inline-block;
         position: relative;
@@ -44,10 +43,10 @@ section {
         &::after {
           content: '';
           position: absolute;
-          bottom: -23px;
-          left: -4px;
+          bottom: clamp(-30px, -3vw, -23px);
+          left: clamp(-6px, -0.5vw, -4px);
           width: 103%;
-          height: 29px;
+          height: clamp(20px, 3vw, 29px);
           background-image: url('/assets/Design-material/00_Hand-drawn lines/03_Portfolio/Color option 3.png');
           background-size: cover;
           background-repeat: no-repeat;
@@ -56,7 +55,7 @@ section {
       }
       
       p {
-        font-size: 14px;
+        font-size: clamp(12px, 1.8vw, 14px);
         line-height: 1.5;
         color: #000;
       }
@@ -117,14 +116,14 @@ section {
     
     .project-info {
       h3 {
-        font-size: 24px;
+        font-size: clamp(18px, 3vw, 24px);
         color: #000;
         margin-bottom: 1rem;
         font-weight: bold;
       }
       
       p {
-        font-size: 13px;
+        font-size: clamp(11px, 1.6vw, 13px);
         line-height: 1.4;
         color: #000;
       }
@@ -159,6 +158,19 @@ section {
   }
 }
 
+@media (max-width: 1024px) {
+  section {
+    .projects-grid {
+      gap: 1.5rem;
+      min-height: 600px;
+    }
+    
+    .grid-item {
+      padding: 1.5rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   section {
     .projects-grid {
@@ -170,6 +182,38 @@ section {
     
     .grid-item {
       padding: 1.5rem;
+    }
+    
+    .project-box {
+      .project-image {
+        min-height: clamp(150px, 25vw, 200px);
+        
+        .featured-badge-image {
+          img {
+            width: clamp(120px, 20vw, 168px);
+            height: clamp(120px, 20vw, 168px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    .grid-item {
+      padding: 1rem;
+    }
+    
+    .intro-box {
+      .intro-content {
+        h2 {
+          &::after {
+            bottom: clamp(-35px, -4vw, -30px);
+            left: clamp(-8px, -1vw, -6px);
+          }
+        }
+      }
     }
   }
 }
