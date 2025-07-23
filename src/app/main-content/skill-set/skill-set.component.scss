@@ -230,11 +230,12 @@ section {
           
           h2 {
             position: relative;
+            font-size: clamp(2.5rem, 6vw, 4rem);
           }
           
           .skill-set-overlay {
             top: 60%;
-            right: -24px;
+            right: clamp(-30px, -2vw, -10px);
             transform: translateY(-50%);
           }
         }
@@ -252,7 +253,7 @@ section {
             background-size: 100% 100%;
             
             p {
-              font-size: 1.2rem;
+              font-size: clamp(1rem, 2vw, 1.2rem);
               text-align: center;
             }
           }
