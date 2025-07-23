@@ -384,6 +384,16 @@ section {
   }
 }
 
+@media (max-width: 533px) {
+  section {
+    .testimonials-cards {
+      .testimonials-header {
+        text-align: center;
+      }
+    }
+  }
+}
+
 // Animation für Mobile Hover-Effekte
 @keyframes hoverLineEffect {
   0%, 16.67%, 83.33%, 100% {
