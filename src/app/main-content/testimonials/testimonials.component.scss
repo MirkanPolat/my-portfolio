@@ -126,9 +126,9 @@ section {
           z-index: 2;
 
           .testimonial-text {
-            font-size: 18px;
+            font-size: clamp(14px, 1.8vw, 18px);
             line-height: 1.4;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             flex-grow: 1;
             overflow: hidden;
           }
@@ -139,7 +139,7 @@ section {
             gap: 0.3rem;
 
             .author-name {
-              font-size: 20px;
+              font-size: clamp(16px, 2vw, 20px);
               font-weight: 700;
             }
 
@@ -149,7 +149,7 @@ section {
               align-items: center;
 
               .author-title {
-                font-size: 16px;
+                font-size: clamp(13px, 1.5vw, 16px);
               }
 
               .profile-link {
@@ -168,7 +168,7 @@ section {
                 }
 
                 span {
-                  font-size: 18px;
+                  font-size: clamp(14px, 1.7vw, 18px);
                   font-weight: 500;
                   transition: color 0.2s ease;
                 }
@@ -202,6 +202,7 @@ section {
         .testimonial-card {
           width: 450px;
           height: 300px;
+          padding: 16px 16px;
           
           &[data-position="left"] {
             transform: rotate(-4deg) translate(-300px, 50px);
@@ -229,6 +230,7 @@ section {
         .testimonial-card {
           width: 400px;
           height: 280px;
+          padding: 14px 14px;
           
           &[data-position="left"] {
             transform: rotate(-4deg) translate(-280px, 50px);
@@ -250,6 +252,7 @@ section {
         .testimonial-card {
           width: 380px;
           height: 260px;
+          padding: 12px 12px;
           
           &[data-position="left"] {
             transform: rotate(-4deg) translate(-250px, 50px);
