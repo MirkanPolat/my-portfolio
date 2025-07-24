@@ -239,13 +239,31 @@ section {
 
 // Responsive Design - nur minimale Anpassungen
 @media (max-width: 900px) {
+  .right-section {
+    width: 100%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-logo {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    order: 1;
+  }
+
+  .contact-form {
+    order: 3;
+  }
+
   section {
     padding: 60px 30px 20px 30px;
   }
 
   .contact-content {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 40px;
     margin-top: 60px;
   }
@@ -259,15 +277,6 @@ section {
     .description p {
       max-width: 100%;
     }
-  }
-
-  .right-section {
-    width: 100%;
-    order: 1;
-  }
-
-  .contact-logo {
-    justify-content: center;
   }
 }
 
