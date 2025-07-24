@@ -34,10 +34,10 @@ export class TestimonialsComponent {
     },
     {
       id: 'right',
-      text: 'Karl is a great team colleague at DA. His positive attitude and willingness to take on challenges made a significant contribution to us achieving our goals.',
-      authorName: 'Max Schmidt',
+      text: 'Mirkan hat sich im JOIN-Projekt durch seine klare, strukturierte Arbeitsweise und durchdachte Ideen zur Codeverbesserung ausgezeichnet. Er überzeugt sowohl fachlich als auch durch sein positives Teamverhalten. Die Zusammenarbeit mit ihm war sehr wertvoll.',
+      authorName: 'Anne Dalchow',
       authorTitle: 'Project Manager',
-      linkedinUrl: 'https://www.linkedin.com/in/max-schmidt/'
+      linkedinUrl: 'https://www.linkedin.com/in/anne-dalchow/'
     }
   ];
 }
