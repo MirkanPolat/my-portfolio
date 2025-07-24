@@ -4,29 +4,40 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.contact-content {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 80px;
-  margin-top: 100px;
+  padding: 100px 62px 20px 62px;
+  color: white;
 }
 
 .content-wrapper {
-  flex: 1;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  z-index: 2;
 }
 
-.left-section,
+.contact-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 100px;
+  padding-bottom: 60px;
+}
+
+.left-section {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .right-section {
-  flex: 1;
-  max-width: 500px;
+  width: 40%;
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
 }
@@ -37,16 +48,17 @@ section {
   .contact-label {
     color: #ffa500;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 12px;
   }
 
   h1 {
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
-    margin: 20px 0 0;
+    margin: 0;
   }
 }
 
@@ -58,6 +70,7 @@ section {
     line-height: 1.6;
     margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.9);
+    max-width: 90%;
   }
 }
 
@@ -111,13 +124,18 @@ section {
   flex-direction: column;
 
   .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border-top: 1px solid transparent;
     margin-bottom: 7px;
 
     label {
       font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      display: block;
+      font-weight: 600;
+      margin-bottom: 4px;
+      margin-left: 20px;
     }
 
     input,
@@ -125,46 +143,50 @@ section {
       width: 100%;
       background: transparent;
       border: none;
-      border-bottom: 1px solid #f7c518;
+      border-bottom: 1px solid #1073EA;
       color: white;
       font-size: 18px;
-      padding-bottom: 14px;
+      padding: 6px 0;
+      text-indent: 20px;
       outline: none;
-      transition: border-color 0.3s ease;
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.65);
       }
 
       &:focus {
-        border-bottom-color: #ffa500;
+        border-bottom-color: white;
       }
     }
 
     textarea {
-      resize: vertical;
-      min-height: 100px;
+      resize: none;
+      min-height: 60px;
     }
   }
 
   .my-button {
     align-self: flex-end;
-    width: 154px;
-    height: 40px;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 0px 1px #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    width: auto;
+    min-width: 154px;
+    height: auto;
 
-    &.disabled {
-      background-color: #666;
-      border-color: #666;
-      color: #999;
-      cursor: not-allowed;
+    &:hover {
+      background-color: #24dd80;
+      color: white;
       box-shadow: none;
-
-      &:hover {
-        background-color: #666;
-        border-color: #666;
-        transform: none;
-        box-shadow: none;
-      }
+      transform: translateY(2px);
     }
   }
 }
@@ -173,55 +195,27 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 
   input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
-    flex-shrink: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: transparent;
-    border: 2px solid #5555ff;
-    border-radius: 3px;
-    cursor: pointer;
-    position: relative;
-
-    &:checked {
-      background-color: #ffa500;
-      border-color: #ffa500;
-
-      &::after {
-        content: "✓";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 14px;
-        font-weight: bold;
-      }
-    }
-
-    &:hover {
-      border-color: #ffa500;
-    }
+    margin-top: 3px;
+    transform: scale(1.2);
   }
 
   label {
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.5;
     color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
   }
 
   .privacy-link {
-    color: #5555ff;
-    text-decoration: none;
+    color: #1073EA;
+    text-decoration: underline;
+    cursor: pointer;
 
     &:hover {
+      color: #24dd80;
       text-decoration: underline;
     }
   }
@@ -243,22 +237,59 @@ section {
   }
 }
 
+// Responsive Design - nur minimale Anpassungen
+@media (max-width: 900px) {
+  section {
+    padding: 60px 30px 20px 30px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .left-section {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    order: 2;
+
+    .description p {
+      max-width: 100%;
+    }
+  }
+
+  .right-section {
+    width: 100%;
+    order: 1;
+  }
+
+  .contact-logo {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   section {
-    padding: 40px 20px;
+    padding: 40px 20px 20px 20px;
   }
 
-  .content-wrapper {
-    flex-direction: column;
-    gap: 40px;
+  .contact-content {
+    margin-top: 40px;
+    gap: 30px;
   }
 
-  .left-section,
-  .right-section {
-    max-width: 100%;
+  .contact-header {
+    h1 {
+      font-size: 3rem;
+    }
   }
 
-  .contact-header h1 {
-    font-size: 3rem;
+  .my-button {
+    align-self: center !important;
+    width: 100%;
+    max-width: 200px;
   }
 }
