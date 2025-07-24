@@ -183,10 +183,24 @@ section {
     height: auto;
 
     &:hover {
-      background-color: #24dd80;
-      color: white;
-      box-shadow: none;
-      transform: translateY(2px);
+      background-color: #F87B57;
+      border-color: white;
+      transform: translateY(4px);
+      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      pointer-events: none;
+
+      &:hover {
+        background-color: transparent;
+        border-color: white;
+        color: white;
+        transform: none;
+        box-shadow: 2px 2px 0px 1px #ffffff;
+      }
     }
   }
 }
@@ -215,7 +229,7 @@ section {
     cursor: pointer;
 
     &:hover {
-      color: #24dd80;
+      color: #F87B57;
       text-decoration: underline;
     }
   }
