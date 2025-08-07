@@ -277,6 +277,23 @@ section {
           margin: 0;
           opacity: 1;
           transform: none;
+          border: 2px solid black;
+          box-shadow: 3px 5px 0 rgb(0, 0, 0);
+          color: black;
+          background-color: transparent;
+          
+          &:hover {
+            background-color: #F87B57;
+            border-color: black;
+            transform: translateY(4px);
+            box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+            color: white;
+          }
+          
+          &:active {
+            transform: translateY(5px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+          }
         }
       }
     }
