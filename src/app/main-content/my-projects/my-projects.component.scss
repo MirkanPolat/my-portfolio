@@ -114,6 +114,20 @@ section {
         z-index: 20;
       }
       
+      .desktop-button {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 20;
+      }
+      
+      .mobile-button {
+        display: none;
+      }
+      
       .featured-badge-image {
         position: absolute;
         bottom: 15px;
@@ -136,6 +150,11 @@ section {
         }
         
         .my-button {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .desktop-button {
           opacity: 1;
           transform: translateY(0);
         }
@@ -235,13 +254,8 @@ section {
           display: none;
         }
         
-        .my-button {
-          position: static;
-          opacity: 1;
-          transform: none;
-          margin-top: 1rem;
-          display: block;
-          width: fit-content;
+        .desktop-button {
+          display: none;
         }
         
         .featured-badge-image {
@@ -249,6 +263,20 @@ section {
             width: clamp(120px, 20vw, 168px);
             height: clamp(120px, 20vw, 168px);
           }
+        }
+      }
+      
+      .project-info {
+        position: relative;
+        padding-bottom: 3rem;
+        
+        .mobile-button {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin: 0;
+          opacity: 1;
+          transform: none;
         }
       }
     }

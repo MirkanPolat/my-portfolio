@@ -30,7 +30,7 @@
             <img [src]="project.image" [alt]="project.title" class="main-project-image">
             
             <div class="overlay"></div>
-            <button class="my-button" (click)="openProjectDetails(project.id)">
+            <button class="my-button desktop-button" (click)="openProjectDetails(project.id)">
               {{ 'projects.button.details' | translate }}
             </button>
         
@@ -43,6 +43,9 @@
           <div class="project-info">
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
+            <button class="my-button mobile-button" (click)="openProjectDetails(project.id)">
+              {{ 'projects.button.details' | translate }}
+            </button>
           </div>
         </div>
       }
