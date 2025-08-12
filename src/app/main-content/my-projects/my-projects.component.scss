@@ -178,6 +178,12 @@ section {
   }
 }
 
+@media (min-width: 769px) {
+  .project-info .mobile-button {
+    display: none;
+  }
+}
+
 .project-box[data-project-id="join"] {
   .main-project-image {
     animation: floatUpDown 3s ease-in-out infinite;
