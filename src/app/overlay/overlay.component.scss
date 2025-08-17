@@ -1,4 +1,8 @@
 section {
+  --text-color: #fff;
+  --button-border: #fff;
+  --button-shadow: #fff;
+  
   background-image: url('/assets/Design-material/01_Background/Img Original Size/Note book paper.png');
   background-size: cover;
   background-position: center;
@@ -36,6 +40,7 @@ section {
       font-size: 18px;
       font-weight: 500;
       transition: all 0.3s ease;
+      mix-blend-mode: difference;
 
       img {
         width: 24px;
@@ -43,7 +48,7 @@ section {
       }
 
       span {
-        color: #000;
+        color: var(--text-color);
       }
 
       &:hover {
@@ -68,14 +73,15 @@ section {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    color: #000;
+    color: var(--text-color);
     max-width: 488px;
+    mix-blend-mode: difference;
 
     .project-title {
       h1 {
         font-size: 64px;
         font-weight: 700;
-        color: #000;
+        color: var(--text-color);
         margin: 0;
         position: relative;
         display: inline-block;
@@ -101,13 +107,13 @@ section {
       h2 {
         font-size: 24px;
         font-weight: 700;
-        color: #000;
+        color: var(--text-color);
         margin-bottom: 15px;
       }
 
       p {
         font-size: 18px;
-        color: #000;
+        color: var(--text-color);
         margin: 0;
       }
     }
@@ -116,18 +122,18 @@ section {
       h2 {
         font-size: 24px;
         font-weight: 700;
-        color: #000;
+        color: var(--text-color);
         margin-bottom: 15px;
       }
 
       p {
         font-size: 16px;
-        color: #000;
+        color: var(--text-color);
         margin: 0;
 
         strong {
           font-weight: 700;
-          color: #000;
+          color: var(--text-color);
         }
       }
     }
@@ -152,7 +158,7 @@ section {
           }
 
           .tech-name {
-            color: #000;
+            color: var(--text-color);
             font-size: 16px;
             font-weight: 400;
           }
@@ -189,18 +195,20 @@ section {
     .action-buttons {
       display: flex;
       gap: 20px;
+      mix-blend-mode: difference;
 
       .my-button {
-        border: 2px solid #000;
-        color: #000;
-        box-shadow: 3px 5px 0 #000;
+        border: 2px solid var(--button-border);
+        color: var(--text-color);
+        box-shadow: 3px 5px 0 var(--button-shadow);
 
         &:hover {
           background-color: #F87B57;
           color: white;
-          border-color: #000;
+          border-color: var(--button-border);
           transform: translateY(4px);
-          box-shadow: 0 1px 0 #000;
+          box-shadow: 0 1px 0 var(--button-shadow);
+          mix-blend-mode: normal;
         }
       }
     }
@@ -213,10 +221,11 @@ section {
         align-items: center;
         gap: 10px;
         cursor: pointer;
-        color: #000;
+        color: var(--text-color);
         font-size: 18px;
         font-weight: 500;
         transition: all 0.3s ease;
+        mix-blend-mode: difference;
 
         img {
           width: 24px;
@@ -226,6 +235,7 @@ section {
         &:hover {
           color: #F87B57;
           transform: translateX(5px);
+          mix-blend-mode: normal;
         }
       }
     }
