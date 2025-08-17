@@ -259,6 +259,13 @@ section {
 
     .right-column {
       align-items: center;
+
+      .next-project {
+        align-self: flex-end;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 }
