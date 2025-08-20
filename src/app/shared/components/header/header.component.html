@@ -5,10 +5,10 @@
     </div>
     
     <nav class="desktop-nav">
-      <a href="#about">{{ 'header.navigation.about' | translate }}</a>
-      <a href="#skills">{{ 'header.navigation.skills' | translate }}</a>
-      <a href="#projects">{{ 'header.navigation.projects' | translate }}</a>
-      <a href="#contact">{{ 'header.navigation.contact' | translate }}</a>
+      <a (click)="scrollToSection('about')" style="cursor: pointer;">{{ 'header.navigation.about' | translate }}</a>
+      <a (click)="scrollToSection('skills')" style="cursor: pointer;">{{ 'header.navigation.skills' | translate }}</a>
+      <a (click)="scrollToSection('projects')" style="cursor: pointer;">{{ 'header.navigation.projects' | translate }}</a>
+      <a (click)="scrollToSection('contact')" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a>
       
       <div class="desktop-language-toggle">
         <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
@@ -34,10 +34,10 @@
       </div>
       
       <nav class="mobile-nav">
-        <a href="#about" (click)="closeMenu()">{{ 'header.navigation.about' | translate }}</a>
-        <a href="#skills" (click)="closeMenu()">{{ 'header.navigation.skills' | translate }}</a>
-        <a href="#projects" (click)="closeMenu()">{{ 'header.navigation.projects' | translate }}</a>
-        <a href="#contact" (click)="closeMenu()">{{ 'header.navigation.contact' | translate }}</a>
+        <a (click)="scrollToSection('about'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.about' | translate }}</a>
+        <a (click)="scrollToSection('skills'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.skills' | translate }}</a>
+        <a (click)="scrollToSection('projects'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.projects' | translate }}</a>
+        <a (click)="scrollToSection('contact'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a>
       </nav>
       
       <div class="language-switch">
