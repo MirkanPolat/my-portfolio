@@ -34,27 +34,30 @@ section {
   flex-direction: column;
   justify-content: center;
 
-  .contact-underline {
+  .arrow {
     width: clamp(350px, 2vw, 250px);
-    height: auto;
-    margin-top: 30px;
-    opacity: 0;
-    animation: slideInFromLeft 1s ease-out forwards;
-    animation-delay: 0.5s;
+    margin-top: 50px;
+    align-self: flex-end;
+    clip-path: inset(0 100% 0 0);
+    animation: lineReveal 6s infinite;
   }
 
-  .contact-underline.aos-animate {
-    animation: slideInFromLeft 1s ease-out forwards;
+  .arrow-mobile {
+    display: none;
   }
 
-  @keyframes slideInFromLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-30px);
+  @keyframes lineReveal {
+    0%, 50% {
+      clip-path: inset(0 100% 0 0);
+    }
+    66.7% {
+      clip-path: inset(0 0 0 0);
+    }
+    83.3% {
+      clip-path: inset(0 0 0 0);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0);
+      clip-path: inset(0 0 0 100%);
     }
   }
 }
@@ -189,9 +192,15 @@ section {
     }
   }
 
-  .my-button {
-    align-self: flex-end;
+  .submit-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
     margin-top: 50px;
+  }
+
+  .my-button {
     display: inline-block;
     padding: 0.75rem 2rem;
     background-color: transparent;
@@ -225,6 +234,29 @@ section {
         transform: none;
         box-shadow: 2px 2px 0px 1px #ffffff;
       }
+    }
+  }
+
+  .arrow-mobile {
+    display: none;
+    width: clamp(80px, 12vw, 150px);
+    height: auto;
+    clip-path: inset(0 100% 0 0);
+    animation: lineReveal 6s infinite;
+  }
+
+  @keyframes lineReveal {
+    0%, 50% {
+      clip-path: inset(0 100% 0 0);
+    }
+    66.7% {
+      clip-path: inset(0 0 0 0);
+    }
+    83.3% {
+      clip-path: inset(0 0 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 100%);
     }
   }
 }
@@ -299,6 +331,17 @@ section {
 
   .contact-form {
     order: 1;
+
+    .submit-container {
+      align-self: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .arrow-mobile {
+      display: block;
+      width: clamp(120px, 15vw, 200px);
+    }
   }
 
   section {
@@ -319,6 +362,10 @@ section {
     text-align: left;
     align-items: flex-start;
     order: 1;
+
+    .arrow {
+      display: none;
+    }
 
     .description p {
       max-width: 100%;

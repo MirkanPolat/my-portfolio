@@ -19,7 +19,7 @@
         <img 
           src="assets/Design-material/00_Hand-drawn lines/05_Contact/Color option 1.png" 
           alt="Contact decoration"
-          class="contact-underline aos-init aos-animate">
+          class="arrow">
       </div>
 
       <div class="right-section">
@@ -80,12 +80,18 @@
             </label>
           </div>
 
-          <button 
-            type="submit" 
-            class="my-button"
-            [class.disabled]="!isFormValid(contactForm)">
-            {{ 'contact.form.submitButton' | translate }}
-          </button>
+          <div class="submit-container">
+            <img 
+              src="assets/Design-material/00_Hand-drawn lines/05_Contact/Color option 1.png" 
+              alt="Contact decoration mobile"
+              class="arrow-mobile">
+            <button 
+              type="submit" 
+              class="my-button"
+              [class.disabled]="!isFormValid(contactForm)">
+              {{ 'contact.form.submitButton' | translate }}
+            </button>
+          </div>
         </form>
       </div>
     </div>
