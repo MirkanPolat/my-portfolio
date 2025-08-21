@@ -54,25 +54,32 @@ section {
       }
 
       .testimonials-underline {
-        width: clamp(80px, 6vw, 120px);
+        width: 150px;
+        margin-right: 20px;
         height: auto;
-        opacity: 0;
-        animation: slideInFromLeft 1s ease-out forwards;
-        animation-delay: 0.5s;
+        clip-path: inset(0 100% 0 0);
+        animation: lineReveal 6s infinite;
       }
 
-      .testimonials-underline.aos-animate {
-        animation: slideInFromLeft 1s ease-out forwards;
+      @media (max-width: 400px) {
+        .testimonials-underline {
+          width: 75px;
+          margin-right: 10px;
+        }
       }
 
-      @keyframes slideInFromLeft {
-        0% {
-          opacity: 0;
-          transform: translateX(-30px);
+      @keyframes lineReveal {
+        0%, 50% {
+          clip-path: inset(0 0 0 100%);
+        }
+        66.7% {
+          clip-path: inset(0 0 0 0);
+        }
+        83.3% {
+          clip-path: inset(0 0 0 0);
         }
         100% {
-          opacity: 1;
-          transform: translateX(0);
+          clip-path: inset(0 100% 0 0);
         }
       }
     }
