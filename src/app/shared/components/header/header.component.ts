@@ -38,7 +38,7 @@ export class HeaderComponent {
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 80; // Höhe des Headers (anpassbar)
+      const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({

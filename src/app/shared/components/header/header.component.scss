@@ -148,19 +148,22 @@ header {
         width: 51px;
         height: 12px;
         background-color: #3355FF;
+        border: 2px solid rgba(255, 255, 255, 0.8);
         border-radius: 15px;
         position: relative;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
         
         .toggle-slider {
           width: 26px;
           height: 26px;
           background-color: #F87B57;
+          border: 2px solid rgba(255, 255, 255, 0.9);
           border-radius: 50%;
           position: absolute;
-          top: -7px;
-          transition: transform 0.3s ease;
+          top: -9px;
+          left: -2px;
+          transition: all 0.3s ease;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
@@ -297,20 +300,22 @@ header {
           width: 60px;
           height: 30px;
           background-color: #3355FF; // Blau für EN (Standard)
+          border: 2px solid rgba(255, 255, 255, 0.8);
           border-radius: 15px;
           position: relative;
           cursor: pointer;
-          transition: background-color 0.3s ease;
+          transition: all 0.3s ease;
           
           .toggle-slider {
             width: 26px;
             height: 26px;
             background-color: #F87B57;
+            border: 2px solid rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             position: absolute;
             top: 2px;
             left: 2px;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           }
           
