@@ -119,7 +119,8 @@ header {
 
       &:nth-child(4)::after {
         background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/4.png');
-        top: 60%;
+        top: 12%;
+        transform: translateX(-50%);
       }
 
       &:hover {
