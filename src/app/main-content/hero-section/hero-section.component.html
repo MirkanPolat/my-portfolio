@@ -25,7 +25,7 @@
                           [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
                 </h1>
                 <div class="contact-button">
-                    <button class="my-button">{{ 'hero.cta' | translate }}</button>
+                    <button class="my-button" (click)="scrollToContact()">{{ 'hero.cta' | translate }}</button>
                 </div>
                 <div class="polaroid">
                     <div class="profile-image">

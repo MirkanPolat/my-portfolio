@@ -13,6 +13,19 @@ export class HeroSectionComponent {
   frontendLetters: string[] = 'Frontend'.split('');
   developerLetters: string[] = 'DEVELOPER'.split('');
 
+  scrollToContact() {
+    const element = document.getElementById('contact');
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+
   ngAfterViewInit(): void {
     const letters = document.querySelectorAll('.letter');
     letters.forEach((letter) => {
