@@ -10,12 +10,12 @@
       <a (click)="scrollToSection('projects')" style="cursor: pointer;">{{ 'header.navigation.projects' | translate }}</a>
       <a (click)="scrollToSection('contact')" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a>
       
-      <div class="desktop-language-toggle">
-        <span class="lang-option" [class.active]="!isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.en' | translate }}</span>
-        <div class="toggle-switch" [class.de-active]="isGerman()" (click)="switchLanguage()">
+      <div class="desktop-language-toggle" (click)="switchLanguage()" style="cursor: pointer;">
+        <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
+        <div class="toggle-switch" [class.de-active]="isGerman()">
           <div class="toggle-slider"></div>
         </div>
-        <span class="lang-option" [class.active]="isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.de' | translate }}</span>
+        <span class="lang-option" [class.active]="isGerman()">{{ 'header.language.de' | translate }}</span>
       </div>
     </nav>
     
@@ -40,12 +40,12 @@
         <a (click)="scrollToSection('contact'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a>
       </nav>
       
-      <div class="language-switch">
-        <span class="lang-option" [class.active]="!isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.en' | translate }}</span>
-        <div class="toggle-switch" [class.de-active]="isGerman()" (click)="switchLanguage()">
+      <div class="language-switch" (click)="switchLanguage()" style="cursor: pointer;">
+        <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
+        <div class="toggle-switch" [class.de-active]="isGerman()">
           <div class="toggle-slider"></div>
         </div>
-        <span class="lang-option" [class.active]="isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.de' | translate }}</span>
+        <span class="lang-option" [class.active]="isGerman()">{{ 'header.language.de' | translate }}</span>
       </div>
       
       <div class="social-links">
