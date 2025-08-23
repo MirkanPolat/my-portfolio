@@ -11,11 +11,11 @@
       <a (click)="scrollToSection('contact')" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a>
       
       <div class="desktop-language-toggle">
-        <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
+        <span class="lang-option" [class.active]="!isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.en' | translate }}</span>
         <div class="toggle-switch" [class.de-active]="isGerman()" (click)="switchLanguage()">
           <div class="toggle-slider"></div>
         </div>
-        <span class="lang-option" [class.active]="isGerman()">{{ 'header.language.de' | translate }}</span>
+        <span class="lang-option" [class.active]="isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.de' | translate }}</span>
       </div>
     </nav>
     
@@ -41,11 +41,11 @@
       </nav>
       
       <div class="language-switch">
-        <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
+        <span class="lang-option" [class.active]="!isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.en' | translate }}</span>
         <div class="toggle-switch" [class.de-active]="isGerman()" (click)="switchLanguage()">
           <div class="toggle-slider"></div>
         </div>
-        <span class="lang-option" [class.active]="isGerman()">{{ 'header.language.de' | translate }}</span>
+        <span class="lang-option" [class.active]="isGerman()" (click)="switchLanguage()" style="cursor: pointer;">{{ 'header.language.de' | translate }}</span>
       </div>
       
       <div class="social-links">
