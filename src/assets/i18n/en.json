@@ -149,5 +149,41 @@
       "linkedin": "LinkedIn",
       "email": "Email"
     }
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "backButton": "Back",
+    "sections": {
+      "information": {
+        "title": "Information according to § 5 TMG"
+      },
+      "represented": {
+        "title": "Represented by"
+      },
+      "contact": {
+        "title": "Contact",
+        "phone": "Phone",
+        "email": "Email"
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "liability": {
+          "title": "Liability for Content",
+          "content": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content. As service providers, we are liable for our own content on these pages in accordance with § 7, para.1 of the TMG under general laws. However, pursuant to §§ 8 to 10 of the TMG, we as service providers are under no obligation to monitor submitted or stored information or to search for circumstances that indicate illegal activity."
+        },
+        "links": {
+          "title": "Liability for Links",
+          "content": "Our offer includes links to external third-party websites, whose content we have no influence on. Therefore, we cannot assume any liability for these external contents either. The respective provider or operator of the linked pages is always responsible for the content of the linked pages."
+        },
+        "copyright": {
+          "title": "Copyright",
+          "content": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator."
+        },
+        "privacy": {
+          "title": "Privacy Policy",
+          "content": "The use of our website is generally possible without providing personal data. Insofar as personal data (such as name, address or email addresses) is collected on our pages, this is always done on a voluntary basis wherever possible. This data will not be passed on to third parties without your explicit consent. We would like to point out that data transmission over the Internet (e.g. when communicating by email) can have security vulnerabilities. A complete protection of data against access by third parties is not possible. The use of contact data published within the framework of the legal notice obligation by third parties for sending unsolicited advertising and information materials is hereby expressly prohibited. The operators of the site expressly reserve the right to take legal action in the event of the unsolicited sending of advertising information, such as spam emails."
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,325 @@
+.legal-notice {
+  background-color: white;
+  min-height: 100vh;
+  padding: 120px 62px 80px 62px;
+  
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .back-button-container {
+    margin-bottom: 40px;
+    
+    .back-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 2px solid #000000;
+      color: #000000;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 3px 5px 0 rgba(0, 0, 0, 1);
+      
+      &:hover {
+        background-color: #F87B57;
+        border-color: #F87B57;
+        color: white;
+        transform: translateY(4px);
+        box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      &:active {
+        transform: translateY(5px);
+        box-shadow: none;
+      }
+      
+      svg {
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover svg {
+        transform: translateX(-3px);
+      }
+    }
+  }
+  
+  .header {
+    margin-bottom: 60px;
+    text-align: center;
+    
+    h1 {
+      font-size: 64px;
+      font-weight: 700;
+      margin: 0;
+      color: #000000;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background-color: #F87B57;
+        border-radius: 2px;
+      }
+    }
+  }
+  
+  .content {
+    .legal-content {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #000000;
+      
+      .section {
+        margin-bottom: 40px;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-left: 5px solid #F87B57;
+        
+        &:first-child {
+          background-color: #ffffff;
+          border-left: 5px solid #3355FF;
+        }
+        
+        &.disclaimer-section {
+          background-color: #ffffff;
+          border: 1px solid #e0e0e0;
+          border-left: 5px solid #FF6B35;
+        }
+      }
+      
+      .contact-details {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        margin-top: 15px;
+        
+        p {
+          margin: 8px 0;
+          font-weight: 500;
+          color: #000000;
+          
+          &:first-child {
+            font-size: 18px;
+            font-weight: 700;
+            color: #F87B57;
+          }
+        }
+      }
+      
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        p {
+          margin: 0;
+          padding: 10px 15px;
+          background-color: #ffffff;
+          border-radius: 6px;
+          border: 1px solid #e0e0e0;
+          border-left: 3px solid #3355FF;
+          color: #000000;
+          
+          strong {
+            margin-right: 8px;
+            color: #3355FF;
+          }
+        }
+      }
+      
+      h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        color: #000000;
+        position: relative;
+        padding-bottom: 10px;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background-color: #F87B57;
+          border-radius: 2px;
+        }
+      }
+      
+      h3 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 25px 0 15px 0;
+        color: #000000;
+        position: relative;
+        padding-left: 20px;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 12px;
+          height: 12px;
+          background-color: #3355FF;
+          border-radius: 50%;
+        }
+      }
+      
+      .subsection {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        
+        h3 {
+          margin-top: 0;
+          color: #000000;
+        }
+        
+        p {
+          margin-bottom: 15px;
+          text-align: justify;
+          color: #000000;
+        }
+      }
+      
+      p {
+        margin-bottom: 16px;
+        text-align: justify;
+        color: #000000;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      
+      ul {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        
+        li {
+          margin-bottom: 10px;
+          color: #000000;
+        }
+      }
+      
+      strong {
+        font-weight: 600;
+        color: #000000;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .legal-notice {
+    padding: 100px 30px 60px 30px;
+    
+    .back-button-container {
+      margin-bottom: 30px;
+      
+      .back-button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+    
+    .header {
+      margin-bottom: 40px;
+      
+      h1 {
+        font-size: 42px;
+      }
+    }
+    
+    .content {
+      .legal-content {
+        font-size: 15px;
+        
+        .section {
+          padding: 20px;
+          margin-bottom: 30px;
+        }
+        
+        .contact-info {
+          flex-direction: column;
+          
+          p {
+            padding: 12px;
+            font-size: 14px;
+          }
+        }
+        
+        h2 {
+          font-size: 24px;
+        }
+        
+        h3 {
+          font-size: 20px;
+          padding-left: 15px;
+          
+          &::before {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        
+        .subsection {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-notice {
+    padding: 90px 20px 50px 20px;
+    
+    .header {
+      h1 {
+        font-size: 36px;
+      }
+    }
+    
+    .content {
+      .legal-content {
+        font-size: 14px;
+        
+        .section {
+          padding: 15px;
+        }
+        
+        .contact-details {
+          padding: 15px;
+        }
+        
+        h2 {
+          font-size: 22px;
+        }
+        
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
