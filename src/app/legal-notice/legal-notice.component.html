@@ -32,8 +32,30 @@
         <div class="section">
           <h3>{{ 'legal.sections.contact.title' | translate }}</h3>
           <div class="contact-info">
-            <p><strong>{{ 'legal.sections.contact.phone' | translate }}:</strong> 0152-02888042</p>
-            <p><strong>{{ 'legal.sections.contact.email' | translate }}:</strong> kontakt&#64;mirkanpolat.com</p>
+            <div class="contact-item" (click)="callPhone()">
+              <div class="contact-icon phone-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7294C21.7209 20.9846 21.5573 21.2137 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.19 12.85C3.49997 10.2412 2.44848 7.27099 2.12 4.18C2.09501 3.90347 2.12788 3.62476 2.21649 3.36162C2.3051 3.09849 2.44748 2.85669 2.63519 2.65162C2.8229 2.44655 3.05028 2.28271 3.30402 2.17052C3.55777 2.05833 3.83233 2.00026 4.11 2H7.11C7.59531 1.99522 8.06711 2.16708 8.43849 2.48353C8.80987 2.79999 9.05423 3.23945 9.13 3.72C9.27004 4.68007 9.51398 5.62273 9.86 6.53C9.98375 6.88792 10.0125 7.27691 9.93125 7.65088C9.85 8.02485 9.66251 8.36811 9.39 8.64L8.21 9.82C9.68793 12.3257 11.6743 14.3121 14.18 15.79L15.36 14.61C15.6319 14.3375 15.9751 14.15 16.3491 14.0687C16.7231 13.9875 17.1121 14.0162 17.47 14.14C18.3773 14.486 19.3199 14.73 20.28 14.87C20.7658 14.9458 21.2094 15.1917 21.5265 15.5673C21.8437 15.9429 22.0122 16.4201 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contact-content">
+                <strong>{{ 'legal.sections.contact.phone' | translate }}</strong>
+                <a href="tel:+4915202888042" class="contact-link" (click)="$event.stopPropagation()">0152-02888042</a>
+              </div>
+            </div>
+            
+            <div class="contact-item" (click)="sendEmail()">
+              <div class="contact-icon email-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contact-content">
+                <strong>{{ 'legal.sections.contact.email' | translate }}</strong>
+                <a href="mailto:kontakt@mirkanpolat.com" class="contact-link" (click)="$event.stopPropagation()">kontakt&#64;mirkanpolat.com</a>
+              </div>
+            </div>
           </div>
         </div>
         

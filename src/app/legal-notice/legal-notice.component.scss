@@ -136,26 +136,148 @@
       .contact-info {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 3rem;
         margin: 2rem 0;
         
-        p {
-          margin: 0;
-          padding: 0;
-          background: none;
-          border: none;
-          color: #000000;
-          text-align: center;
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1.5rem 2rem;
+          background-color: #ffffff;
+          border-radius: 12px;
+          border: 2px solid #e0e0e0;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
           
-          strong {
-            margin-right: 8px;
-            color: #000000;
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #F87B57;
+          }
+          
+          &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          }
+          
+          .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            
+            &.phone-icon {
+              background-color: #E3F2FD;
+              color: #3355FF;
+            }
+            
+            &.email-icon {
+              background-color: #FFF3E0;
+              color: #F87B57;
+            }
+            
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+          
+          .contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            
+            strong {
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: #666;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+            
+            .contact-link {
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #000000;
+              text-decoration: none;
+              transition: all 0.3s ease;
+              
+              &:hover {
+                color: #F87B57;
+                transform: translateX(3px);
+              }
+            }
+          }
+          
+          &:hover .contact-icon {
+            transform: scale(1.1);
+            
+            &.phone-icon {
+              background-color: #3355FF;
+              color: white;
+            }
+            
+            &.email-icon {
+              background-color: #F87B57;
+              color: white;
+            }
           }
         }
         
         @media (max-width: 768px) {
           flex-direction: column;
-          gap: 1rem;
+          gap: 1.5rem;
+          
+          .contact-item {
+            padding: 1.2rem 1.5rem;
+            
+            .contact-icon {
+              width: 45px;
+              height: 45px;
+              
+              svg {
+                width: 22px;
+                height: 22px;
+              }
+            }
+            
+            .contact-content {
+              .contact-link {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .contact-item {
+            padding: 1rem 1.2rem;
+            
+            .contact-icon {
+              width: 40px;
+              height: 40px;
+              
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+            
+            .contact-content {
+              strong {
+                font-size: 0.8rem;
+              }
+              
+              .contact-link {
+                font-size: 0.95rem;
+              }
+            }
+          }
         }
       }
       

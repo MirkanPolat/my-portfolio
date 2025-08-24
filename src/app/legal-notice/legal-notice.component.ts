@@ -17,4 +17,12 @@ export class LegalNoticeComponent {
   goBack() {
     this.router.navigate(['/']);
   }
+  
+  callPhone() {
+    window.location.href = 'tel:+4915202888042';
+  }
+  
+  sendEmail() {
+    window.location.href = 'mailto:kontakt@mirkanpolat.com';
+  }
 }
