@@ -21,16 +21,15 @@ export class ContactComponent {
     message: '',
   };
 
-  mailTest = true; 
+  mailTest = false; 
   privacyAccepted = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://mirkanpolat.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
       },
     },
   };
