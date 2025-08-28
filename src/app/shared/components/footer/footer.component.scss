@@ -57,9 +57,30 @@
     &.legal-link {
       display: flex;
       align-items: center;
+      position: relative;
       
-      &:hover {
-        color: #FFA500;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150%;
+        height: 200%;
+        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/3.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      &:hover {        
+        &::after {
+          opacity: 1;
+        }
       }
     }
     
