@@ -45,6 +45,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 15px;
+  flex-wrap: wrap;
   
   .footer-link {
     color: rgba(255, 255, 255, 0.8);
@@ -52,8 +54,28 @@
     font-size: 16px;
     transition: color 0.3s ease;
     
-    &:hover {
-      color: #FFA500;
+    &.legal-link {
+      display: flex;
+      align-items: center;
+      
+      &:hover {
+        color: #FFA500;
+      }
+    }
+    
+    &.social-link {
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      padding: 8px 20px;
+      transition: all 0.4s ease;
+      white-space: nowrap;
+      
+      &:hover {
+        color: white;
+        background-color: #3355FF;
+        border-color: #3355FF;
+      }
     }
   }
 }
