@@ -49,19 +49,19 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('Email successfully sent!', response);
             contactForm.resetForm();
             this.contactData = { name: '', email: '', message: '' };
             this.privacyAccepted = false;
           },
           error: (error) => {
-            console.error('Error sending email:', error);
+            // Silent error handling
           },
-          complete: () => console.info('Send post complete'),
+          complete: () => {
+            // Email sending complete
+          }
         });
     } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
-      // TEST MODE: Nur Console Log
-      console.log('TEST MODE - Form Data:', this.contactData);
+      // TEST MODE: Silent execution
       contactForm.resetForm();
       this.contactData = { name: '', email: '', message: '' }; 
       this.privacyAccepted = false;
