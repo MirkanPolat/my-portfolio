@@ -45,7 +45,6 @@ export class ContactComponent {
     }
 
     if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
-      // PRODUCTION MODE: Email versenden
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -54,14 +53,11 @@ export class ContactComponent {
             this.privacyAccepted = false;
           },
           error: (error) => {
-            // Silent error handling
           },
           complete: () => {
-            // Email sending complete
           }
         });
     } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
-      // TEST MODE: Silent execution
       contactForm.resetForm();
       this.contactData = { name: '', email: '', message: '' }; 
       this.privacyAccepted = false;
