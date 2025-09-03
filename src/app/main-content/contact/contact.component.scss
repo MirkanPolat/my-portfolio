@@ -394,3 +394,31 @@ section {
     max-width: 200px;
   }
 }
+
+@media (max-width: 320px) {
+  .content-wrapper {
+    padding: 0 10px;
+  }
+  
+  .my-button {
+    min-width: auto;
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+  
+  .contact-logo .logo-circle {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .right-section {
+    padding: 0;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}

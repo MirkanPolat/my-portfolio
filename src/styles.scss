@@ -3,9 +3,11 @@
     padding: 0;
     color: #f8f9fa;
     font-family: 'Bricolage Grotesque';
+    box-sizing: border-box;
 }
 
-body {
+html, body {
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -17,6 +19,17 @@ body {
 
 section {
     padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 320px) {
+    section {
+        padding: 0 15px;
+    }
 }
 .bricolage-grotesque {
     font-family: 'Bricolage Grotesque', sans-serif;
