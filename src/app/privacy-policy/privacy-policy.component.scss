@@ -1,0 +1,399 @@
+.privacy-policy {
+  padding: 100px 0 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0B0D17 0%, #151A2B 100%);
+  
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .back-button-container {
+    margin-bottom: 50px;
+  }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+      border-color: rgba(248, 123, 87, 0.4);
+      
+      svg {
+        transform: translateX(-3px);
+      }
+    }
+    
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+    
+    h1 {
+      font-size: 3rem;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      font-family: 'Kalam', cursive;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120%;
+        height: 4px;
+        background: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Frame 20.png') no-repeat center;
+        background-size: contain;
+        animation: slideInOut 0.8s ease-in-out forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+      }
+    }
+  }
+  
+  .legal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .info-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba(248, 123, 87, 0.3);
+      box-shadow: 0 20px 40px rgba(248, 123, 87, 0.1);
+    }
+    
+    .card-header {
+      background: linear-gradient(135deg, rgba(248, 123, 87, 0.1) 0%, rgba(51, 85, 255, 0.1) 100%);
+      padding: 24px 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      
+      .card-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(248, 123, 87, 0.2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #F87B57;
+        flex-shrink: 0;
+        
+        &.contact-header-icon {
+          background: rgba(51, 85, 255, 0.2);
+          color: #3355FF;
+        }
+        
+        &.disclaimer-icon {
+          background: rgba(139, 69, 19, 0.2);
+          color: #DEB887;
+        }
+      }
+      
+      h2 {
+        color: #FFFFFF;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0;
+        font-family: 'Kalam', cursive;
+      }
+    }
+    
+    .card-content {
+      padding: 30px;
+    }
+  }
+  
+  .main-info-card {
+    .personal-info {
+      .name {
+        font-size: 1.3rem;
+        color: #F87B57;
+        margin-bottom: 15px;
+      }
+      
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+    }
+    
+    .represented-section {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      
+      h3 {
+        color: #3355FF;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+      
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  .contact-card {
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(248, 123, 87, 0.3);
+        transform: translateX(5px);
+        
+        .contact-icon {
+          transform: scale(1.1);
+        }
+      }
+      
+      &:active {
+        transform: translateX(5px) scale(0.98);
+      }
+      
+      .contact-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+        
+        &.phone-icon {
+          background: rgba(34, 197, 94, 0.15);
+          color: #22C55E;
+        }
+        
+        &.email-icon {
+          background: rgba(59, 130, 246, 0.15);
+          color: #3B82F6;
+        }
+      }
+      
+      .contact-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 0;
+        
+        strong {
+          color: #FFFFFF;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        
+        .contact-link {
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none;
+          font-size: 0.95rem;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: #F87B57;
+          }
+        }
+      }
+    }
+  }
+  
+  .disclaimer-card {
+    .disclaimer-section {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .subsection {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 25px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+      }
+      
+      .subsection-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        
+        .subsection-icon {
+          width: 35px;
+          height: 35px;
+          background: rgba(248, 123, 87, 0.15);
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #F87B57;
+          flex-shrink: 0;
+        }
+        
+        h3 {
+          color: #FFFFFF;
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+      
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.7;
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  @keyframes slideInOut {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) scaleX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    
+    .content-wrapper {
+      padding: 0 15px;
+    }
+    
+    .header {
+      margin-bottom: 30px;
+      
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+    
+    .info-card {
+      .card-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+      
+      .card-content {
+        padding: 20px;
+      }
+    }
+    
+    .contact-item {
+      padding: 16px !important;
+      flex-direction: column;
+      text-align: center;
+      gap: 12px !important;
+      
+      &:hover {
+        transform: translateY(-2px) !important;
+      }
+    }
+    
+    .subsection {
+      padding: 20px !important;
+      
+      .subsection-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px !important;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .back-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    
+    .legal-content {
+      gap: 20px;
+    }
+    
+    .info-card .card-header {
+      padding: 16px;
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

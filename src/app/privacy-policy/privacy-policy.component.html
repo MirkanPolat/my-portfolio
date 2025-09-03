@@ -1,0 +1,120 @@
+<section class="privacy-policy">
+  <div class="content-wrapper">
+    <div class="back-button-container">
+      <button class="back-button" (click)="goBack()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        {{ 'privacy.backButton' | translate }}
+      </button>
+    </div>
+    
+    <div class="header">
+      <h1>{{ 'privacy.title' | translate }}</h1>
+    </div>
+    
+    <div class="content">
+      <div class="privacy-content">
+        <div class="info-card main-info-card">
+          <div class="card-header">
+            <div class="card-icon main-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15L12 3M12 3L16 7M12 3L8 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L2 19C2 20.1046 2.89543 21 4 21L20 21C21.1046 21 22 20.1046 22 19L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2>{{ 'privacy.sections.dataCollection.title' | translate }}</h2>
+          </div>
+          <div class="card-content">
+            <p>{{ 'privacy.sections.dataCollection.content.intro' | translate }}</p>
+            <ul>
+              <li>{{ 'privacy.sections.dataCollection.content.personal' | translate }}</li>
+              <li>{{ 'privacy.sections.dataCollection.content.usage' | translate }}</li>
+              <li>{{ 'privacy.sections.dataCollection.content.technical' | translate }}</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="info-card contact-card">
+          <div class="card-header">
+            <div class="card-icon contact-header-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22S2 16 2 10C2 5.58172 5.58172 2 10 2H14C18.4183 2 22 5.58172 22 10C22 16 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h2>{{ 'privacy.sections.dataUsage.title' | translate }}</h2>
+          </div>
+          <div class="card-content">
+            <p>{{ 'privacy.sections.dataUsage.content.purpose' | translate }}</p>
+            <ul>
+              <li>{{ 'privacy.sections.dataUsage.content.communication' | translate }}</li>
+              <li>{{ 'privacy.sections.dataUsage.content.improvement' | translate }}</li>
+              <li>{{ 'privacy.sections.dataUsage.content.legal' | translate }}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card disclaimer-card">
+          <div class="card-header">
+            <div class="card-icon disclaimer-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h2>{{ 'privacy.sections.rights.title' | translate }}</h2>
+          </div>
+          <div class="card-content">
+            <p>{{ 'privacy.sections.rights.content.intro' | translate }}</p>
+            <ul>
+              <li>{{ 'privacy.sections.rights.content.access' | translate }}</li>
+              <li>{{ 'privacy.sections.rights.content.correction' | translate }}</li>
+              <li>{{ 'privacy.sections.rights.content.deletion' | translate }}</li>
+              <li>{{ 'privacy.sections.rights.content.objection' | translate }}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card contact-card">
+          <div class="card-header">
+            <div class="card-icon contact-header-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2>{{ 'privacy.sections.contact.title' | translate }}</h2>
+          </div>
+          <div class="card-content">
+            <p>{{ 'privacy.sections.contact.content.intro' | translate }}</p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <strong>{{ 'privacy.sections.contact.content.name' | translate }}</strong>
+                <p>Mirkan Polat</p>
+              </div>
+              
+              <div class="contact-item">
+                <strong>{{ 'privacy.sections.contact.content.email' | translate }}</strong>
+                <p>
+                  <a href="mailto:kontakt@mirkanpolat.com" (click)="sendEmail()">
+                    kontakt&#64;mirkanpolat.com
+                  </a>
+                </p>
+              </div>
+              
+              <div class="contact-item">
+                <strong>{{ 'privacy.sections.contact.content.phone' | translate }}</strong>
+                <p>
+                  <a href="tel:+4915202888042" (click)="callPhone()">
+                    +49 152 02 888 042
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

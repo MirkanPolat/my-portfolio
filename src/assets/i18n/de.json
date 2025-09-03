@@ -185,5 +185,27 @@
         }
       }
     }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "backButton": "Zurück",
+    "sections": {
+      "dataCollection": {
+        "title": "Datenerfassung und -verarbeitung",
+        "content": "Beim Besuch unserer Website können personenbezogene Daten erfasst werden. Dazu gehören Daten, die Sie freiwillig bereitstellen (z.B. bei Nutzung des Kontaktformulars) und Daten, die automatisch erfasst werden (z.B. IP-Adresse, Browser-Typ, Betriebssystem). Wir erfassen diese Daten, um unsere Dienste bereitzustellen und zu verbessern, auf Ihre Anfragen zu antworten und die Sicherheit unserer Website zu gewährleisten."
+      },
+      "dataUsage": {
+        "title": "Datenverwendung",
+        "content": "Wir verwenden Ihre personenbezogenen Daten ausschließlich für die Zwecke, für die sie erhoben wurden. Dazu gehören die Bearbeitung Ihrer Kontaktanfragen, die Verbesserung unserer Website und die Erfüllung gesetzlicher Verpflichtungen. Ihre Daten werden ohne Ihre ausdrückliche Einwilligung nicht an Dritte weitergegeben, außer wenn dies gesetzlich vorgeschrieben oder für die Bereitstellung unserer Dienste erforderlich ist."
+      },
+      "rights": {
+        "title": "Ihre Rechte",
+        "content": "Sie haben das Recht auf Auskunft über die von uns über Sie gespeicherten personenbezogenen Daten sowie das Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung. Zudem haben Sie das Recht auf Datenübertragbarkeit und auf Widerspruch gegen die Verarbeitung Ihrer Daten. Haben Sie eine Einwilligung zur Datenverarbeitung erteilt, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen."
+      },
+      "contact": {
+        "title": "Kontakt in Datenschutzangelegenheiten",
+        "content": "Wenn Sie Fragen zur Verarbeitung Ihrer personenbezogenen Daten haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte über die im Impressum angegebenen Kontaktdaten. Wir werden Ihre Anfrage umgehend und in Übereinstimmung mit den geltenden Datenschutzbestimmungen beantworten."
+      }
+    }
   }
 }

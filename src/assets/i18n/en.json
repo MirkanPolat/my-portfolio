@@ -185,5 +185,27 @@
         }
       }
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "backButton": "Back",
+    "sections": {
+      "dataCollection": {
+        "title": "Data Collection and Processing",
+        "content": "When you visit our website, personal data may be collected. This includes data that you provide voluntarily (e.g., when using the contact form) and data that is automatically collected (e.g., IP address, browser type, operating system). We collect this data to provide and improve our services, respond to your inquiries, and ensure the security of our website."
+      },
+      "dataUsage": {
+        "title": "Data Usage",
+        "content": "We use your personal data exclusively for the purposes for which it was collected. This includes processing your contact inquiries, improving our website, and complying with legal obligations. Your data will not be shared with third parties without your explicit consent, except where required by law or necessary for the provision of our services."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "You have the right to information about the personal data we store about you, as well as the right to correction, deletion, or restriction of processing. You also have the right to data portability and to object to the processing of your data. If you have given your consent to data processing, you can revoke it at any time with effect for the future."
+      },
+      "contact": {
+        "title": "Contact for Privacy Matters",
+        "content": "If you have questions about the processing of your personal data or would like to exercise your rights, please contact us using the contact information provided in the legal notice. We will respond to your inquiry promptly and in accordance with applicable data protection regulations."
+      }
+    }
   }
 }

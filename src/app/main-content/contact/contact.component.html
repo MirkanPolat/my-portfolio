@@ -75,7 +75,7 @@
             <input [(ngModel)]="privacyAccepted" type="checkbox" id="privacy" name="privacy">
             <label for="privacy">
               {{ 'contact.form.privacyText' | translate }} 
-              <a href="#" class="privacy-link">{{ 'contact.form.privacyLink' | translate }}</a> 
+              <a (click)="openPrivacyPolicy()" class="privacy-link">{{ 'contact.form.privacyLink' | translate }}</a> 
               {{ 'contact.form.privacyAgreement' | translate }}
             </label>
           </div>

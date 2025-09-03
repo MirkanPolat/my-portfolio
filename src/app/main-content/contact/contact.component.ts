@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 
@@ -14,6 +15,7 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
 })
 export class ContactComponent {
   http = inject(HttpClient);
+  router = inject(Router);
 
   contactData = {
     name: '',
@@ -36,6 +38,10 @@ export class ContactComponent {
 
   isFormValid(contactForm: NgForm): boolean {
     return contactForm.form.valid && this.privacyAccepted;
+  }
+
+  openPrivacyPolicy() {
+    this.router.navigate(['/privacy-policy']);
   }
 
   onSubmit(contactForm: NgForm) {
