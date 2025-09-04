@@ -14,7 +14,7 @@
     </div>
     
     <div class="content">
-      <div class="privacy-content">
+      <div class="legal-content">
         <div class="info-card main-info-card">
           <div class="card-header">
             <div class="card-icon main-icon">
@@ -23,15 +23,12 @@
                 <path d="M2 17L2 19C2 20.1046 2.89543 21 4 21L20 21C21.1046 21 22 20.1046 22 19L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h2>{{ 'privacy.sections.dataCollection.title' | translate }}</h2>
+            <h2>Präambel</h2>
           </div>
           <div class="card-content">
-            <p>{{ 'privacy.sections.dataCollection.content.intro' | translate }}</p>
-            <ul>
-              <li>{{ 'privacy.sections.dataCollection.content.personal' | translate }}</li>
-              <li>{{ 'privacy.sections.dataCollection.content.usage' | translate }}</li>
-              <li>{{ 'privacy.sections.dataCollection.content.technical' | translate }}</li>
-            </ul>
+            <p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z. B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als "Onlineangebot").</p>
+            <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
+            <p><strong>Stand: 4. September 2025</strong></p>
           </div>
         </div>
         
@@ -39,19 +36,35 @@
           <div class="card-header">
             <div class="card-icon contact-header-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22S2 16 2 10C2 5.58172 5.58172 2 10 2H14C18.4183 2 22 5.58172 22 10C22 16 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h2>{{ 'privacy.sections.dataUsage.title' | translate }}</h2>
+            <h2>Verantwortlicher</h2>
           </div>
           <div class="card-content">
-            <p>{{ 'privacy.sections.dataUsage.content.purpose' | translate }}</p>
-            <ul>
-              <li>{{ 'privacy.sections.dataUsage.content.communication' | translate }}</li>
-              <li>{{ 'privacy.sections.dataUsage.content.improvement' | translate }}</li>
-              <li>{{ 'privacy.sections.dataUsage.content.legal' | translate }}</li>
-            </ul>
+            <div class="personal-info">
+              <p class="name"><strong>Mirkan Polat</strong></p>
+              <p>Feldschmiede 10A</p>
+              <p>22159 Hamburg Deutschland</p>
+            </div>
+            
+            <div class="contact-info">
+              <div class="contact-item" (click)="sendEmail()">
+                <div class="contact-icon email-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="contact-content">
+                  <strong>E-Mail-Adresse</strong>
+                  <a href="mailto:kontakt@mirkanpolat.com" class="contact-link" (click)="$event.stopPropagation()">kontakt&#64;mirkanpolat.com</a>
+                </div>
+              </div>
+            </div>
+            
+            <p>Impressum: <a href="https://mirkanpolat.com/legal-notice" target="_blank">https://mirkanpolat.com/legal-notice</a></p>
           </div>
         </div>
 
@@ -63,57 +76,182 @@
                 <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
               </svg>
             </div>
-            <h2>{{ 'privacy.sections.rights.title' | translate }}</h2>
+            <h2>Übersicht der Verarbeitungen</h2>
           </div>
           <div class="card-content">
-            <p>{{ 'privacy.sections.rights.content.intro' | translate }}</p>
-            <ul>
-              <li>{{ 'privacy.sections.rights.content.access' | translate }}</li>
-              <li>{{ 'privacy.sections.rights.content.correction' | translate }}</li>
-              <li>{{ 'privacy.sections.rights.content.deletion' | translate }}</li>
-              <li>{{ 'privacy.sections.rights.content.objection' | translate }}</li>
-            </ul>
+            <p>Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.</p>
+            
+            <div class="disclaimer-section">
+              <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3>Arten der verarbeiteten Daten</h3>
+              </div>
+              <ul>
+                <li>Bestandsdaten</li>
+                <li>Kontaktdaten</li>
+                <li>Inhaltsdaten</li>
+                <li>Nutzungsdaten</li>
+                <li>Meta-, Kommunikations- und Verfahrensdaten</li>
+                <li>Protokolldaten</li>
+              </ul>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3>Kategorien betroffener Personen</h3>
+              </div>
+              <ul>
+                <li>Kommunikationspartner</li>
+                <li>Nutzer</li>
+              </ul>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Zwecke der Verarbeitung</h3>
+              </div>
+              <ul>
+                <li>Kommunikation</li>
+                <li>Sicherheitsmaßnahmen</li>
+                <li>Organisations- und Verwaltungsverfahren</li>
+                <li>Feedback</li>
+                <li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit</li>
+                <li>Informationstechnische Infrastruktur</li>
+                <li>Öffentlichkeitsarbeit</li>
+              </ul>
+            </div>
+            </div>
           </div>
         </div>
 
-        <div class="info-card contact-card">
+        <div class="info-card main-info-card">
           <div class="card-header">
-            <div class="card-icon contact-header-icon">
+            <div class="card-icon main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 22S8 18 8 14A4 4 0 0 1 16 14C16 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="14" r="3" stroke="currentColor" stroke-width="2"/>
               </svg>
             </div>
-            <h2>{{ 'privacy.sections.contact.title' | translate }}</h2>
+            <h2>Maßgebliche Rechtsgrundlagen</h2>
           </div>
           <div class="card-content">
-            <p>{{ 'privacy.sections.contact.content.intro' | translate }}</p>
-            <div class="contact-info">
-              <div class="contact-item">
-                <strong>{{ 'privacy.sections.contact.content.name' | translate }}</strong>
-                <p>Mirkan Polat</p>
+            <p><strong>Maßgebliche Rechtsgrundlagen nach der DSGVO: </strong>Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können.</p>
+            
+            <div class="disclaimer-section">
+              <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO)</h3>
               </div>
-              
-              <div class="contact-item">
-                <strong>{{ 'privacy.sections.contact.content.email' | translate }}</strong>
-                <p>
-                  <a href="mailto:kontakt@mirkanpolat.com" (click)="sendEmail()">
-                    kontakt&#64;mirkanpolat.com
-                  </a>
-                </p>
+              <p>Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der betroffenen Person erfolgen.</p>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)</h3>
               </div>
-              
-              <div class="contact-item">
-                <strong>{{ 'privacy.sections.contact.content.phone' | translate }}</strong>
-                <p>
-                  <a href="tel:+4915202888042" (click)="callPhone()">
-                    +49 152 02 888 042
-                  </a>
-                </p>
-              </div>
+              <p>Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten notwendig, vorausgesetzt, dass die Interessen, Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten verlangen, nicht überwiegen.</p>
+            </div>
             </div>
           </div>
         </div>
 
+        <div class="info-card disclaimer-card">
+          <div class="card-header">
+            <div class="card-icon disclaimer-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22S2 16 2 10C2 5.58172 5.58172 2 10 2H14C18.4183 2 22 5.58172 22 10C22 16 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h2>Ihre Rechte als betroffene Person</h2>
+          </div>
+          <div class="card-content">
+            <p>Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:</p>
+            
+            <div class="disclaimer-section">
+              <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Widerspruchsrecht</h3>
+              </div>
+              <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten Widerspruch einzulegen.</p>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Auskunftsrecht</h3>
+              </div>
+              <p>Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen entsprechend den gesetzlichen Vorgaben.</p>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Recht auf Berichtigung und Löschung</h3>
+              </div>
+              <p>Sie haben entsprechend den gesetzlichen Vorgaben das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen sowie die Löschung Ihrer Daten.</p>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header">
+                <div class="subsection-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>Beschwerde bei Aufsichtsbehörde</h3>
+              </div>
+              <p>Sie haben das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthaltsorts, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die Vorgaben der DSGVO verstößt.</p>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
