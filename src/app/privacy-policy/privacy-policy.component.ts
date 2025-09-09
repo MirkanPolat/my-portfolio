@@ -22,7 +22,8 @@ export class PrivacyPolicyComponent {
     if (element) {
       element.scrollIntoView({ 
         behavior: 'smooth', 
-        block: 'start' 
+        block: 'center',
+        inline: 'nearest'
       });
     }
   }
