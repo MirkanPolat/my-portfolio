@@ -265,36 +265,6 @@
           margin-bottom: 8px;
         }
       }
-      
-      .index {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        
-        li {
-          padding: 10px 15px;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          border-radius: 8px;
-          margin-bottom: 8px;
-          transition: all 0.3s ease;
-          
-          &:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateX(3px);
-          }
-        }
-        
-        .index-link {
-          color: rgba(255, 255, 255, 0.8);
-          text-decoration: none;
-          cursor: pointer;
-          
-          &:hover {
-            color: #F87B57;
-          }
-        }
-      }
     }
   }
   
