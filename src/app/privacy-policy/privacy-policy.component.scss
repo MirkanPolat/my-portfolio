@@ -48,7 +48,7 @@
     margin-bottom: 50px;
 
     h1 {
-      font-size: 3rem;
+      font-size: clamp(2rem, 5vw, 3rem);
       color: #FFFFFF;
       margin-bottom: 20px;
       font-family: 'Kalam', cursive;
@@ -95,8 +95,7 @@
       color: #FFFFFF;
       font-size: 1.5rem;
       font-weight: 600;
-      margin-top: 0;
-      margin-bottom: 12px;
+      margin: 0 0 12px 0;
     }
 
     p {
@@ -133,8 +132,7 @@
     padding: 20px 24px;
 
     h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
+      margin: 0 0 12px 0;
     }
 
     ul.index {
@@ -351,40 +349,26 @@
 
 @media (max-width: 768px) {
   .privacy-policy {
-    padding: 80px 15px 30px 15px;
-    
-    .header h1 {
-      font-size: 2rem;
-    }
+    padding: 80px 15px 30px;
     
     .info-card .card-header {
       flex-direction: column;
       text-align: center;
       gap: 10px;
       
-      h2 {
-        font-size: 1.3rem;
-      }
+      h2 { font-size: 1.3rem; }
     }
 
     .card {
       padding: 18px;
-
-      h2 {
-        font-size: 1.25rem;
-      }
+      h2 { font-size: 1.25rem; }
     }
 
     .toc {
       padding: 16px;
-
-      ul.index li {
-        padding: 8px 12px;
-      }
+      ul.index li { padding: 8px 12px; }
     }
 
-    .asof {
-      font-size: 0.75rem;
-    }
+    .asof { font-size: 0.75rem; }
   }
 }
