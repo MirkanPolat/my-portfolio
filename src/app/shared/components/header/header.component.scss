@@ -301,7 +301,7 @@ header {
         .toggle-switch {
           width: 60px;
           height: 30px;
-          background-color: #3355FF; // Blau für EN (Standard)
+          background-color: #3355FF;
           border: 2px solid rgba(255, 255, 255, 0.8);
           border-radius: 15px;
           position: relative;
@@ -322,7 +322,7 @@ header {
           }
           
           &.de-active {
-            background-color: #F87B57; // Orange für DE
+            background-color: #F87B57; 
             
             .toggle-slider {
               background-color: #3355FF;

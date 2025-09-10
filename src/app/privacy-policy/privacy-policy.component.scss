@@ -78,14 +78,13 @@
     gap: 30px;
   }
   
-  /* === New structure support: generic cards, toc, simple meta text === */
   .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    padding: 25px; /* because the new sections don't use .card-content */
+    padding: 25px;
 
     &:hover {
       transform: translateY(-3px);
@@ -96,7 +95,7 @@
       color: #FFFFFF;
       font-size: 1.5rem;
       font-weight: 600;
-      margin-top: 0; /* avoid extra gap at top */
+      margin-top: 0;
       margin-bottom: 12px;
     }
 
@@ -350,7 +349,6 @@
   }
 }
 
-// Responsive Design
 @media (max-width: 768px) {
   .privacy-policy {
     padding: 80px 15px 30px 15px;
