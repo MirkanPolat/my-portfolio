@@ -3,7 +3,6 @@
     padding: 0;
     color: #f8f9fa;
     font-family: 'Bricolage Grotesque';
-    box-sizing: border-box;
 }
 
 html, body {
@@ -22,7 +21,7 @@ section {
 }
 
 img {
-    max-width: 100%;
+    max-width: auto;
     height: auto;
 }
 
