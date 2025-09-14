@@ -16,6 +16,7 @@ interface Testimonial {
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss'
 })
+
 export class TestimonialsComponent {
   testimonials: Testimonial[] = [
     {

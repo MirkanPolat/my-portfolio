@@ -13,10 +13,10 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
+
 export class ContactComponent {
   http = inject(HttpClient);
   router = inject(Router);
-
   contactData = {
     name: '',
     email: '',
@@ -49,24 +49,24 @@ export class ContactComponent {
       alert('Please fill out the form correctly and accept the privacy policy');
       return;
     }
-
-    if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            contactForm.resetForm();
-            this.contactData = { name: '', email: '', message: '' };
-            this.privacyAccepted = false;
-          },
-          error: (error) => {
-          },
-          complete: () => {
-          }
-        });
-    } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
-      contactForm.resetForm();
-      this.contactData = { name: '', email: '', message: '' }; 
-      this.privacyAccepted = false;
+    
+    if (contactForm.submitted && contactForm.form.valid) {
+      if (!this.mailTest) {
+        this.http.post(this.post.endPoint, this.post.body(this.contactData))
+          .subscribe({
+            next: () => this.resetForm(contactForm),
+            error: () => {},
+            complete: () => {}
+          });
+      } else {
+        this.resetForm(contactForm);
+      }
     }
+  }
+
+  private resetForm(contactForm: NgForm) {
+    contactForm.resetForm();
+    this.contactData = { name: '', email: '', message: '' };
+    this.privacyAccepted = false;
   }
 }

@@ -9,6 +9,7 @@ import { TranslatePipe } from "@ngx-translate/core";
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
+
 export class HeroSectionComponent {
   frontendLetters: string[] = 'Frontend'.split('');
   developerLetters: string[] = 'DEVELOPER'.split('');
@@ -18,7 +19,6 @@ export class HeroSectionComponent {
     if (element) {
       const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
-      
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from "@ngx-translate/core";
 
-
 interface Skill {
   name: string;
   icon: string;
@@ -16,6 +15,7 @@ interface Skill {
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
+
 export class SkillSetComponent {
   stickerState: 'default' | 'transition' | 'peeled' = 'default';
 

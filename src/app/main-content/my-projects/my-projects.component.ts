@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './my-projects.component.html',
   styleUrl: './my-projects.component.scss'
 })
+
 export class MyProjectsComponent implements OnInit, OnDestroy {
   private projectService = inject(ProjectService);
   private router = inject(Router);
@@ -28,7 +29,6 @@ export class MyProjectsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
-    
     this.langChangeSubscription = this.translateService.onLangChange.subscribe(() => {
       this.projects = this.projectService.getProjects();
     });

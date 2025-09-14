@@ -33,7 +33,6 @@ export class OverlayComponent implements OnInit {
   private loadProject(projectId: string): void {
     this.project = this.projectService.getProjectById(projectId);
     this.currentIndex = this.allProjects.findIndex(p => p.id === projectId);
-    
     if (!this.project) {
       this.redirectToHome();
     }
@@ -67,11 +66,9 @@ export class OverlayComponent implements OnInit {
 
   private getNextIndex(direction: 'prev' | 'next'): number {
     const maxIndex = this.allProjects.length - 1;
-    
     if (direction === 'prev') {
       return this.currentIndex > 0 ? this.currentIndex - 1 : maxIndex;
     }
-    
     return this.currentIndex < maxIndex ? this.currentIndex + 1 : 0;
   }
 }

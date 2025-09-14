@@ -10,6 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
+
 export class PrivacyPolicyComponent implements OnInit {
   
   constructor(private router: Router) {}
