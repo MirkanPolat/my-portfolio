@@ -189,22 +189,161 @@
   "privacy": {
     "title": "Datenschutzerklärung",
     "backButton": "Zurück",
+    "header": {
+      "asof": "Stand: 4. September 2025"
+    },
+    "toc": {
+      "title": "Inhaltsübersicht",
+      "items": {
+        "introduction": "Einleitung",
+        "responsible": "Verantwortlicher",
+        "overview": "Übersicht der Verarbeitungen",
+        "legalBasis": "Rechtsgrundlagen",
+        "security": "Sicherheitsmaßnahmen",
+        "storage": "Speicherung & Löschung",
+        "rights": "Ihre Datenschutzrechte",
+        "hosting": "Bereitstellung & Webhosting",
+        "contact": "Kontakt & Anfrageverwaltung",
+        "socialMedia": "Social Media",
+        "externalLinks": "Externe Links (GitHub, Live-Demos)",
+        "authority": "Zuständige Aufsichtsbehörde",
+        "changes": "Änderung & Aktualisierung",
+        "definitions": "Begriffsdefinitionen"
+      }
+    },
     "sections": {
-      "dataCollection": {
-        "title": "Datenerfassung und -verarbeitung",
-        "content": "Beim Besuch unserer Website können personenbezogene Daten erfasst werden. Dazu gehören Daten, die Sie freiwillig bereitstellen (z.B. bei Nutzung des Kontaktformulars) und Daten, die automatisch erfasst werden (z.B. IP-Adresse, Browser-Typ, Betriebssystem). Wir erfassen diese Daten, um unsere Dienste bereitzustellen und zu verbessern, auf Ihre Anfragen zu antworten und die Sicherheit unserer Website zu gewährleisten."
+      "introduction": {
+        "title": "Einleitung",
+        "content": "Diese Datenschutzerklärung informiert Sie darüber, welche Arten personenbezogener Daten (nachfolgend \"Daten\") wir zu welchen Zwecken und in welchem Umfang verarbeiten. Sie gilt für alle Verarbeitungen im Zusammenhang mit diesem Onlineangebot (Webseite) sowie ggf. verbundenen externen Auftritten.",
+        "note": "Die verwendeten Begriffe sind nicht geschlechtsspezifisch."
       },
-      "dataUsage": {
-        "title": "Datenverwendung",
-        "content": "Wir verwenden Ihre personenbezogenen Daten ausschließlich für die Zwecke, für die sie erhoben wurden. Dazu gehören die Bearbeitung Ihrer Kontaktanfragen, die Verbesserung unserer Website und die Erfüllung gesetzlicher Verpflichtungen. Ihre Daten werden ohne Ihre ausdrückliche Einwilligung nicht an Dritte weitergegeben, außer wenn dies gesetzlich vorgeschrieben oder für die Bereitstellung unserer Dienste erforderlich ist."
+      "responsible": {
+        "title": "Verantwortlicher",
+        "name": "Mirkan Polat",
+        "address": "Feldschmiede 10A, 22159 Hamburg, Deutschland",
+        "email": "kontakt@mirkanpolat.com",
+        "impressum": "https://mirkanpolat.com/legal-notice"
+      },
+      "overview": {
+        "title": "Übersicht der Verarbeitungen",
+        "dataTypes": {
+          "title": "Arten der verarbeiteten Daten",
+          "items": [
+            "Bestandsdaten",
+            "Kontaktdaten",
+            "Inhaltsdaten",
+            "Nutzungsdaten",
+            "Meta‑, Kommunikations‑ und Verfahrensdaten",
+            "Protokolldaten"
+          ]
+        },
+        "categories": {
+          "title": "Kategorien betroffener Personen",
+          "items": [
+            "Kommunikationspartner",
+            "Nutzer"
+          ]
+        },
+        "purposes": {
+          "title": "Zwecke der Verarbeitung",
+          "items": [
+            "Kommunikation",
+            "Sicherheitsmaßnahmen",
+            "Organisations‑ und Verwaltungsverfahren",
+            "Feedback",
+            "Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit",
+            "Informationstechnische Infrastruktur",
+            "Öffentlichkeitsarbeit"
+          ]
+        }
+      },
+      "legalBasis": {
+        "title": "Rechtsgrundlagen",
+        "gdpr": "DSGVO‑Rechtsgrundlagen: Wir verarbeiten personenbezogene Daten auf Basis der folgenden Rechtsgrundlagen:",
+        "items": [
+          "Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b DSGVO)",
+          "Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO)"
+        ],
+        "national": "Nationale Regelungen (Deutschland): Zusätzlich zur DSGVO gilt das BDSG.",
+        "switzerland": "Hinweis Schweiz: Begriffe werden an die DSGVO angelehnt verwendet; die gesetzliche Bedeutung richtet sich bei Anwendung des Schweizer DSG nach diesem."
+      },
+      "security": {
+        "title": "Sicherheitsmaßnahmen",
+        "content": "Wir treffen technische und organisatorische Maßnahmen entsprechend dem Stand der Technik, um ein angemessenes Schutzniveau zu gewährleisten, u. a. Zugriffskontrollen, Trennung, Backup‑/Wiederherstellungsverfahren sowie datenschutzfreundliche Voreinstellungen.",
+        "tls": "TLS/SSL (HTTPS): Die Übertragung zwischen Browser und Server ist verschlüsselt."
+      },
+      "storage": {
+        "title": "Allgemeine Informationen zur Datenspeicherung und Löschung",
+        "content": "Daten werden gelöscht, sobald der Verarbeitungszweck entfällt und keine weiteren Rechtsgrundlagen bestehen. Gesetzliche Aufbewahrungspflichten bleiben unberührt (insb. handels‑ und steuerrechtliche Fristen).",
+        "periods": [
+          "10 Jahre: Bücher/Aufzeichnungen, Jahresabschlüsse usw. (§ 147 AO, § 14b UStG, § 257 HGB)",
+          "8 Jahre: Buchungsbelege (je nach Anwendbarkeit)",
+          "6 Jahre: sonstige Geschäftsunterlagen (§ 147 AO, § 257 HGB)",
+          "3 Jahre: gesetzliche Regelverjährung (§§ 195, 199 BGB)"
+        ]
       },
       "rights": {
-        "title": "Ihre Rechte",
-        "content": "Sie haben das Recht auf Auskunft über die von uns über Sie gespeicherten personenbezogenen Daten sowie das Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung. Zudem haben Sie das Recht auf Datenübertragbarkeit und auf Widerspruch gegen die Verarbeitung Ihrer Daten. Haben Sie eine Einwilligung zur Datenverarbeitung erteilt, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen."
+        "title": "Ihre Datenschutzrechte",
+        "items": [
+          "Widerspruchsrecht (Art. 21 DSGVO), inkl. Widerspruch gegen Direktwerbung",
+          "Widerruf von Einwilligungen",
+          "Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18)",
+          "Datenübertragbarkeit (Art. 20)",
+          "Beschwerde bei einer Aufsichtsbehörde (Art. 77)"
+        ]
       },
-      "contact": {
-        "title": "Kontakt in Datenschutzangelegenheiten",
-        "content": "Wenn Sie Fragen zur Verarbeitung Ihrer personenbezogenen Daten haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte über die im Impressum angegebenen Kontaktdaten. Wir werden Ihre Anfrage umgehend und in Übereinstimmung mit den geltenden Datenschutzbestimmungen beantworten."
+      "hosting": {
+        "title": "Bereitstellung des Onlineangebots und Webhosting",
+        "content": "Zur Auslieferung und Betrieb dieses Onlineangebots werden u. a. IP‑Adresse, Zeitstempel, angeforderte Ressourcen und technische Metadaten verarbeitet.",
+        "dataTypes": "Verarbeitete Datenarten: Nutzungsdaten; Meta‑/Kommunikations‑/Verfahrensdaten; Protokolldaten; Inhaltsdaten",
+        "purposes": "Zwecke: Betrieb/IT‑Infrastruktur, Sicherheit, Bereitstellung und Stabilität",
+        "legalBasis": "Rechtsgrundlage: berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)",
+        "additionalInfo": {
+          "title": "Weitere Hinweise",
+          "serverLogs": "Server‑Logfiles: Speicherung bis zu 30 Tagen; längere Aufbewahrung, wenn Beweiszwecke dies erfordern.",
+          "email": "E‑Mail‑Versand und ‑Hosting: Versand/Empfang/Speicherung inkl. Metadaten; i. d. R. Transportverschlüsselung, keine Ende‑zu‑Ende‑Verschlüsselung.",
+          "allInkl": "ALL‑INKL (Webhosting): ALL‑INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Deutschland. Website: all-inkl.com, Datenschutzerklärung: all-inkl.com/datenschutzinformationen. Auftragsverarbeitungsvertrag wird vom Anbieter bereitgestellt."
+        }
+      },
+      "contactManagement": {
+        "title": "Kontakt- und Anfrageverwaltung",
+        "content": "Bei Kontaktaufnahme (z. B. per Formular oder E‑Mail) verarbeiten wir die mitgeteilten Daten zur Bearbeitung des Anliegens.",
+        "dataTypes": "Datenarten: Bestands‑, Kontakt‑, Inhalts‑, Nutzungs‑ sowie Meta‑/Kommunikationsdaten",
+        "legalBasis": "Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (vorvertraglich/Vertrag) und Art. 6 Abs. 1 lit. f DSGVO (Interessenabwägung)"
+      },
+      "socialMedia": {
+        "title": "Präsenzen in sozialen Netzwerken (Social Media)",
+        "content": "Wir betreiben u. a. ein LinkedIn‑Profil. Daten werden dort zu eigenen Zwecken der Plattform verarbeitet (u. a. Reichweitenmessung/Statistiken). Details finden Sie in der Datenschutzerklärung des jeweiligen Anbieters.",
+        "linkedin": "LinkedIn: Datenschutzerklärung · Joint Controller Addendum · Opt‑out: Retargeting‑Opt‑out"
+      },
+      "externalLinks": {
+        "title": "Externe Links (z. B. GitHub, Live-Demos)",
+        "content": "Unser Onlineangebot enthält normale Links zu externen Anbietern (z. B. GitHub‑Repositorys, Live‑Demos). Beim Anklicken eines Links verlassen Sie unsere Seite; ab diesem Moment werden Daten (z. B. IP‑Adresse, Browser/Device‑Infos) an den jeweiligen Drittanbieter übermittelt. Bitte beachten Sie dortige Datenschutzhinweise (z. B. GitHub, LinkedIn).",
+        "note": "Wir binden keine Widgets/iframes dieser Dienste automatisch ein; eine Datenübertragung findet erst nach Link‑Klick statt."
+      },
+      "authority": {
+        "title": "Zuständige Aufsichtsbehörde",
+        "name": "Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit",
+        "address": "Ludwig‑Erhard‑Straße 22, 7. OG, 20459 Hamburg",
+        "phone": "+49 40 428 54‑4040",
+        "email": "mailbox@datenschutz.hamburg.de",
+        "website": "datenschutz-hamburg.de"
+      },
+      "changes": {
+        "title": "Änderung und Aktualisierung",
+        "content": "Wir passen diese Hinweise an, sobald dies aufgrund geänderter Verarbeitungen erforderlich ist."
+      },
+      "definitions": {
+        "title": "Begriffsdefinitionen",
+        "items": [
+          "Bestandsdaten: z. B. Name, Adresse, IDs.",
+          "Kontaktdaten: z. B. E‑Mail, Telefon, Anschrift.",
+          "Inhaltsdaten: vom Nutzer übermittelte Inhalte.",
+          "Nutzungsdaten: z. B. Seitenaufrufe, Interaktionen, Geräte.",
+          "Meta‑/Kommunikationsdaten: z. B. IP‑Adresse, Zeitangaben.",
+          "Protokolldaten: technische Logeinträge über Ereignisse."
+        ],
+        "generator": "Erstellt mit kostenlosem Datenschutz‑Generator.de von Dr. Thomas Schwenke"
       }
     }
   }

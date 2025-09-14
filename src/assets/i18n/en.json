@@ -189,22 +189,161 @@
   "privacy": {
     "title": "Privacy Policy",
     "backButton": "Back",
+    "header": {
+      "asof": "Last updated: September 4, 2025"
+    },
+    "toc": {
+      "title": "Table of Contents",
+      "items": {
+        "introduction": "Introduction",
+        "responsible": "Data Controller",
+        "overview": "Processing Overview",
+        "legalBasis": "Legal Basis",
+        "security": "Security Measures",
+        "storage": "Storage & Deletion",
+        "rights": "Your Privacy Rights",
+        "hosting": "Online Services & Web Hosting",
+        "contact": "Contact & Inquiry Management",
+        "socialMedia": "Social Media",
+        "externalLinks": "External Links (GitHub, Live Demos)",
+        "authority": "Supervisory Authority",
+        "changes": "Updates & Changes",
+        "definitions": "Definitions"
+      }
+    },
     "sections": {
-      "dataCollection": {
-        "title": "Data Collection and Processing",
-        "content": "When you visit our website, personal data may be collected. This includes data that you provide voluntarily (e.g., when using the contact form) and data that is automatically collected (e.g., IP address, browser type, operating system). We collect this data to provide and improve our services, respond to your inquiries, and ensure the security of our website."
+      "introduction": {
+        "title": "Introduction",
+        "content": "This privacy policy informs you about what types of personal data (hereinafter referred to as 'data') we process, for what purposes, and to what extent. It applies to all processing activities related to this online service (website) and any associated external platforms.",
+        "note": "The terms used are not gender-specific."
       },
-      "dataUsage": {
-        "title": "Data Usage",
-        "content": "We use your personal data exclusively for the purposes for which it was collected. This includes processing your contact inquiries, improving our website, and complying with legal obligations. Your data will not be shared with third parties without your explicit consent, except where required by law or necessary for the provision of our services."
+      "responsible": {
+        "title": "Data Controller",
+        "name": "Mirkan Polat",
+        "address": "Feldschmiede 10A, 22159 Hamburg, Germany",
+        "email": "kontakt@mirkanpolat.com",
+        "impressum": "https://mirkanpolat.com/legal-notice"
+      },
+      "overview": {
+        "title": "Processing Overview",
+        "dataTypes": {
+          "title": "Types of Data Processed",
+          "items": [
+            "Master data",
+            "Contact data",
+            "Content data",
+            "Usage data",
+            "Meta, communication and procedural data",
+            "Log data"
+          ]
+        },
+        "categories": {
+          "title": "Categories of Data Subjects",
+          "items": [
+            "Communication partners",
+            "Users"
+          ]
+        },
+        "purposes": {
+          "title": "Processing Purposes",
+          "items": [
+            "Communication",
+            "Security measures",
+            "Organizational and administrative procedures",
+            "Feedback",
+            "Provision of our online services and user experience",
+            "Information technology infrastructure",
+            "Public relations"
+          ]
+        }
+      },
+      "legalBasis": {
+        "title": "Legal Basis",
+        "gdpr": "GDPR Legal Basis: We process personal data based on the following legal grounds:",
+        "items": [
+          "Contract performance and pre-contractual inquiries (Art. 6 para. 1 sentence 1 lit. b GDPR)",
+          "Legitimate interests (Art. 6 para. 1 sentence 1 lit. f GDPR)"
+        ],
+        "national": "National Regulations (Germany): In addition to the GDPR, the BDSG applies.",
+        "switzerland": "Note Switzerland: Terms are used in accordance with the GDPR; the legal meaning is governed by the Swiss DPA when applying Swiss DSG."
+      },
+      "security": {
+        "title": "Security Measures",
+        "content": "We implement technical and organizational measures in accordance with the state of the art to ensure an appropriate level of protection, including access controls, separation, backup/recovery procedures, and privacy-friendly default settings.",
+        "tls": "TLS/SSL (HTTPS): Data transmission between browser and server is encrypted."
+      },
+      "storage": {
+        "title": "General Information on Data Storage and Deletion",
+        "content": "Data is deleted as soon as the processing purpose no longer applies and no further legal bases exist. Statutory retention obligations remain unaffected (especially commercial and tax law deadlines).",
+        "periods": [
+          "10 years: Books/records, annual financial statements, etc. (§ 147 AO, § 14b UStG, § 257 HGB)",
+          "8 years: Accounting documents (depending on applicability)",
+          "6 years: Other business documents (§ 147 AO, § 257 HGB)",
+          "3 years: Legal statute of limitations (§§ 195, 199 BGB)"
+        ]
       },
       "rights": {
-        "title": "Your Rights",
-        "content": "You have the right to information about the personal data we store about you, as well as the right to correction, deletion, or restriction of processing. You also have the right to data portability and to object to the processing of your data. If you have given your consent to data processing, you can revoke it at any time with effect for the future."
+        "title": "Your Privacy Rights",
+        "items": [
+          "Right to object (Art. 21 GDPR), including objection to direct marketing",
+          "Withdrawal of consent",
+          "Access (Art. 15), Rectification (Art. 16), Erasure (Art. 17), Restriction (Art. 18)",
+          "Data portability (Art. 20)",
+          "Complaint to a supervisory authority (Art. 77)"
+        ]
       },
-      "contact": {
-        "title": "Contact for Privacy Matters",
-        "content": "If you have questions about the processing of your personal data or would like to exercise your rights, please contact us using the contact information provided in the legal notice. We will respond to your inquiry promptly and in accordance with applicable data protection regulations."
+      "hosting": {
+        "title": "Provision of Online Services and Web Hosting",
+        "content": "For the delivery and operation of this online service, IP addresses, timestamps, requested resources, and technical metadata are processed.",
+        "dataTypes": "Processed data types: Usage data; Meta/communication/procedural data; Log data; Content data",
+        "purposes": "Purposes: Operation/IT infrastructure, security, provision and stability",
+        "legalBasis": "Legal basis: Legitimate interests (Art. 6 para. 1 lit. f GDPR)",
+        "additionalInfo": {
+          "title": "Additional Information",
+          "serverLogs": "Server log files: Storage for up to 30 days; longer retention if required for evidence purposes.",
+          "email": "Email sending and hosting: Sending/receiving/storing including metadata; usually transport encryption, no end-to-end encryption.",
+          "allInkl": "ALL-INKL (Web hosting): ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Germany. Website: all-inkl.com, Privacy policy: all-inkl.com/datenschutzinformationen. Data processing agreement is provided by the provider."
+        }
+      },
+      "contactManagement": {
+        "title": "Contact and Inquiry Management",
+        "content": "When you contact us (e.g., via form or email), we process the provided data to handle your inquiry.",
+        "dataTypes": "Data types: Master, contact, content, usage, and meta/communication data",
+        "legalBasis": "Legal basis: Art. 6 para. 1 lit. b GDPR (pre-contractual/contract) and Art. 6 para. 1 lit. f GDPR (balancing of interests)"
+      },
+      "socialMedia": {
+        "title": "Social Media Presence",
+        "content": "We operate a LinkedIn profile, among others. Data is processed there for the platform's own purposes (including reach measurement/statistics). Details can be found in the respective provider's privacy policy.",
+        "linkedin": "LinkedIn: Privacy Policy · Joint Controller Addendum · Opt-out: Retargeting Opt-out"
+      },
+      "externalLinks": {
+        "title": "External Links (e.g., GitHub, Live Demos)",
+        "content": "Our online service contains regular links to external providers (e.g., GitHub repositories, live demos). When you click a link, you leave our site; from that moment, data (e.g., IP address, browser/device info) is transmitted to the respective third-party provider. Please note their privacy policies (e.g., GitHub, LinkedIn).",
+        "note": "We do not automatically embed widgets/iframes of these services; data transmission only occurs after clicking links."
+      },
+      "authority": {
+        "title": "Supervisory Authority",
+        "name": "The Hamburg Commissioner for Data Protection and Freedom of Information",
+        "address": "Ludwig-Erhard-Straße 22, 7th floor, 20459 Hamburg",
+        "phone": "+49 40 428 54-4040",
+        "email": "mailbox@datenschutz.hamburg.de",
+        "website": "datenschutz-hamburg.de"
+      },
+      "changes": {
+        "title": "Updates and Changes",
+        "content": "We adapt these notices as soon as this becomes necessary due to changed processing activities."
+      },
+      "definitions": {
+        "title": "Definitions",
+        "items": [
+          "Master data: e.g., name, address, IDs.",
+          "Contact data: e.g., email, phone, address.",
+          "Content data: content submitted by users.",
+          "Usage data: e.g., page views, interactions, devices.",
+          "Meta/communication data: e.g., IP address, timestamps.",
+          "Log data: technical log entries about events."
+        ],
+        "generator": "Created with free Datenschutz-Generator.de by Dr. Thomas Schwenke"
       }
     }
   }
