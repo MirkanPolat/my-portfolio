@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -10,9 +10,13 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
+export class PrivacyPolicyComponent implements OnInit {
   
   constructor(private router: Router) {}
+  
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
   
   goBack() {
     this.router.navigate(['/']);
