@@ -77,4 +77,10 @@ export class OverlayComponent implements OnInit {
       window.open('https://mirkanpolat.com/join/', '_blank');
     }
   }
+
+  openGithub(): void {
+    if (this.project?.id === 'join') {
+      window.open('https://github.com/MirkanPolat/join', '_blank');
+    }
+  }
 }
