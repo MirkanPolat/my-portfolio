@@ -71,4 +71,10 @@ export class OverlayComponent implements OnInit {
     }
     return this.currentIndex < maxIndex ? this.currentIndex + 1 : 0;
   }
+
+  openLiveDemo(): void {
+    if (this.project?.id === 'join') {
+      window.open('https://mirkanpolat.com/join/', '_blank');
+    }
+  }
 }
