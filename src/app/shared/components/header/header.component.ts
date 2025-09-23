@@ -39,8 +39,33 @@ export class HeaderComponent {
 
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 80;
+    
+    if (!element) {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          const targetElement = document.getElementById(sectionId);
+          if (targetElement) {
+            let headerHeight = 80;
+            
+            if (sectionId === 'skills') {
+              headerHeight = 0; 
+            }
+            
+            const elementPosition = targetElement.offsetTop - headerHeight;
+            
+            window.scrollTo({
+              top: elementPosition
+            });
+          }
+        }, 100);
+      });
+    } else {
+      let headerHeight = 80;
+      
+      if (sectionId === 'skills') {
+        headerHeight = 0; 
+      }
+      
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
@@ -50,9 +75,7 @@ export class HeaderComponent {
   }
 
   navigateToHome() {
-    // Navigiere zur Hauptseite falls wir nicht dort sind
     this.router.navigate(['/']).then(() => {
-      // Scrolle zur Startseite
       window.scrollTo({
         top: 0
       });
