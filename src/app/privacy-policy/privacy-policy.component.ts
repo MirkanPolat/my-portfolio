@@ -27,7 +27,6 @@ export class PrivacyPolicyComponent implements OnInit {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ 
-        behavior: 'smooth', 
         block: 'center',
         inline: 'nearest'
       });

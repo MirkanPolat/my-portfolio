@@ -52,7 +52,6 @@ export class OverlayComponent implements OnInit {
     setTimeout(() => {
       const projectsElement = document.getElementById(OverlayComponent.PROJECTS_ELEMENT_ID);
       projectsElement?.scrollIntoView({ 
-        behavior: 'smooth', 
         block: 'start' 
       });
     }, OverlayComponent.SCROLL_DELAY);

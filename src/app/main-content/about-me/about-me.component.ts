@@ -12,4 +12,14 @@ import { TranslatePipe } from "@ngx-translate/core";
 
 export class AboutMeComponent {
 
+  scrollToContact() {
+    const element = document.getElementById('contact');
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition
+      });
+    }
+  }
 }

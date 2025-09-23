@@ -11,4 +11,9 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class FooterComponent {
 
+  scrollToTop() {
+    window.scrollTo({
+      top: 0
+    });
+  }
 }

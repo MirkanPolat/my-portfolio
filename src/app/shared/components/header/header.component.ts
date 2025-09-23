@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe, TranslateService } from "@ngx-translate/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 })
 export class HeaderComponent {
   private translateService = inject(TranslateService);
+  private router = inject(Router);
   
   isMenuOpen = false;
   currentLang = 'en';
@@ -42,9 +44,18 @@ export class HeaderComponent {
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
+        top: elementPosition
       });
     }
+  }
+
+  navigateToHome() {
+    // Navigiere zur Hauptseite falls wir nicht dort sind
+    this.router.navigate(['/']).then(() => {
+      // Scrolle zur Startseite
+      window.scrollTo({
+        top: 0
+      });
+    });
   }
 }

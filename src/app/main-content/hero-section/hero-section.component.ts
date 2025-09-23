@@ -20,8 +20,7 @@ export class HeroSectionComponent {
       const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
+        top: elementPosition
       });
     }
   }
