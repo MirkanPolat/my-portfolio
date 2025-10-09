@@ -13,7 +13,6 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-
 export class ContactComponent {
   http = inject(HttpClient);
   router = inject(Router);
@@ -23,8 +22,13 @@ export class ContactComponent {
     message: '',
   };
 
-  mailTest = false; 
+  mailTest = false;
   privacyAccepted = false;
+
+  formErrors = {
+    name: '',
+    email: '',
+  };
 
   post = {
     endPoint: 'https://mirkanpolat.com/sendMail.php',
@@ -36,27 +40,75 @@ export class ContactComponent {
     },
   };
 
-  isFormValid(contactForm: NgForm): boolean {
-    return contactForm.form.valid && this.privacyAccepted;
+  validateName(): boolean {
+    const nameValue = this.contactData.name.trim();
+
+    if (nameValue.length === 0) {
+      this.formErrors.name = 'nameRequired';
+      return false;
+    }
+
+    if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
+      this.formErrors.name = 'nameMinLetter';
+      return false;
+    }
+
+    this.formErrors.name = '';
+    return true;
   }
 
-  openPrivacyPolicy() {
+  validateEmail(): boolean {
+    const emailValue = this.contactData.email.trim();
+
+    if (emailValue.length === 0) {
+      this.formErrors.email = 'emailRequired';
+      return false;
+    }
+
+    if (!emailValue.includes('@')) {
+      this.formErrors.email = 'emailMissingAt';
+      return false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailValue)) {
+      this.formErrors.email = 'emailInvalid';
+      return false;
+    }
+
+    this.formErrors.email = '';
+    return true;
+  }
+
+  isFormValid(contactForm: NgForm): boolean {
+    const isNameValid = this.validateName();
+    const isEmailValid = this.validateEmail();
+    return (
+      contactForm.form.valid &&
+      this.privacyAccepted &&
+      isNameValid &&
+      isEmailValid
+    );
+  }
+
+  openPrivacyPolicy(): void {
     this.router.navigate(['/privacy-policy']);
   }
 
-  onSubmit(contactForm: NgForm) {
+  onSubmit(contactForm: NgForm): void {
     if (!this.isFormValid(contactForm)) {
       alert('Please fill out the form correctly and accept the privacy policy');
       return;
     }
-    
+
     if (contactForm.submitted && contactForm.form.valid) {
       if (!this.mailTest) {
-        this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        this.http
+          .post(this.post.endPoint, this.post.body(this.contactData))
           .subscribe({
             next: () => this.resetForm(contactForm),
             error: () => {},
-            complete: () => {}
+            complete: () => {},
           });
       } else {
         this.resetForm(contactForm);
@@ -64,9 +116,10 @@ export class ContactComponent {
     }
   }
 
-  private resetForm(contactForm: NgForm) {
+  private resetForm(contactForm: NgForm): void {
     contactForm.resetForm();
     this.contactData = { name: '', email: '', message: '' };
     this.privacyAccepted = false;
+    this.formErrors = { name: '', email: '' };
   }
 }

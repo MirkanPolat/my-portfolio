@@ -44,16 +44,49 @@
         <form (ngSubmit)="onSubmit(contactForm)" class="contact-form" #contactForm="ngForm">
           <div class="form-group">
             <label for="name">{{ 'contact.form.nameLabel' | translate }}</label>
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ 'contact.form.namePlaceholder' | translate }}" required>
-            @if (!name.valid && (name.touched || contactForm.submitted)) {
+            <input 
+              #name="ngModel" 
+              [(ngModel)]="contactData.name" 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="{{ 'contact.form.namePlaceholder' | translate }}" 
+              (blur)="validateName()"
+              [class.error]="formErrors.name"
+              required>
+            @if (formErrors.name === 'nameRequired') {
+              <span class="error-message">{{ 'contact.form.nameError' | translate }}</span>
+            }
+            @if (formErrors.name === 'nameMinLetter') {
+              <span class="error-message">{{ 'contact.form.nameMinLetter' | translate }}</span>
+            }
+            @if (!name.valid && (name.touched || contactForm.submitted) && !formErrors.name) {
               <span class="error-message">{{ 'contact.form.nameError' | translate }}</span>
             }
           </div>
 
           <div class="form-group">
             <label for="email">{{ 'contact.form.emailLabel' | translate }}</label>
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{ 'contact.form.emailPlaceholder' | translate }}" required>
-            @if (!email.valid && (email.touched || contactForm.submitted)) {
+            <input 
+              #email="ngModel" 
+              [(ngModel)]="contactData.email" 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="{{ 'contact.form.emailPlaceholder' | translate }}"
+              (blur)="validateEmail()"
+              [class.error]="formErrors.email"
+              required>
+            @if (formErrors.email === 'emailRequired') {
+              <span class="error-message">{{ 'contact.form.emailError' | translate }}</span>
+            }
+            @if (formErrors.email === 'emailMissingAt') {
+              <span class="error-message">{{ 'contact.form.emailMissingAt' | translate }}</span>
+            }
+            @if (formErrors.email === 'emailInvalid') {
+              <span class="error-message">{{ 'contact.form.emailInvalid' | translate }}</span>
+            }
+            @if (!email.valid && (email.touched || contactForm.submitted) && !formErrors.email) {
               <span class="error-message">{{ 'contact.form.emailError' | translate }}</span>
             }
           </div>
