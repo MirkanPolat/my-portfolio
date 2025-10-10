@@ -1,4 +1,11 @@
 <section>
+  @if (showSuccessMessage) {
+    <div class="success-backdrop"></div>
+    <div class="success-message">
+      <span>✓ {{ 'contact.form.successMessage' | translate }}</span>
+    </div>
+  }
+
   <div class="content-wrapper">
     <div class="contact-content">
       <div class="left-section">
@@ -51,17 +58,14 @@
               id="name" 
               name="name" 
               placeholder="{{ 'contact.form.namePlaceholder' | translate }}" 
-              (blur)="validateName()"
-              [class.error]="formErrors.name"
+              (blur)="onNameBlur()"
+              [class.error]="formErrors.name && name.touched"
               required>
-            @if (formErrors.name === 'nameRequired') {
+            @if (formErrors.name === 'nameRequired' && name.touched) {
               <span class="error-message">{{ 'contact.form.nameError' | translate }}</span>
             }
-            @if (formErrors.name === 'nameMinLetter') {
+            @if (formErrors.name === 'nameMinLetter' && name.touched) {
               <span class="error-message">{{ 'contact.form.nameMinLetter' | translate }}</span>
-            }
-            @if (!name.valid && (name.touched || contactForm.submitted) && !formErrors.name) {
-              <span class="error-message">{{ 'contact.form.nameError' | translate }}</span>
             }
           </div>
 
@@ -74,20 +78,17 @@
               id="email" 
               name="email" 
               placeholder="{{ 'contact.form.emailPlaceholder' | translate }}"
-              (blur)="validateEmail()"
-              [class.error]="formErrors.email"
+              (blur)="onEmailBlur()"
+              [class.error]="formErrors.email && email.touched"
               required>
-            @if (formErrors.email === 'emailRequired') {
+            @if (formErrors.email === 'emailRequired' && email.touched) {
               <span class="error-message">{{ 'contact.form.emailError' | translate }}</span>
             }
-            @if (formErrors.email === 'emailMissingAt') {
+            @if (formErrors.email === 'emailMissingAt' && email.touched) {
               <span class="error-message">{{ 'contact.form.emailMissingAt' | translate }}</span>
             }
-            @if (formErrors.email === 'emailInvalid') {
+            @if (formErrors.email === 'emailInvalid' && email.touched) {
               <span class="error-message">{{ 'contact.form.emailInvalid' | translate }}</span>
-            }
-            @if (!email.valid && (email.touched || contactForm.submitted) && !formErrors.email) {
-              <span class="error-message">{{ 'contact.form.emailError' | translate }}</span>
             }
           </div>
 

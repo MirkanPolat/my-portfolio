@@ -22,8 +22,9 @@ export class ContactComponent {
     message: '',
   };
 
-  mailTest = false;
+  mailTest = true;
   privacyAccepted = false;
+  showSuccessMessage = false;
 
   formErrors = {
     name: '',
@@ -44,40 +45,62 @@ export class ContactComponent {
     const nameValue = this.contactData.name.trim();
 
     if (nameValue.length === 0) {
-      this.formErrors.name = 'nameRequired';
       return false;
     }
 
     if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
-      this.formErrors.name = 'nameMinLetter';
       return false;
     }
 
-    this.formErrors.name = '';
     return true;
+  }
+
+  onNameBlur(): void {
+    const nameValue = this.contactData.name.trim();
+
+    if (nameValue.length === 0) {
+      this.formErrors.name = 'nameRequired';
+    } else if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
+      this.formErrors.name = 'nameMinLetter';
+    } else {
+      this.formErrors.name = '';
+    }
   }
 
   validateEmail(): boolean {
     const emailValue = this.contactData.email.trim();
 
     if (emailValue.length === 0) {
-      this.formErrors.email = 'emailRequired';
       return false;
     }
 
     if (!emailValue.includes('@')) {
-      this.formErrors.email = 'emailMissingAt';
       return false;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(emailValue)) {
-      this.formErrors.email = 'emailInvalid';
       return false;
     }
 
-    this.formErrors.email = '';
     return true;
+  }
+
+  onEmailBlur(): void {
+    const emailValue = this.contactData.email.trim();
+
+    if (emailValue.length === 0) {
+      this.formErrors.email = 'emailRequired';
+    } else if (!emailValue.includes('@')) {
+      this.formErrors.email = 'emailMissingAt';
+    } else {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailValue)) {
+        this.formErrors.email = 'emailInvalid';
+      } else {
+        this.formErrors.email = '';
+      }
+    }
   }
 
   isFormValid(contactForm: NgForm): boolean {
@@ -96,23 +119,53 @@ export class ContactComponent {
   }
 
   onSubmit(contactForm: NgForm): void {
+    console.log('onSubmit called');
+    console.log('Form valid:', this.isFormValid(contactForm));
+    
     if (!this.isFormValid(contactForm)) {
-      alert('Please fill out the form correctly and accept the privacy policy');
+      console.log('Form is not valid, returning');
       return;
     }
 
+    console.log('Form submitted and valid');
+
     if (contactForm.submitted && contactForm.form.valid) {
+      console.log('Inside submitted block, mailTest:', this.mailTest);
+      
       if (!this.mailTest) {
+        console.log('Sending real email');
         this.http
           .post(this.post.endPoint, this.post.body(this.contactData))
           .subscribe({
-            next: () => this.resetForm(contactForm),
-            error: () => {},
+            next: () => {
+              console.log('Email sent successfully, showing message');
+              this.showSuccessMessage = true;
+              console.log('showSuccessMessage set to:', this.showSuccessMessage);
+              this.resetForm(contactForm);
+              setTimeout(() => {
+                this.showSuccessMessage = false;
+              }, 5000);
+            },
+            error: (error) => {
+              console.error('Email sending failed:', error);
+              alert(
+                'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.'
+              );
+            },
             complete: () => {},
           });
       } else {
+        console.log('Test mode - showing success message');
+        this.showSuccessMessage = true;
+        console.log('showSuccessMessage set to:', this.showSuccessMessage);
         this.resetForm(contactForm);
+        setTimeout(() => {
+          console.log('Hiding success message after 5s');
+          this.showSuccessMessage = false;
+        }, 5000);
       }
+    } else {
+      console.log('Form not submitted or not valid');
     }
   }
 

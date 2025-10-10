@@ -141,7 +141,8 @@
       "privacyText": "Ich habe die",
       "privacyLink": "Datenschutzerklärung",
       "privacyAgreement": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-      "submitButton": "Senden"
+      "submitButton": "Senden",
+      "successMessage": "Vielen Dank! Deine Nachricht wurde erfolgreich versendet."
     }
   },
   "footer": {
