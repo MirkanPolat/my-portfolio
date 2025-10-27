@@ -5,10 +5,12 @@
     </div>
     
     <nav class="desktop-nav">
-      <a (click)="scrollToSection('about')" style="cursor: pointer;">{{ 'header.navigation.about' | translate }}</a>
-      <a (click)="scrollToSection('skills')" style="cursor: pointer;">{{ 'header.navigation.skills' | translate }}</a>
-      <a (click)="scrollToSection('projects')" style="cursor: pointer;">{{ 'header.navigation.projects' | translate }}</a>
-      <a (click)="scrollToSection('contact')" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a>
+      <ul>
+        <li><a (click)="scrollToSection('about')" style="cursor: pointer;">{{ 'header.navigation.about' | translate }}</a></li>
+        <li><a (click)="scrollToSection('skills')" style="cursor: pointer;">{{ 'header.navigation.skills' | translate }}</a></li>
+        <li><a (click)="scrollToSection('projects')" style="cursor: pointer;">{{ 'header.navigation.projects' | translate }}</a></li>
+        <li><a (click)="scrollToSection('contact')" style="cursor: pointer;">{{ 'header.navigation.contact' | translate }}</a></li>
+      </ul>
       
       <div class="desktop-language-toggle" (click)="switchLanguage()" style="cursor: pointer;">
         <span class="lang-option" [class.active]="!isGerman()">{{ 'header.language.en' | translate }}</span>
