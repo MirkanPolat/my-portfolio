@@ -93,6 +93,40 @@
   gap: 15px;
   flex-wrap: wrap;
   
+  .social-link-container {
+    position: relative;
+    display: inline-block;
+    
+    .social-icon-hover {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -42px;
+      left: -20px;
+      opacity: 0;
+      transform: translateX(0px) rotate(-180deg);
+      transition: all 0.8s ease;
+      filter: brightness(0) invert(1);
+    }
+    
+    &:hover .social-icon-hover {
+      opacity: 1;
+      transform: translateX(75px) rotate(360deg);
+    }
+    
+    &.github-link:hover .social-icon-hover {
+      transform: translateX(90px) rotate(360deg);
+    }
+    
+    &.linkedin-link:hover .social-icon-hover {
+      transform: translateX(95px) rotate(360deg);
+    }
+    
+    &.email-link:hover .social-icon-hover {
+      transform: translateX(75px) rotate(360deg);
+    }
+  }
+  
   .footer-link {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
