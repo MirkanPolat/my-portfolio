@@ -65,6 +65,7 @@ section {
                     left: 50%;
                     transform: translate(-50%, 100%);
                     opacity: 0;
+                    padding: 0 10px;
                 }
                 
                 .text-default {
@@ -75,7 +76,7 @@ section {
                 &:hover {
                     background-color: #3355FF;
                     border-color: #3355FF;
-                    padding: 10px 40px;
+                    padding: 10px 55px;
                     
                     .text-default {
                         transform: translateY(-100%);
