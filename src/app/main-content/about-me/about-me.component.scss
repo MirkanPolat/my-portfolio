@@ -1,6 +1,6 @@
 section {
   background-color: white;
-  min-height: 720px;
+  min-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +16,15 @@ section {
     align-items: center;
     justify-content: space-evenly;
     gap: 60px;
+    width: 100%;
+    max-width: 1400px;
   }
 
   .availability-ribbons {
     display: flex;
     flex-direction: column;
     max-height: 465px;
+    flex-shrink: 0;
 
     .ribbon {
       position: relative;
@@ -80,6 +83,11 @@ section {
 
   .about-text {
     max-width: 560px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
 
     h4 {
       font-size: 1.25rem;
@@ -89,21 +97,23 @@ section {
 
     h2 {
       font-size: 4rem;
-      margin-bottom: 3rem;
-      display: inline-block;
+      margin-bottom: 4rem;
+      display: block;
       position: relative;
+      width: fit-content;
       
       &::after {
         content: '';
         position: absolute;
-        bottom: -17px;
+        bottom: -22px;
         left: 0;
         width: 114%;
-        height: 22px;
+        height: 25px;
         background-image: url('/assets/Design-material/00_Hand-drawn lines/01_About me/Color option 3.png');
         background-size: cover;
         background-repeat: no-repeat;
         animation: slideInOut 6s ease-in-out infinite;
+        z-index: 1;
       }
     }
 
