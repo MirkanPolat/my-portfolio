@@ -207,26 +207,58 @@ header {
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
-    gap: 5px;
+    gap: 6px;
+    position: relative;
+    z-index: 1002;
+    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
     
     .burger-line {
-      width: 25px;
+      width: 30px;
       height: 3px;
       background-color: white;
-      transition: all 0.3s ease;
+      border-radius: 2px;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      position: absolute;
+      
+      &:nth-child(1) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10px);
+      }
+      
+      &:nth-child(2) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      &:nth-child(3) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + 10px));
+      }
     }
 
     &.active {
       .burger-line:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
+        transform: translate(-50%, -50%) rotate(45deg);
       }
       
       .burger-line:nth-child(2) {
         opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
       }
       
       .burger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -8px);
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
     }
   }
@@ -263,39 +295,6 @@ header {
       position: relative;
       opacity: 0;
       transition: opacity 0.3s ease 0.1s;
-      
-      .close-button {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        cursor: pointer;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease;
-        
-        &:hover {
-          transform: rotate(90deg) scale(1.1);
-        }
-        
-        .close-line {
-          width: 28px;
-          height: 3px;
-          background-color: white;
-          border-radius: 2px;
-          position: absolute;
-          
-          &:nth-child(1) {
-            transform: rotate(45deg);
-          }
-          
-          &:nth-child(2) {
-            transform: rotate(-45deg);
-          }
-        }
-      }
 
       .mobile-nav {
         display: flex;

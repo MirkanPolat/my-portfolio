@@ -30,11 +30,6 @@
 
   <div class="mobile-menu-overlay" [class.active]="isMenuOpen" (click)="closeMenu()">
     <div class="mobile-menu" (click)="$event.stopPropagation()">
-      <div class="close-button" (click)="closeMenu()">
-        <div class="close-line"></div>
-        <div class="close-line"></div>
-      </div>
-      
       <nav class="mobile-nav">
         <a (click)="scrollToSection('about'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.about' | translate }}</a>
         <a (click)="scrollToSection('skills'); closeMenu()" style="cursor: pointer;">{{ 'header.navigation.skills' | translate }}</a>
