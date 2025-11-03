@@ -1,47 +1,46 @@
-<section>
-    <div class="hero-content">
-        <div class="hero-top">
-            <div class="button-container">
-                <img class="hand-icon" src="assets/Design-material/img/waving-hand/waving_hand.svg" alt="Hand">
-                <div class="hello-button">
-                    <span class="text-default">{{ 'hero.greeting.default' | translate }}</span>
-                    <span class="text-hover">{{ 'hero.greeting.hover' | translate }}</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-middle">
-            <div class="title-container">
-                <h1 class="title-top animated-title">
-                    <span class="letter" 
-                          *ngFor="let letter of ('hero.title.frontend' | translate).split(''); let i = index" 
-                          [attr.data-letter]="letter.toLowerCase()"
-                          [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
-                </h1>
-                <h1 class="title-bottom animated-title">
-                    <span class="letter" 
-                          *ngFor="let letter of ('hero.title.developer' | translate).split(''); let i = index" 
-                          [attr.data-letter]="letter.toLowerCase()"
-                          [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
-                </h1>
-                <div class="contact-button">
-                    <button class="my-button" (click)="scrollToContact()">{{ 'hero.cta' | translate }}</button>
-                </div>
-                <div class="polaroid">
-                    <div class="profile-image">
-                        <img src="assets/Design-material/img/me/me-polaroid(3).png" alt="Profile image">
-                    </div>
-                    <p class="name-tag">Mr. Polat</p>
-                </div>
-            </div>
-        </div>
+<section id="hero" class="hero-section">
+  <div class="main-content">
+    <div class="title-container">
+      <button class="hello-button">
+        <span class="default-text">{{ 'hero.greeting.default' | translate }}</span>
+        <span class="hover-text">{{ 'hero.greeting.hover' | translate }}</span>
+        <img src="assets/Design-material/img/waving-hand/waving_hand.svg" alt="Waving Hand" class="waving-hand">
+      </button>
+      
+      <h1 class="title-first">
+        <span class="letter" 
+              *ngFor="let letter of ('hero.title.frontend' | translate).split(''); let i = index" 
+              [attr.data-letter]="letter.toLowerCase()"
+              [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
+      </h1>
+      <h1 class="title-second">
+        <span class="letter" 
+              *ngFor="let letter of ('hero.title.developer' | translate).split(''); let i = index" 
+              [attr.data-letter]="letter.toLowerCase()"
+              [style.animation-delay.s]="i * 0.1">{{ letter }}</span>
+      </h1>
+      
+      <button class="cta-button" (click)="scrollToContact()">{{ 'hero.cta' | translate }}</button>
     </div>
     
-    <div class="hero-bottom">
-        <div class="social-links">
-            <a href="#" class="social-icon"><img src="assets/Design-material/img/contact-icons/LinkedIn.svg" alt="LinkedIn"></a>
-            <a href="https://github.com/MirkanPolat" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="assets/Design-material/img/contact-icons/Github.svg" alt="GitHub"></a>
-            <a href="mailto:kontakt@mirkanpolat.com" class="social-icon"><img src="assets/Design-material/img/contact-icons/Mail.svg" alt="Email"></a>
-        </div>
+    <div class="polaroid-container">
+      <img src="assets/Design-material/img/me/me-polaroid(3).png" alt="Mirkan Polaroid" class="polaroid">
+      <div class="polaroid-text">
+        <span class="default-text">Mr. Polat</span>
+        <span class="hover-text">Mr. Polat :D</span>
+      </div>
     </div>
+  </div>
+  
+  <div class="social-icons">
+    <a href="#" class="icon linkedin">
+      <img src="assets/Design-material/img/contact-icons/LinkedIn.svg" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/MirkanPolat" target="_blank" class="icon github">
+      <img src="assets/Design-material/img/contact-icons/Github.svg" alt="GitHub">
+    </a>
+    <a href="mailto:kontakt@mirkanpolat.com" class="icon email">
+      <img src="assets/Design-material/img/contact-icons/Mail.svg" alt="Email">
+    </a>
+  </div>
 </section>
