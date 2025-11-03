@@ -186,16 +186,20 @@ $transition-base: 0.3s ease;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Kalam', cursive;
-    font-weight: 700;
-    font-size: clamp(14px, 2.5vw, 24px);
-    color: #333;
+    font-size: 24px;
+    color: black;
     text-align: center;
     white-space: nowrap;
     width: max-content;
+    margin: 0;
     
     .default-text {
       display: block;
       transition: opacity $transition-base;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      font-weight: normal;
     }
     
     .hover-text {
@@ -205,6 +209,10 @@ $transition-base: 0.3s ease;
       transform: translateX(-50%);
       opacity: 0;
       transition: opacity $transition-base;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      font-weight: normal;
     }
   }
   
