@@ -1,11 +1,13 @@
 <section id="hero" class="hero-section">
   <div class="main-content">
     <div class="title-container">
-      <button class="hello-button">
-        <span class="default-text">{{ 'hero.greeting.default' | translate }}</span>
-        <span class="hover-text">{{ 'hero.greeting.hover' | translate }}</span>
-        <img src="assets/Design-material/img/waving-hand/waving_hand.svg" alt="Waving Hand" class="waving-hand">
-      </button>
+      <div class="button-container">
+        <img class="hand-icon" src="assets/Design-material/img/waving-hand/waving_hand.svg" alt="Hand">
+        <div class="hello-button">
+          <span class="text-default">{{ 'hero.greeting.default' | translate }}</span>
+          <span class="text-hover">{{ 'hero.greeting.hover' | translate }}</span>
+        </div>
+      </div>
       
       <h1 class="title-first">
         <span class="letter" 
