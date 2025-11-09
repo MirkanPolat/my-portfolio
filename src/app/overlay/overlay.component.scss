@@ -5,26 +5,28 @@ section {
   
   background: url('/assets/Design-material/01_Background/Img Original Size/Note book paper.png') center/cover no-repeat #000;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 
   .content-wrapper {
-    max-width: 1920px;
     width: 100%;
+    max-width: 1920px;
     margin: 0 auto;
-    padding: 120px 62px 40px;
-    height: auto;
+    padding: 120px 40px 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
   }
 
   .go-back-container {
     margin-bottom: 40px;
+    width: 100%;
 
     .go-back-btn {
       background: transparent;
@@ -55,23 +57,22 @@ section {
   }
 
   .project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    flex-grow: 1;
-    align-items: start;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .left-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
     color: var(--text-color);
-    max-width: 488px;
     mix-blend-mode: difference;
+    min-width: 0;
 
     .project-title {
       h1 {
@@ -161,15 +162,18 @@ section {
   }
 
   .right-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    align-items: flex-end;
+    align-items: center;
+    position: relative;
+    min-width: 0;
 
     .project-image-container {
       position: relative;
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
 
       .project-image {
         width: 100%;
@@ -187,6 +191,8 @@ section {
 
     .action-buttons {
       display: flex;
+      justify-content: space-around;
+      width: 100%;
       gap: 20px;
       mix-blend-mode: difference;
 
@@ -235,6 +241,27 @@ section {
   }
 }
 
+@media (max-width: 1200px) {
+  section {
+    .project-container {
+      gap: 40px;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    .content-wrapper {
+      padding: 100px 30px 30px;
+    }
+
+    .project-container {
+      gap: 30px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   section {
     .content-wrapper {
@@ -242,12 +269,18 @@ section {
     }
 
     .project-container {
-      grid-template-columns: 1fr;
+      flex-direction: column;
       gap: 40px;
+      max-width: 500px;
+    }
+
+    .left-column {
+      width: 100%;
     }
 
     .right-column {
       align-items: center;
+      width: 100%;
 
       .next-project {
         align-self: flex-end;
