@@ -213,6 +213,10 @@ section {
     }
 
     .next-project {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
       .next-project-btn {
         background: transparent;
         border: none;
