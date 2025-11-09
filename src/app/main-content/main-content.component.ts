@@ -5,11 +5,20 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
+import { ScrollRevealDirective } from '../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent, TestimonialsComponent, ContactComponent],
+  imports: [
+    HeroSectionComponent, 
+    AboutMeComponent, 
+    SkillSetComponent, 
+    MyProjectsComponent, 
+    TestimonialsComponent, 
+    ContactComponent,
+    ScrollRevealDirective
+  ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
