@@ -119,28 +119,17 @@ export class ContactComponent {
   }
 
   onSubmit(contactForm: NgForm): void {
-    console.log('onSubmit called');
-    console.log('Form valid:', this.isFormValid(contactForm));
-    
     if (!this.isFormValid(contactForm)) {
-      console.log('Form is not valid, returning');
       return;
     }
 
-    console.log('Form submitted and valid');
-
     if (contactForm.submitted && contactForm.form.valid) {
-      console.log('Inside submitted block, mailTest:', this.mailTest);
-      
       if (!this.mailTest) {
-        console.log('Sending real email');
         this.http
           .post(this.post.endPoint, this.post.body(this.contactData))
           .subscribe({
             next: () => {
-              console.log('Email sent successfully, showing message');
               this.showSuccessMessage = true;
-              console.log('showSuccessMessage set to:', this.showSuccessMessage);
               this.resetForm(contactForm);
               setTimeout(() => {
                 this.showSuccessMessage = false;
@@ -155,17 +144,12 @@ export class ContactComponent {
             complete: () => {},
           });
       } else {
-        console.log('Test mode - showing success message');
         this.showSuccessMessage = true;
-        console.log('showSuccessMessage set to:', this.showSuccessMessage);
         this.resetForm(contactForm);
         setTimeout(() => {
-          console.log('Hiding success message after 5s');
           this.showSuccessMessage = false;
         }, 5000);
       }
-    } else {
-      console.log('Form not submitted or not valid');
     }
   }
 
