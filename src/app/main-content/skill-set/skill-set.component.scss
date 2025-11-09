@@ -32,16 +32,20 @@ section {
         justify-content: space-evenly;
         align-items: flex-start;
         max-width: 1251px;
+        width: 100%;
         gap: 2rem;
+        box-sizing: border-box;
 
         .column {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
         }
 
         .column-left {
             position: relative;
+            flex: 0 0 auto;
             
             h3 {
                 font-size: 20px;
@@ -77,22 +81,28 @@ section {
         }
 
         .column-middle {
+            min-width: 0;
+            flex: 1 1 auto;
+            
             .skill-set-content {
                 background-image: url("./../../../assets/Design-material/01_Background/Design Size Relation@3x/skill_set_text.png");
                 background-size: 100% 100%;
                 background-position: center;
-                width: 656px;
-                height: 144px;
+                width: 100%;
+                height: auto;
+                min-height: 144px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                padding: 1rem 2rem;
+                padding: 2rem 2.5rem;
+                box-sizing: border-box;
 
                 p {
                     margin: 0;
                     color: black;
                     font-size: 1.126rem;
                     line-height: 1.5;
+                    word-wrap: break-word;
                 }
             }
             
@@ -103,6 +113,7 @@ section {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 2rem;
+                box-sizing: border-box;
                 
                 .skill-item {
                     display: flex;
@@ -111,6 +122,7 @@ section {
                     gap: 14px;
                     flex: 0 0 auto;
                     min-width: 80px;
+                    max-width: 100px;
                     
                     img {
                         width: 60px;
@@ -139,6 +151,7 @@ section {
             align-self: flex-end;
             position: relative;
             cursor: pointer;
+            flex: 0 0 auto;
             
             .sticker-container {
                 width: 200px;
@@ -218,21 +231,28 @@ section {
 @media (max-width: 1315px) {
   section {
     .content-wrapper {
+      padding: 0 20px;
+      box-sizing: border-box;
+      
       .skill-set-container {
         flex-direction: column;
         align-items: center;
         gap: 3rem;
         max-width: 100%;
+        padding: 0;
         
         .column-left {
           order: 1;
           text-align: right;
           width: 100%;
           position: relative;
+          overflow: visible;
           
           h2 {
             position: relative;
             font-size: clamp(2.5rem, 6vw, 4rem);
+            white-space: normal;
+            word-wrap: break-word;
           }
           
           .skill-set-overlay {
@@ -245,28 +265,32 @@ section {
         .column-middle {
           order: 2;
           width: 100%;
-          max-width: 800px;
+          max-width: 100%;
+          padding: 0;
           
           .skill-set-content {
             width: 100%;
+            max-width: 100%;
             height: auto;
             min-height: 144px;
-            padding: 2rem;
+            padding: 3.5rem 1rem;
             background-size: 100% 100%;
+            box-sizing: border-box;
             
             p {
-              font-size: clamp(1rem, 2vw, 1.2rem);
+              font-size: clamp(0.9rem, 2vw, 1.126rem);
               text-align: center;
+              word-wrap: break-word;
+              overflow-wrap: break-word;
             }
           }
           
           .skills-grid {
             margin-top: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            width: 100%;
+            max-width: 100%;
+            padding: 0 1rem;
+            box-sizing: border-box;
             gap: 1.5rem;
           }
         }
