@@ -125,21 +125,21 @@ header {
       }
 
       &:nth-child(1)::after {
-        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/1.png');
+        background-image: url('/assets/img/00_Hand-drawn lines/00_Header/Color option 3/1.webp');
       }
 
       &:nth-child(2)::after {
-        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/2.png');
+        background-image: url('/assets/img/00_Hand-drawn lines/00_Header/Color option 3/2.webp');
         width: 220%;
         height: 270%;
       }
 
       &:nth-child(3)::after {
-        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/3.png');
+        background-image: url('/assets/img/00_Hand-drawn lines/00_Header/Color option 3/3.webp');
       }
 
       &:nth-child(4)::after {
-        background-image: url('/assets/Design-material/00_Hand-drawn lines/00_Header/Color option 3/4.png');
+        background-image: url('/assets/img/00_Hand-drawn lines/00_Header/Color option 3/4.webp');
         top: 12%;
         transform: translateX(-50%);
       }
@@ -272,7 +272,7 @@ header {
     z-index: 1001;
     pointer-events: none;
     
-    background-image: url('/assets/Design-material/01_Background/Img Original Size/12 Isolated Paper Rips copia.png');
+    background-image: url('/assets/img/01_Background/Img Original Size/12 Isolated Paper Rips copia.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

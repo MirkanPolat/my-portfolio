@@ -5,7 +5,7 @@
         <h3>{{ 'skills.subtitle' | translate }}</h3>
         <h2>{{ 'skills.title' | translate }}</h2>
         <div class="skill-set-overlay">
-          <img src="assets/Design-material/00_Hand-drawn lines/02_Skills/Color option 1.png" alt="Skill Set Decoration">
+          <img src="assets/img/00_Hand-drawn lines/02_Skills/Color option 1.webp" alt="Skill Set Decoration">
         </div>
       </div>
 
@@ -27,31 +27,31 @@
           <img 
             class="sticker-image" 
             [class.hidden]="stickerState !== 'default'"
-            src="assets/Design-material/03_Stickers/01_Skills - Peel off/Default.png" 
+            src="assets/img/03_Stickers/01_Skills - Peel off/Default.webp" 
             alt="Pull to peel" 
           />
           
           <img 
             class="sticker-image" 
             [class.hidden]="stickerState !== 'transition'"
-            src="assets/Design-material/03_Stickers/01_Skills - Peel off/Transition.png" 
+            src="assets/img/03_Stickers/01_Skills - Peel off/Transition.webp" 
             alt="Peeling" 
           />
           
           <img 
             class="sticker-image" 
             [class.hidden]="stickerState !== 'peeled'"
-            src="assets/Design-material/03_Stickers/01_Skills - Peel off/Final.png" 
+            src="assets/img/03_Stickers/01_Skills - Peel off/Final.webp" 
             alt="Peeled" 
           />
           
           <div class="sticker-text" [class.hidden]="stickerState !== 'default'">
-            <img class="arrow-img" src="assets/Design-material/03_Stickers/Arrow.png" alt="Arrow">
+            <img class="arrow-img" src="assets/img/03_Stickers/Arrow.webp" alt="Arrow">
             <span class="text kalam" [innerHTML]="'skills.sticker.pullText' | translate"></span>
           </div>
           
           <div class="final-image" [class.hidden]="stickerState !== 'peeled'">
-            <img src="assets/Design-material/03_Stickers/01_Skills - Peel off/Frame.png" alt="Also interested in">
+            <img src="assets/img/03_Stickers/01_Skills - Peel off/Frame.webp" alt="Also interested in">
           </div>
         </div>
       </div>
