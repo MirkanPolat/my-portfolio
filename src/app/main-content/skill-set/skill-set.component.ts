@@ -20,18 +20,18 @@ export class SkillSetComponent {
   stickerState: 'default' | 'transition' | 'peeled' = 'default';
 
   skills: Skill[] = [
-    { name: 'HTML', icon: 'assets/Design-material/img/Skill-Icons/HTML.svg', row: 1 },
-    { name: 'CSS', icon: 'assets/Design-material/img/Skill-Icons/CSS.svg', row: 1 },
-    { name: 'JavaScript', icon: 'assets/Design-material/img/Skill-Icons/Js.svg', row: 1 },
-    { name: 'TypeScript', icon: 'assets/Design-material/img/Skill-Icons/Ts.svg', row: 1 },
-    { name: 'Angular', icon: 'assets/Design-material/img/Skill-Icons/Angular.svg', row: 1 },
-    { name: 'Bootstrap', icon: 'assets/Design-material/img/Skill-Icons/Bootstrap.png', row: 1 },
-    { name: 'Firebase', icon: 'assets/Design-material/img/Skill-Icons/Firebase.svg', row: 2 },
-    { name: 'Git', icon: 'assets/Design-material/img/Skill-Icons/Git.svg', row: 2 },
-    { name: 'Rest-Api', icon: 'assets/Design-material/img/Skill-Icons/Rest-Api.svg', row: 2 },
-    { name: 'Scrum', icon: 'assets/Design-material/img/Skill-Icons/Scrum.svg', row: 2 },
-    { name: 'GitHub', icon: 'assets/Design-material/img/Skill-Icons/GitHub.ico', row: 2 },
-    { name: 'Material Design', icon: 'assets/Design-material/img/Skill-Icons/Material-Design.svg', row: 2 }
+    { name: 'HTML', icon: 'assets/img/Skill-Icons/HTML.svg', row: 1 },
+    { name: 'CSS', icon: 'assets/img/Skill-Icons/CSS.svg', row: 1 },
+    { name: 'JavaScript', icon: 'assets/img/Skill-Icons/Js.svg', row: 1 },
+    { name: 'TypeScript', icon: 'assets/img/Skill-Icons/Ts.svg', row: 1 },
+    { name: 'Angular', icon: 'assets/img/Skill-Icons/Angular.svg', row: 1 },
+    { name: 'Bootstrap', icon: 'assets/img/Skill-Icons/Bootstrap.png', row: 1 },
+    { name: 'Firebase', icon: 'assets/img/Skill-Icons/Firebase.svg', row: 2 },
+    { name: 'Git', icon: 'assets/img/Skill-Icons/Git.svg', row: 2 },
+    { name: 'Rest-Api', icon: 'assets/img/Skill-Icons/Rest-Api.svg', row: 2 },
+    { name: 'Scrum', icon: 'assets/img/Skill-Icons/Scrum.svg', row: 2 },
+    { name: 'GitHub', icon: 'assets/img/Skill-Icons/GitHub.ico', row: 2 },
+    { name: 'Material Design', icon: 'assets/img/Skill-Icons/Material-Design.svg', row: 2 }
   ];
 
   peelSticker(): void {
