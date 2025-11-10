@@ -22,7 +22,7 @@ export class ContactComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
   privacyAccepted = false;
   showSuccessMessage = false;
 
