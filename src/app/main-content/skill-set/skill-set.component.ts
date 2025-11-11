@@ -25,13 +25,13 @@ export class SkillSetComponent {
     { name: 'JavaScript', icon: 'assets/img/Skill-Icons/Js.svg', row: 1 },
     { name: 'TypeScript', icon: 'assets/img/Skill-Icons/Ts.svg', row: 1 },
     { name: 'Angular', icon: 'assets/img/Skill-Icons/Angular.svg', row: 1 },
-    { name: 'Bootstrap', icon: 'assets/img/Skill-Icons/Bootstrap.png', row: 1 },
+    { name: 'Bootstrap', icon: 'assets/img/Skill-Icons/Bootstrap.webp', row: 1 },
     { name: 'Firebase', icon: 'assets/img/Skill-Icons/Firebase.svg', row: 2 },
     { name: 'Git', icon: 'assets/img/Skill-Icons/Git.svg', row: 2 },
     { name: 'Rest-Api', icon: 'assets/img/Skill-Icons/Rest-Api.svg', row: 2 },
     { name: 'Scrum', icon: 'assets/img/Skill-Icons/Scrum.svg', row: 2 },
-    { name: 'GitHub', icon: 'assets/img/Skill-Icons/GitHub.ico', row: 2 },
-    { name: 'Material Design', icon: 'assets/img/Skill-Icons/Material-Design.svg', row: 2 }
+    { name: 'GitHub', icon: 'assets/img/Skill-Icons/GitHub.webp', row: 2 },
+    { name: 'Material Design', icon: 'assets/img/Skill-Icons/Material_design.svg', row: 2 },
   ];
 
   peelSticker(): void {

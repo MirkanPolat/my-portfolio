@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🎨 Starting image optimization..."
+echo "Starting image optimization..."
 
 ASSETS_DIR="src/assets/Design-material"
 OPTIMIZED_DIR="src/assets/optimized"
@@ -40,12 +40,12 @@ process_file() {
         
         if [ -f "$output_file" ]; then
             new_size=$(du -h "$output_file" | cut -f1)
-            echo "  ✅ $original_size → $new_size"
+            echo "  $original_size -> $new_size"
         else
-            echo "  ❌ Failed"
+            echo "  Failed"
         fi
     else
-        echo "  ❌ Not found"
+        echo "  Not found"
     fi
 }
 
@@ -81,4 +81,4 @@ current=$((current + 1))
 process_file "03_Stickers/02_Testimonials/Color option 3/A.png" 800 $current $total
 
 echo ""
-echo "✅ Done! Files in: $OPTIMIZED_DIR"
+echo "Done. Files in: $OPTIMIZED_DIR"

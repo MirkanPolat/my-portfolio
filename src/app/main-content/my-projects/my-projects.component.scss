@@ -12,13 +12,14 @@ section {
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     min-height: 800px;
+    align-items: start;
   }
 
   .grid-item {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: 100%;
   }
 
   .intro-box {
@@ -69,7 +70,6 @@ section {
 
   .project-box {
     .project-image {
-      flex: 1;
       border-radius: 25px;
       margin-bottom: 1.5rem;
       position: relative;
