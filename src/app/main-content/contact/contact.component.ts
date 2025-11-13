@@ -67,6 +67,18 @@ export class ContactComponent {
     }
   }
 
+  onNameInput(): void {
+    const nameValue = this.contactData.name.trim();
+    
+    if (nameValue.length === 0) {
+      this.formErrors.name = 'nameRequired';
+    } else if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
+      this.formErrors.name = 'nameMinLetter';
+    } else {
+      this.formErrors.name = '';
+    }
+  }
+
   validateEmail(): boolean {
     const emailValue = this.contactData.email.trim();
 
@@ -89,6 +101,23 @@ export class ContactComponent {
   onEmailBlur(): void {
     const emailValue = this.contactData.email.trim();
 
+    if (emailValue.length === 0) {
+      this.formErrors.email = 'emailRequired';
+    } else if (!emailValue.includes('@')) {
+      this.formErrors.email = 'emailMissingAt';
+    } else {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailValue)) {
+        this.formErrors.email = 'emailInvalid';
+      } else {
+        this.formErrors.email = '';
+      }
+    }
+  }
+
+  onEmailInput(): void {
+    const emailValue = this.contactData.email.trim();
+    
     if (emailValue.length === 0) {
       this.formErrors.email = 'emailRequired';
     } else if (!emailValue.includes('@')) {

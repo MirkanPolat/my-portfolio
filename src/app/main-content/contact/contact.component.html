@@ -59,6 +59,7 @@
               name="name" 
               placeholder="{{ 'contact.form.namePlaceholder' | translate }}" 
               (blur)="onNameBlur()"
+              (input)="onNameInput()"
               [class.error]="formErrors.name && name.touched"
               required>
             @if (formErrors.name === 'nameRequired' && name.touched) {
@@ -79,6 +80,7 @@
               name="email" 
               placeholder="{{ 'contact.form.emailPlaceholder' | translate }}"
               (blur)="onEmailBlur()"
+              (input)="onEmailInput()"
               [class.error]="formErrors.email && email.touched"
               required>
             @if (formErrors.email === 'emailRequired' && email.touched) {
