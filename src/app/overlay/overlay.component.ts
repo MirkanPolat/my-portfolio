@@ -74,12 +74,16 @@ export class OverlayComponent implements OnInit {
   openLiveDemo(): void {
     if (this.project?.id === 'join') {
       window.open('https://mirkanpolat.com/join/', '_blank');
+    } else if (this.project?.id === 'el-pollo-loco') {
+      window.open('https://mirkanpolat.com/El-Pollo-Loco/', '_blank');
     }
   }
 
   openGithub(): void {
     if (this.project?.id === 'join') {
       window.open('https://github.com/MirkanPolat/join', '_blank');
+    } else if (this.project?.id === 'el-pollo-loco') {
+      window.open('https://github.com/MirkanPolat/El-Pollo-Loco-', '_blank');
     }
   }
 }
