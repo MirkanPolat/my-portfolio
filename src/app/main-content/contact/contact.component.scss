@@ -208,7 +208,6 @@ section {
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 4px;
-      margin-left: 20px;
     }
 
     input, textarea {
@@ -219,7 +218,6 @@ section {
       color: white;
       font-size: 18px;
       padding: 6px 0;
-      text-indent: 20px;
       outline: none;
 
       &::placeholder { color: rgba(255, 255, 255, 0.65); }
