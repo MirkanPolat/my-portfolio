@@ -31,7 +31,7 @@ export class SkillSetComponent {
     { name: 'Rest-Api', icon: 'assets/img/Skill-Icons/Rest-Api.svg', row: 2 },
     { name: 'Scrum', icon: 'assets/img/Skill-Icons/Scrum.svg', row: 2 },
     { name: 'GitHub', icon: 'assets/img/Skill-Icons/GitHub.webp', row: 2 },
-    { name: 'Material Design', icon: 'assets/img/Skill-Icons/Material_design.svg', row: 2 },
+    { name: 'Material Design', icon: 'assets/img/Skill-Icons/Material-Design.svg', row: 2 },
   ];
 
   peelSticker(): void {
