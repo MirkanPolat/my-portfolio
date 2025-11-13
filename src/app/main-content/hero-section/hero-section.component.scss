@@ -14,23 +14,10 @@ $transition-base: 0.3s ease;
     align-items: center;
     overflow: hidden;
     z-index: 1;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      max-width: 1920px;
-      height: 100%;
-      margin: 0 auto;
-      background-image: url('./../../../assets/img/01_Background/Design Size Relation@3x/01_Hero.webp');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      z-index: -1;
-    }
+    background-image: url('./../../../assets/img/01_Background/Design Size Relation@3x/01_Hero.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 
 }
 
@@ -263,7 +250,7 @@ $transition-base: 0.3s ease;
 .social-icons {
   position: absolute;
   left: 80px;
-  top: 80%;
+  top: 76%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
