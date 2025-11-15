@@ -128,7 +128,7 @@
       "nameLabel": "Wie ist dein Name?",
       "namePlaceholder": "Dein Name kommt hier hin",
       "nameError": "Bitte gib deinen Namen ein",
-      "nameMinLetter": "Name muss mindestens einen Buchstaben enthalten",
+      "nameMinLetter": "Name muss mindestens 2 Buchstaben enthalten",
       "emailLabel": "Wie ist deine E-Mail?",
       "emailPlaceholder": "deineemail@email.com",
       "emailError": "Bitte gib eine gültige E-Mail ein",

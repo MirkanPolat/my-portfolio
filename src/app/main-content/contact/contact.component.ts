@@ -48,7 +48,8 @@ export class ContactComponent {
       return false;
     }
 
-    if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
+    const letterCount = (nameValue.match(/[a-zA-ZäöüÄÖÜß]/g) || []).length;
+    if (letterCount < 2) {
       return false;
     }
 
@@ -60,10 +61,13 @@ export class ContactComponent {
 
     if (nameValue.length === 0) {
       this.formErrors.name = 'nameRequired';
-    } else if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
-      this.formErrors.name = 'nameMinLetter';
     } else {
-      this.formErrors.name = '';
+      const letterCount = (nameValue.match(/[a-zA-ZäöüÄÖÜß]/g) || []).length;
+      if (letterCount < 2) {
+        this.formErrors.name = 'nameMinLetter';
+      } else {
+        this.formErrors.name = '';
+      }
     }
   }
 
@@ -72,10 +76,13 @@ export class ContactComponent {
     
     if (nameValue.length === 0) {
       this.formErrors.name = 'nameRequired';
-    } else if (!/[a-zA-ZäöüÄÖÜß]/.test(nameValue)) {
-      this.formErrors.name = 'nameMinLetter';
     } else {
-      this.formErrors.name = '';
+      const letterCount = (nameValue.match(/[a-zA-ZäöüÄÖÜß]/g) || []).length;
+      if (letterCount < 2) {
+        this.formErrors.name = 'nameMinLetter';
+      } else {
+        this.formErrors.name = '';
+      }
     }
   }
 
