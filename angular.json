@@ -33,7 +33,8 @@
                 "output": "/assets",
                 "ignore": ["Design-material/**"]
               },
-              "src/sendMail.php"
+              "src/sendMail.php",
+              "src/.htaccess"
             ],
             "styles": [
               "src/styles.scss",
