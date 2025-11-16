@@ -34,7 +34,11 @@
                 "ignore": ["Design-material/**"]
               },
               "src/sendMail.php",
-              "src/.htaccess"
+              {
+                "glob": ".htaccess",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss",
