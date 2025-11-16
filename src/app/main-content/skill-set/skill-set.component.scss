@@ -73,9 +73,10 @@ section {
                 img {
                     width: auto;
                     height: auto;
-                    max-width: 300px;
+                    max-width: clamp(200px, 29.6vw, 300px);
                     clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 50%);
                     animation: clockwiseClip 5s infinite;
+                    transition: max-width 0.3s ease;
                 }
             }
         }
@@ -258,7 +259,7 @@ section {
           .skill-set-overlay {
             top: 60%;
             right: clamp(-30px, -2vw, -10px);
-            transform: translateY(-50%);
+            transform: translateY(-44%);
           }
         }
         
