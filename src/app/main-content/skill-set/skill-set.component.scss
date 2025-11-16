@@ -304,3 +304,17 @@ section {
     }
   }
 }
+
+@media (max-width: 460px) {
+  section {
+    .skill-set-container {
+      .column-left {
+        .skill-set-overlay {
+          right: 0;
+          left: auto;
+          transform: translate(-20%, -44%);
+        }
+      }
+    }
+  }
+}
