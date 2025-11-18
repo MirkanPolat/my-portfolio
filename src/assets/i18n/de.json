@@ -53,6 +53,9 @@
       "title": "Meine Projekte", 
       "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
     },
+    "badge": {
+      "workInProgress": "In Arbeit"
+    },
     "button": {
       "details": "Details anzeigen"
     },

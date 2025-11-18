@@ -39,6 +39,11 @@
                 <img [src]="project.badgeImage" alt="Featured Project">
               </div>
             }
+            @if (project.workInProgress) {
+              <div class="featured-badge-image">
+                <img [src]="project.badgeImage" [alt]="'projects.badge.workInProgress' | translate">
+              </div>
+            }
           </div>
           <div class="project-info">
             <h3>{{ project.title }}</h3>

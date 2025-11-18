@@ -7,6 +7,7 @@ export interface Project {
   description: string;
   image: string;
   featured?: boolean;
+  workInProgress?: boolean;
   badgeImage?: string;
   implementationDetails?: string;
   duration?: string;
@@ -54,6 +55,8 @@ export class ProjectService {
       id: 'dabubble',
       title: 'DABubble',
       description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+      workInProgress: true,
+      badgeImage: 'assets/img/project-imgs/work-in-progress.svg',
       image: 'assets/img/project-imgs/DABubble.svg',
       implementationDetails: 'Developed as a comprehensive team communication platform using Angular and Firebase. Features include real-time messaging, channel management, file sharing, and user presence indicators. The app uses RxJS for reactive programming patterns.',
       duration: '4 weeks',

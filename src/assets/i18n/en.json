@@ -53,6 +53,9 @@
       "title": "My Projects",
       "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
     },
+    "badge": {
+      "workInProgress": "Work in Progress"
+    },
     "button": {
       "details": "Show Details"
     },
