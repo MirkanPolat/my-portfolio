@@ -136,8 +136,8 @@ section {
         z-index: 10;
         
         img {
-          width: 121px;
-          height: 121px;
+          width: clamp(70px, 10vw, 121px);
+          height: clamp(70px, 10vw, 121px);
         }
       }
       
@@ -266,9 +266,12 @@ section {
         }
         
         .featured-badge-image {
+          bottom: 10px;
+          left: 10px;
+          
           img {
-            width: clamp(120px, 20vw, 168px);
-            height: clamp(120px, 20vw, 168px);
+            width: clamp(60px, 15vw, 100px);
+            height: clamp(60px, 15vw, 100px);
           }
         }
       }
