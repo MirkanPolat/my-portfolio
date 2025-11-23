@@ -75,6 +75,9 @@ section {
     min-width: 0;
 
     .project-title {
+      overflow: hidden;
+      width: fit-content;
+      
       h1 {
         font-size: clamp(48px, 8vw, 64px);
         font-weight: 700;
@@ -88,10 +91,13 @@ section {
           position: absolute;
           bottom: -17px;
           left: 0;
+          right: 0;
           width: 100%;
+          max-width: 100%;
           height: 22px;
           background: url('/assets/img/00_Hand-drawn lines/01_About me/Color option 3.webp') no-repeat;
-          background-size: cover;
+          background-size: 100% 100%;
+          background-position: left center;
           animation: slideInOut 6s ease-in-out infinite;
         }
       }
