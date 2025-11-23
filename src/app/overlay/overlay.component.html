@@ -46,7 +46,8 @@
         <div class="project-image-container">
           <img [src]="project.image" [alt]="project.title" class="project-image">
           
-          <div class="featured-badge" *ngIf="project.featured">
+          <div class="featured-badge" *ngIf="project.featured || project.workInProgress">
+            <img [src]="project.badgeImage" [alt]="project.featured ? 'Featured Project' : 'Work in Progress'">
           </div>
         </div>
 
