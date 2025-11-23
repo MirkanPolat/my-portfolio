@@ -216,14 +216,30 @@ section {
         border: 2px solid var(--button-border);
         color: var(--text-color);
         box-shadow: 3px 5px 0 var(--button-shadow);
+        position: relative;
+        overflow: visible;
+        transition: all 0.3s ease;
 
-        &:hover {
+        &:hover:not(.wip) {
           background-color: #F87B57;
           color: white;
           border-color: var(--button-border);
           transform: translateY(4px);
           box-shadow: 0 1px 0 var(--button-shadow);
           mix-blend-mode: normal;
+        }
+        
+        &.wip {
+          cursor: not-allowed;
+          transition: opacity 0.3s ease;
+          
+          &:hover,
+          &.clicked {
+            background-color: transparent;
+            transform: none;
+            box-shadow: 3px 5px 0 var(--button-shadow);
+            opacity: 0.5;
+          }
         }
       }
     }
@@ -323,3 +339,5 @@ section {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
 }
+
+

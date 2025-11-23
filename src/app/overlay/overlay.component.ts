@@ -71,6 +71,27 @@ export class OverlayComponent implements OnInit {
     return this.currentIndex < maxIndex ? this.currentIndex + 1 : 0;
   }
 
+  githubClicked = false;
+  liveTestClicked = false;
+
+  handleGithubClick(): void {
+    if (this.project?.workInProgress) {
+      this.githubClicked = true;
+      setTimeout(() => this.githubClicked = false, 2000);
+      return;
+    }
+    this.openGithub();
+  }
+
+  handleLiveTestClick(): void {
+    if (this.project?.workInProgress) {
+      this.liveTestClicked = true;
+      setTimeout(() => this.liveTestClicked = false, 2000);
+      return;
+    }
+    this.openLiveDemo();
+  }
+
   openLiveDemo(): void {
     if (this.project?.id === 'join') {
       window.open('https://mirkanpolat.com/join/', '_blank');
@@ -85,5 +106,9 @@ export class OverlayComponent implements OnInit {
     } else if (this.project?.id === 'el-pollo-loco') {
       window.open('https://github.com/MirkanPolat/El-Pollo-Loco-', '_blank');
     }
+  }
+
+  isWorkInProgress(): boolean {
+    return this.project?.workInProgress || false;
   }
 }
