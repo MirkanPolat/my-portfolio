@@ -106,6 +106,7 @@ header {
       position: relative;
       display: inline-block;
       padding: 10px;
+      white-space: nowrap;
 
       &::after {
         content: '';
@@ -398,6 +399,34 @@ header {
     
     &.active .mobile-menu {
       opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    .desktop-nav {
+      a {
+        font-size: 16px;
+        padding: 8px;
+      }
+      
+      .desktop-language-toggle {
+        .lang-option {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 827px) {
+  header {
+    .desktop-nav {
+      a {
+        font-size: 14px;
+        padding: 6px;
+      }
     }
   }
 }
