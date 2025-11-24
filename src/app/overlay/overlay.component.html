@@ -56,13 +56,13 @@
                   [class.wip]="isWorkInProgress()"
                   [class.clicked]="githubClicked && isWorkInProgress()"
                   (click)="handleGithubClick()">
-            {{ (githubClicked && isWorkInProgress()) ? 'Soon...' : ('overlay.buttons.github' | translate) }}
+            {{ (githubClicked && isWorkInProgress()) ? ('overlay.buttons.comingSoon' | translate) : ('overlay.buttons.github' | translate) }}
           </button>
           <button class="my-button" 
                   [class.wip]="isWorkInProgress()"
                   [class.clicked]="liveTestClicked && isWorkInProgress()"
                   (click)="handleLiveTestClick()">
-            {{ (liveTestClicked && isWorkInProgress()) ? 'Soon...' : ('overlay.buttons.liveTest' | translate) }}
+            {{ (liveTestClicked && isWorkInProgress()) ? ('overlay.buttons.comingSoon' | translate) : ('overlay.buttons.liveTest' | translate) }}
           </button>
         </div>
 

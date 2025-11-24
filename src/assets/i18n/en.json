@@ -93,7 +93,8 @@
     },
     "buttons": {
       "github": "GitHub",
-      "liveTest": "Live Test"
+      "liveTest": "Live Test",
+      "comingSoon": "Soon..."
     },
     "nextProject": "Next Project"
   },
