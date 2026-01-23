@@ -24,7 +24,7 @@ export class LegalNoticeComponent implements OnInit {
   }
   
   callPhone() {
-    window.location.href = 'tel:+4915202888042';
+    window.location.href = 'tel:+4915679748254';
   }
   
   sendEmail() {
