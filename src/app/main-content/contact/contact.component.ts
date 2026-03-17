@@ -163,7 +163,7 @@ export class ContactComponent {
     if (contactForm.submitted && contactForm.form.valid) {
       if (!this.mailTest) {
         this.http
-          .post(this.post.endPoint, this.post.body(this.contactData))
+          .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
           .subscribe({
             next: () => {
               this.showSuccessMessage = true;
