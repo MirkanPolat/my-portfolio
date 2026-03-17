@@ -22,6 +22,7 @@ export class ContactComponent {
     message: '',
   };
 
+  honeypot = '';
   mailTest = false;
   privacyAccepted = false;
   showSuccessMessage = false;
@@ -33,7 +34,7 @@ export class ContactComponent {
 
   post = {
     endPoint: 'https://mirkanpolat.com/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+    body: (payload: any) => JSON.stringify({ ...payload, website: this.honeypot }),
     options: {
       headers: {
         'Content-Type': 'application/json'
@@ -171,8 +172,7 @@ export class ContactComponent {
                 this.showSuccessMessage = false;
               }, 5000);
             },
-            error: (error) => {
-              console.error('Email sending failed:', error);
+            error: () => {
               alert(
                 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.'
               );

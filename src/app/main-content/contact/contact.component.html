@@ -49,6 +49,16 @@
         </div>
 
         <form (ngSubmit)="onSubmit(contactForm)" class="contact-form" #contactForm="ngForm">
+          <div class="honeypot-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input
+              [(ngModel)]="honeypot"
+              type="text"
+              id="website"
+              name="website"
+              autocomplete="off"
+              tabindex="-1">
+          </div>
           <div class="form-group">
             <label for="name">{{ 'contact.form.nameLabel' | translate }}</label>
             <input 
