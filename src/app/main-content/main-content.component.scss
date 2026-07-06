@@ -1,0 +1,6 @@
+/* Weißer Seiten-Hintergrund für die Hauptseite — füllt die Margin-Lücken
+   zwischen den Sektionen (body ist dunkel wegen iOS Overscroll-Farbe). */
+:host {
+    display: block;
+    background-color: white;
+}

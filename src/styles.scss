@@ -11,7 +11,9 @@ html, body {
     /* clip statt hidden: kein neuer Scroll-Container auf iOS Safari */
     overflow-x: clip;
     -webkit-text-size-adjust: 100%;
-    /* Farbe der Footer-Unterkante — iOS Overscroll-Bounce zeigt sonst Weiß */
+    /* iOS Safari malt den Overscroll-Bereich (Bounce unterm Footer) mit der body-Farbe —
+       beide dunkel wie die Footer-Unterkante. Das Weiß zwischen den Sektionen
+       liegt auf app-main-content (main-content.component.scss). */
     background-color: #171717;
 }
 

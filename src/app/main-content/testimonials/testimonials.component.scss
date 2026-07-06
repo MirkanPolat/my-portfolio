@@ -226,16 +226,10 @@ section {
     clip-path: inset(0 100% 0 0);
   }
 }
-/* iOS Safari: infinite Animationen auf Touch-Devices ausschalten.
-   Plus: cards-container fixed height raus → kein Layout-Shift bei URL-Bar resize. */
+/* iOS Safari: cards-container fixed height raus → kein Layout-Shift bei URL-Bar resize. */
 @media (hover: none) and (pointer: coarse) {
   section .testimonials-cards .cards-container {
     height: auto;
-  }
-
-  section .testimonials-cards .testimonials-header .testimonials-underline {
-    animation: none;
-    clip-path: inset(0 0 0 0);
   }
 }
 

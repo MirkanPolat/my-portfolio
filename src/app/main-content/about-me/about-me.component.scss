@@ -223,18 +223,13 @@ section {
   }
 }
 
-/* iOS Safari: infinite Hand-drawn-Line Animation pausieren auf Touch-Devices.
-   Plus: feste min-heights raus — kein Layout-Shift bei iOS URL-Bar resize. */
+/* iOS Safari: feste min-heights raus — kein Layout-Shift bei iOS URL-Bar resize. */
 @media (hover: none) and (pointer: coarse) {
   section {
     min-height: auto;
   }
   section .about-text {
     min-height: auto;
-  }
-  section .about-text h2::after {
-    animation: none;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 

@@ -227,21 +227,10 @@ section {
   }
 }
 
-/* iOS Safari: infinite Animationen auf Touch-Devices ausschalten — entlasten den Compositor.
-   Plus: feste min-height auf grid raus → keine Layout-Shifts bei iOS URL-Bar resize. */
+/* iOS Safari: feste min-height auf grid raus → keine Layout-Shifts bei iOS URL-Bar resize. */
 @media (hover: none) and (pointer: coarse) {
   section .projects-grid {
     min-height: auto;
-  }
-
-  section .intro-box .intro-content .underline {
-    animation: none;
-    clip-path: inset(0 0 0 0);
-  }
-
-  .project-box[data-project-id="join"] .main-project-image {
-    animation: none;
-    transform: none;
   }
 }
 

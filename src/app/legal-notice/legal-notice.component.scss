@@ -7,6 +7,8 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
+    /* Global .content-wrapper hat width: 100% — ohne border-box ragt das Padding rechts raus */
+    box-sizing: border-box;
   }
   
   .back-button-container {
@@ -321,7 +323,8 @@
   
   // Responsive Design
   @media (max-width: 768px) {
-    padding: 20px 0;
+    /* 80px oben wie bei der Privacy Policy — sonst liegt der Back-Button unter der fixen Navbar */
+    padding: 80px 0 30px;
     
     .content-wrapper {
       padding: 0 15px;
