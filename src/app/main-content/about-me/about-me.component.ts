@@ -18,7 +18,8 @@ export class AboutMeComponent {
       const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
-        top: elementPosition
+        top: elementPosition,
+        behavior: 'smooth'
       });
     }
   }

@@ -20,12 +20,15 @@ export class HeroSectionComponent {
       const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
-        top: elementPosition
+        top: elementPosition,
+        behavior: 'smooth'
       });
     }
   }
 
   ngAfterViewInit(): void {
+    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+
     const letters = document.querySelectorAll('.letter');
     letters.forEach((letter) => {
       letter.addEventListener('mouseenter', () => {

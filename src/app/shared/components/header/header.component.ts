@@ -54,7 +54,8 @@ export class HeaderComponent {
             const elementPosition = targetElement.offsetTop - headerHeight;
             
             window.scrollTo({
-              top: elementPosition
+              top: elementPosition,
+              behavior: 'smooth'
             });
           }
         }, 100);
@@ -69,7 +70,8 @@ export class HeaderComponent {
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
-        top: elementPosition
+        top: elementPosition,
+        behavior: 'smooth'
       });
     }
   }

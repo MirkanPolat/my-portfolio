@@ -315,3 +315,21 @@ section {
     }
   }
 }
+
+/* iOS Safari: schwere clockwiseClip-Animation (100+ Keyframes mit clip-path: polygon)
+   überlastet GPU-Compositor während Scroll → Touch wird ignoriert.
+   Plus: min-height: 100vh raus — iOS URL-Bar resize triggert Layout-Shift während Scroll. */
+@media (hover: none) and (pointer: coarse) {
+  section {
+    min-height: auto;
+  }
+  section .skill-set-container .column-left .skill-set-overlay {
+    animation: none;
+    opacity: 1;
+
+    img {
+      animation: none;
+      clip-path: none;
+    }
+  }
+}

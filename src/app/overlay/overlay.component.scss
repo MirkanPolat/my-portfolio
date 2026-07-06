@@ -7,7 +7,7 @@ section {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  overflow-y: auto;
+  overflow-y: visible;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,6 +340,14 @@ section {
   }
   80%, 100% {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+}
+
+/* iOS Safari: infinite Hand-drawn-Line Animation auf Touch-Devices ausschalten */
+@media (hover: none) and (pointer: coarse) {
+  section .left-column .project-title h1::after {
+    animation: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 

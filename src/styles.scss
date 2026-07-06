@@ -3,15 +3,14 @@
     padding: 0;
     color: #f8f9fa;
     font-family: 'Bricolage Grotesque';
-}
-
-html {
-    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    /* clip statt hidden: kein neuer Scroll-Container auf iOS Safari */
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
 }
 
 .content-wrapper {
@@ -69,7 +68,10 @@ img {
 }
 
 .scroll-reveal {
-  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-reveal.before-reveal {
@@ -110,4 +112,35 @@ img {
 
 .scroll-reveal.blur-in.revealed {
   filter: blur(0);
+}
+
+/* iOS Safari: Scroll-Reveal komplett aus auf Touch-Devices → kein IntersectionObserver-Trigger während Scroll */
+@media (hover: none) and (pointer: coarse) {
+  .scroll-reveal,
+  .scroll-reveal.before-reveal,
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* User-Präferenz respektieren + iOS Performance schonen */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+
+  .scroll-reveal {
+    transition: none;
+  }
+
+  .scroll-reveal.before-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }
