@@ -76,11 +76,20 @@ export class HeaderComponent {
     }
   }
 
-  navigateToHome() {
+  navigateToHome(event?: Event) {
+    this.playLogoTapEffect(event);
     this.router.navigate(['/']).then(() => {
       window.scrollTo({
         top: 0
       });
     });
+  }
+
+  /* Touch-Geräte haben kein :hover — Glow-Effekt beim Tap einmal abspielen */
+  private playLogoTapEffect(event?: Event) {
+    if (!event || !window.matchMedia('(hover: none)').matches) return;
+    const logo = (event.currentTarget as HTMLElement);
+    logo.classList.add('tapped');
+    setTimeout(() => logo.classList.remove('tapped'), 800);
   }
 }
